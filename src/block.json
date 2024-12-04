@@ -1,0 +1,130 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "create-block/orcid-data-2",
+    "version": "0.1.0",
+    "title": "ORCID Data Block",
+    "category": "widgets",
+    "icon": "",
+    "description": "Enables embedding public data from ORCID profiles",
+    "example": {},
+    "attributes": {
+        "orcid_id": {
+            "type": "string"
+        },
+        "verified_orcid_id": {
+            "type": "boolean",
+            "default": false
+        },
+        "starting_heading_level": {
+            "type": "number",
+            "default": 2
+        },
+        "bio_show": {
+            "type": "boolean",
+            "default": true
+        },
+        "distinctions_excluded": {
+            "type": "object",
+            "default": {}
+        },
+        "distinctions_show": {
+            "type": "boolean",
+            "default": true
+        },
+        "educations_excluded": {
+            "type": "object",
+            "default": {}
+        },
+        "educations_show": {
+            "type": "boolean",
+            "default": true
+        },
+        "employments_excluded": {
+            "type": "object",
+            "default": {}
+        },
+        "employments_show": {
+            "type": "boolean",
+            "default": true
+        },
+        "fundings_excluded": {
+            "type": "object",
+            "default": {}
+        },
+        "fundings_show": {
+            "type": "boolean",
+            "default": true
+        },
+        "invited-positions_excluded": {
+            "type": "object",
+            "default": {}
+        },
+        "invited-positions_show": {
+            "type": "boolean",
+            "default": true
+        },
+        "memberships_excluded": {
+            "type": "object",
+            "default": {}
+        },
+        "memberships_show": {
+            "type": "boolean",
+            "default": true
+        },
+        "peer-reviews_excluded": {
+            "type": "object",
+            "default": {}
+        },
+        "peer-reviews_show": {
+            "type": "boolean",
+            "default": true
+        },
+        "qualifications_excluded": {
+            "type": "object",
+            "default": {}
+        },
+        "qualifications_show": {
+            "type": "boolean",
+            "default": true
+        },
+        "services_excluded": {
+            "type": "object",
+            "default": {}
+        },
+        "services_show": {
+            "type": "boolean",
+            "default": true
+        },
+        "works_excluded": {
+            "type": "object",
+            "default": {}
+        },
+        "works_show": {
+            "type": "boolean",
+            "default": true
+        }
+    },
+    "supports": {
+        "color": {
+            "background": true,
+            "text": true,
+            "heading": true
+        },
+        "html": true,
+        "typography": {
+            "fontSize": true,
+            "lineHeight": true
+        },
+        "spacing": {
+            "margin": true,
+            "padding": true,
+            "blockGap": true
+        }
+    },
+    "textdomain": "orcid-data-2",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "render": "file:./render.php",
+    "viewScript": "file:./view.js"
+}
