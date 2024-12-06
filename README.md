@@ -1,6 +1,6 @@
 # ORCID Data Block 2
 
-This is a WordPress plugin for displaying ORCID profile data on pages, posts, and more in WordPress. It's a successor to [ORCID Data Block](https://github.com/MESH-Research/orcid-data-block).
+This is a WordPress plugin for displaying data from multiple ORCID profiles on pages, posts, and more in WordPress. It's a successor to [ORCID Data Block](https://github.com/MESH-Research/orcid-data-block).
 
 This work is funded by the [ORCID Global Participation Fund](https://info.orcid.org/global-participation-fund-announces-fourth-round-of-awardees/).
 
