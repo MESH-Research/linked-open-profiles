@@ -1,0 +1,13 @@
+{
+    "name": "mesh-research/orcid-data-block-2",
+    "description": "WordPress plugin for displaying data from multiple ORCID profiles on pages, posts, and more in WordPress.",
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Grant Eben",
+            "email": "gmeben@gmail.com"
+        }
+    ],
+    "require": {}
+}
