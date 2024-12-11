@@ -1,4 +1,4 @@
-import { sections, displayPreferences } from "./sections";
+import { sections } from "./sections";
 
 export function getItems(type, profile) {
     let records = profile["activities-summary"][type];

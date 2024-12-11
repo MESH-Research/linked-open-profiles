@@ -4,7 +4,7 @@
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
  */
 import { __ } from "@wordpress/i18n";
-import { useState } from "@wordpress/element";
+import { useEffect, useState } from "@wordpress/element";
 
 /**
  * React hook that is used to mark the block wrapper element.
@@ -26,9 +26,9 @@ import {
     Button,
     CheckboxControl,
     Disabled,
+    DropdownMenu,
     Panel,
     PanelBody,
-    DropdownMenu,
     TextControl,
     __experimentalHeading as Heading,
     __experimentalItemGroup as ItemGroup,
@@ -36,9 +36,10 @@ import {
     __experimentalNumberControl as NumberControl,
 } from "@wordpress/components";
 
-import { sections, verifyOrcidId, createDynamicState } from "./sections";
+import { sections, verifyOrcidId } from "./sections";
 import { getProcessedData } from "./processdata";
 import { BlockControls, HeadingLevelDropdown } from "@wordpress/block-editor";
+import LoadingSpinner from "./components/LoadingSpinner.js";
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -49,19 +50,21 @@ import { BlockControls, HeadingLevelDropdown } from "@wordpress/block-editor";
  * @return {Element} Element to render.
  */
 export default function Edit({ attributes, setAttributes }) {
-    const { orcid_id } = attributes || "";
-    const { starting_heading_level } = attributes || 2;
-    const { verified_orcid_id } = attributes || false;
+    const { orcid_id, starting_heading_level, verified_orcid_id } = attributes;
     const [items, setItems] = useState({});
-
     const [invalidId, setInvalidId] = useState(false);
+    const [dataFetched, setDataFetched] = useState(false);
+    const [loading, setLoading] = useState(true);
 
-    if (orcid_id && verified_orcid_id) {
-        fetchData();
-    }
+    useEffect(() => {
+        if (orcid_id && verified_orcid_id) {
+            fetchData();
+        }
+    }, [orcid_id, verified_orcid_id]);
 
     async function fetchData() {
         try {
+            setDataFetched(false);
             const response = await fetch(
                 `/wp-json/custom/v1/orcid-proxy?orcid_id=${orcid_id}`,
             );
@@ -70,8 +73,11 @@ export default function Edit({ attributes, setAttributes }) {
             }
             const result = await response.json();
             setItems(getProcessedData(result));
+            setDataFetched(true);
         } catch (error) {
             console.error("Error fetching data:", error);
+        } finally {
+            setLoading(false);
         }
     }
 
@@ -81,8 +87,8 @@ export default function Edit({ attributes, setAttributes }) {
         if (!verification) {
             setInvalidId(true);
         } else {
+            setLoading(true);
             setInvalidId(false);
-            fetchData();
         }
     }
 
@@ -256,7 +262,11 @@ export default function Edit({ attributes, setAttributes }) {
                         </div>
                     </PanelBody>
                 </Panel>
-                {verified_orcid_id && (
+                {loading ? (
+                    <PanelBody>
+                        <LoadingSpinner />
+                    </PanelBody>
+                ) : (
                     <>
                         <HeadingLevelToolbar />
                         <Panel header="Sections">
@@ -308,41 +318,59 @@ export default function Edit({ attributes, setAttributes }) {
                     </>
                 )}
             </InspectorControls>
-            {(verified_orcid_id && (
-                <div {...useBlockProps()}>
-                    {Object.keys(sections).map(
-                        (section) =>
-                            isSectionShown(section) &&
-                            !hasNoItems(section) && (
-                                <section style={{ marginBottom: "2rem" }}>
-                                    <Heading level={starting_heading_level}>
-                                        {sections[section].term}
-                                    </Heading>
-                                    <ItemGroup>
-                                        {items[section].map(
-                                            (item) =>
-                                                excludedItems(section)[
-                                                    item.path
-                                                ] !== false && (
-                                                    <Item>
-                                                        {item.display_label}
-                                                    </Item>
-                                                ),
-                                        )}
-                                    </ItemGroup>
-                                </section>
-                            ),
-                    )}
-                </div>
-            )) || (
-                <p
-                    {...useBlockProps()}
-                    style={{ padding: "2rem", border: "1px solid #ddd" }}
-                    role="alert"
-                >
-                    Please provide your ORCID iD
-                </p>
-            )}
+
+            <div {...useBlockProps()}>
+                {!verified_orcid_id && !dataFetched && !loading ? (
+                    <p
+                        style={{
+                            padding: "2rem",
+                            border: "1px solid #ddd",
+                        }}
+                        role="alert"
+                    >
+                        Please provide your ORCID iD
+                    </p>
+                ) : (
+                    <>
+                        {!loading ? (
+                            Object.keys(sections).map(
+                                (section) =>
+                                    isSectionShown(section) &&
+                                    !hasNoItems(section) && (
+                                        <section
+                                            style={{ marginBottom: "2rem" }}
+                                            key={section}
+                                        >
+                                            <Heading
+                                                level={starting_heading_level}
+                                            >
+                                                {sections[section].term}
+                                            </Heading>
+                                            <ItemGroup>
+                                                {items[section].map(
+                                                    (item) =>
+                                                        excludedItems(section)[
+                                                            item.path
+                                                        ] !== false && (
+                                                            <Item
+                                                                key={item.path}
+                                                            >
+                                                                {
+                                                                    item.display_label
+                                                                }
+                                                            </Item>
+                                                        ),
+                                                )}
+                                            </ItemGroup>
+                                        </section>
+                                    ),
+                            )
+                        ) : (
+                            <LoadingSpinner />
+                        )}
+                    </>
+                )}
+            </div>
         </>
     );
 }

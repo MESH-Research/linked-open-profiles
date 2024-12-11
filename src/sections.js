@@ -1,5 +1,3 @@
-import { useState } from "@wordpress/element";
-
 export const verifyOrcidId = (orcidId) => {
     if (orcidId === undefined || orcidId === null || orcidId === "") {
         return false;
@@ -8,22 +6,6 @@ export const verifyOrcidId = (orcidId) => {
         return true;
     }
     return false;
-};
-
-export const createDynamicState = (data) => {
-    const stateArray = [];
-    if (data.length === 0) {
-        return stateArray;
-    }
-    for (const key in data) {
-        const [value, setValue] = useState(true);
-        stateArray[key] = { value, setValue };
-    }
-    return stateArray;
-};
-
-export const displayPreferences = () => {
-    return createDynamicState(sections);
 };
 
 export const sections = {
