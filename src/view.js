@@ -21,7 +21,7 @@
  */
 
 /* eslint-disable no-console */
-console.log("Hello World! (from create-block-orcid-data-2 block)");
+// console.log("Hello World! (from create-block-orcid-data-2 block)");
 /* eslint-enable no-console */
 /**
  * Retrieves the translation of text.
@@ -52,6 +52,11 @@ import {
     __experimentalItemGroup as ItemGroup,
     __experimentalItem as Item,
 } from "@wordpress/components";
+import {
+    isSectionShown,
+    hasNoItems,
+    excludedItems,
+} from "./sharedfunctions.js";
 import LoadingSpinner from "./components/LoadingSpinner.js";
 
 import { sections } from "./sections";
@@ -96,29 +101,6 @@ function OrcidDataBlock2({ attributes }) {
         }
     }
 
-    function isSectionShown(section) {
-        return attributes[`${sections[section].id}_show`];
-    }
-
-    function hasNoItems(section) {
-        if (!items[section]) {
-            return true;
-        }
-        return items[section].length == 0;
-    }
-
-    function canExclude(section) {
-        return sections[section].can_exclude;
-    }
-
-    function excludedItems(section) {
-        let i = [];
-        if (canExclude(section)) {
-            i = attributes[`${sections[section].id}_excluded`] || {};
-        }
-        return i;
-    }
-
     return (
         <div {...useBlockProps()}>
             {!verified_orcid_id && !dataFetched && !loading ? (
@@ -136,8 +118,8 @@ function OrcidDataBlock2({ attributes }) {
                     {!loading ? (
                         Object.keys(sections).map(
                             (section) =>
-                                isSectionShown(section) &&
-                                !hasNoItems(section) && (
+                                isSectionShown(section, sections, attributes) &&
+                                !hasNoItems(section, items) && (
                                     <section
                                         style={{ marginBottom: "2rem" }}
                                         key={section}
@@ -148,7 +130,7 @@ function OrcidDataBlock2({ attributes }) {
                                         <ItemGroup>
                                             {items[section].map(
                                                 (item) =>
-                                                    excludedItems(section)[
+                                                    excludedItems(section, sections, attributes)[
                                                         item.path
                                                     ] !== false && (
                                                         <Item key={item.path}>

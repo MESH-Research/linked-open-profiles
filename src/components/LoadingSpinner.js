@@ -1,8 +1,12 @@
-import { Spinner } from "@wordpress/components";
+import { Card, CardBody, Spinner } from "@wordpress/components";
 export default function LoadingSpinner() {
     return (
-        <div>
-            <Spinner /> <span>Loading ORCID Data</span>
-        </div>
+        <Card>
+            <CardBody>
+                <p>
+                    <Spinner /> <span>Loading ORCID Data</span>
+                </p>
+            </CardBody>
+        </Card>
     );
 }

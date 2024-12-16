@@ -1,13 +1,3 @@
-export const verifyOrcidId = (orcidId) => {
-    if (orcidId === undefined || orcidId === null || orcidId === "") {
-        return false;
-    }
-    if (orcidId.length > 4) {
-        return true;
-    }
-    return false;
-};
-
 export const sections = {
     bio: {
         term: "Biography",
