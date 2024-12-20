@@ -1,3 +1,141 @@
+import {
+    addressMarkup,
+    dateMarkup,
+    degreeMarkup,
+    departmentMarkup,
+    doiMarkup,
+    issnMarkup,
+    journalMarkup,
+    organizationMarkup,
+    reviewSourceMarkup,
+    roleMarkup,
+    titleMarkup,
+    typeMarkup,
+    urlMarkup,
+} from "./markupfunctions";
+const bio = function () {
+    return (
+        <>
+            <strong>Biography</strong> <br />
+        </>
+    );
+};
+const distinction = function (data) {
+    return (
+        <>
+            {roleMarkup(data, true)}
+            {organizationMarkup(data)}
+            {departmentMarkup(data)}
+            {addressMarkup(data)}
+            {dateMarkup(data)}
+        </>
+    );
+};
+const education = function (data) {
+    return (
+        <>
+            {organizationMarkup(data, true)}
+            {degreeMarkup(data)}
+            {addressMarkup(data)}
+            {dateMarkup(data)}
+        </>
+    );
+};
+const employment = function (data) {
+    return (
+        <>
+            {roleMarkup(data, true)}
+            {organizationMarkup(data)}
+            {departmentMarkup(data)}
+            {addressMarkup(data)}
+            {dateMarkup(data)}
+        </>
+    );
+};
+const funding = function (data) {
+    return (
+        <>
+            {titleMarkup(data, true)}
+            {organizationMarkup(data)}
+            {typeMarkup(data)}
+            {dateMarkup(data)}
+            {doiMarkup(data)}
+        </>
+    );
+};
+const invitedPosition = function (data) {
+    return (
+        <>
+            {roleMarkup(data, true)}
+            {organizationMarkup(data)}
+            {departmentMarkup(data)}
+            {addressMarkup(data)}
+            {dateMarkup(data)}
+        </>
+    );
+};
+
+const membership = function (data) {
+    return (
+        <>
+            {roleMarkup(data, true)}
+            {organizationMarkup(data)}
+            {departmentMarkup(data)}
+            {addressMarkup(data)}
+            {dateMarkup(data)}
+        </>
+    );
+};
+const peerReview = function (data) {
+    return (
+        <>
+            {organizationMarkup(data, true)}
+            {roleMarkup(data)}
+            {departmentMarkup(data)}
+            {addressMarkup(data)}
+            {doiMarkup(data)}
+            {urlMarkup(data)}
+            {issnMarkup(data)}
+            {reviewSourceMarkup(data)}
+            {dateMarkup(data)}
+        </>
+    );
+};
+const qualification = function (data) {
+    return (
+        <>
+            {roleMarkup(data, true)}
+            {organizationMarkup(data)}
+            {departmentMarkup(data)}
+            {addressMarkup(data)}
+            {doiMarkup(data)}
+            {dateMarkup(data)}
+        </>
+    )
+};
+const service = function (data) {
+    return (
+        <>
+            {organizationMarkup(data, true)}
+            {roleMarkup(data)}
+            {doiMarkup(data)}
+            {addressMarkup(data)}
+            {dateMarkup(data)}
+        </>
+    );
+};
+const work = function (data) {
+    return (
+        <>
+            {titleMarkup(data, true)}
+            {journalMarkup(data)}
+            {typeMarkup(data)}
+            {dateMarkup(data)}
+            {doiMarkup(data)}
+        </>
+    );
+};
+
 export const sections = {
     bio: {
         term: "Biography",
@@ -6,6 +144,7 @@ export const sections = {
         summary_name: null,
         date_name: null,
         can_exclude: false,
+        model: bio,
     },
     distinctions: {
         term: "Distinctions",
@@ -14,6 +153,7 @@ export const sections = {
         summary_name: "distinction-summary",
         date_name: "start-date",
         can_exclude: true,
+        model: distinction,
     },
     educations: {
         term: "Education",
@@ -22,6 +162,7 @@ export const sections = {
         summary_name: "education-summary",
         date_name: "start-date",
         can_exclude: true,
+        model: education,
     },
     employments: {
         term: "Employment",
@@ -30,6 +171,7 @@ export const sections = {
         summary_name: "employment-summary",
         date_name: "start-date",
         can_exclude: true,
+        model: employment,
     },
     fundings: {
         term: "Fundings",
@@ -38,6 +180,7 @@ export const sections = {
         summary_name: "funding-summary",
         date_name: "start-date",
         can_exclude: true,
+        model: funding,
     },
     "invited-positions": {
         term: "Invited Positions",
@@ -46,6 +189,7 @@ export const sections = {
         summary_name: "invited-position-summary",
         date_name: "start-date",
         can_exclude: true,
+        model: invitedPosition,
     },
     memberships: {
         term: "Memberships",
@@ -54,14 +198,16 @@ export const sections = {
         summary_name: "membership-summary",
         date_name: "",
         can_exclude: true,
+        model: membership,
     },
     "peer-reviews": {
         term: "Peer Reviews",
         id: "peer-reviews",
-        format: "peer-review",
+        format: "group",
         summary_name: "peer-review-summary",
         date_name: "completion-date",
         can_exclude: true,
+        model: peerReview,
     },
     qualifications: {
         term: "Qualifications",
@@ -70,6 +216,7 @@ export const sections = {
         summary_name: "qualification-summary",
         date_name: "start-date",
         can_exclude: true,
+        model: qualification,
     },
     // "research-resources": {
     // 	term: "Research Resources",
@@ -85,6 +232,7 @@ export const sections = {
         format: "affiliation-group",
         summary_name: "service-summary",
         can_exclude: true,
+        model: service,
     },
     works: {
         term: "Works",
@@ -92,5 +240,6 @@ export const sections = {
         format: "group",
         summary_name: "work-summary",
         can_exclude: true,
+        model: work,
     },
 };

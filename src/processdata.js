@@ -10,9 +10,6 @@ export function getItems(type, profile) {
         case "group":
             items = records.group;
             break;
-        case "peer-reviews":
-            items = records["peer-review-group"];
-            break;
         default:
             return [];
     }
@@ -59,14 +56,14 @@ function processRecordDistinction(record) {
         return {};
     }
     return {
+        address: data.organization.address,
         display_label: data["role-title"],
-        date: data["start-date"],
         department: data["department-name"],
-        end_date: data["end-date"],
         organization: data.organization.name,
         path: data.path,
         role: data["role-title"],
-        start_date: data["start-date"],
+        end_date: data?.["end-date"],
+        start_date: data?.["start-date"],
     };
 }
 
@@ -77,7 +74,7 @@ function processRecordWork(record) {
     }
     return {
         display_label: data.title.title.value,
-        ["journal-title"]: data["journal-title"]?.value,
+        journal_title: data["journal-title"]?.value,
         date: data["publication-date"],
         doi_url:
             data["external-ids"]?.["external-id"][0]?.["external-id-url"]
@@ -99,10 +96,10 @@ function processRecordEducation(record) {
         display_label: data.organization.name,
         path: data.path,
         degree: data?.["role-title"],
-        department_name: data["department-name"],
-        end_date: data["end-date"],
+        department: data["department-name"],
         address: data.organization.address,
         organization: data.organization.name,
+        end_date: data["end-date"],
         start_date: data["start-date"],
     };
 }
@@ -115,7 +112,7 @@ function processRecordEmployment(record) {
     return {
         display_label: data["role-title"],
         path: data.path,
-        department_name: data["department-name"],
+        department: data["department-name"],
         end_date: data["end-date"],
         address: data.organization.address,
         organization: data.organization.name,
@@ -149,7 +146,7 @@ function processRecordInvitedPositions(record) {
     return {
         display_label: data["role-title"],
         path: data.path,
-        department_name: data["department-name"],
+        department: data["department-name"],
         end_date: data["end-date"],
         address: data.organization.address,
         organization: data.organization.name,
@@ -169,10 +166,13 @@ function processRecordPeerReviews(record) {
     return {
         display_label: data["convening-organization"].name,
         path: data.path,
-        end_date: data["completion-date"],
+        date: data["completion-date"],
         address: data["convening-organization"].address,
         organization: data["convening-organization"].name,
         role: data["reviewer-role"],
+        url: data["review-url"]?.value,
+        issn: data["review-group-id"],
+        review_source: data["source"]?.["source-name"]?.value,
     };
 }
 
@@ -184,7 +184,7 @@ function processRecordQualifications(record) {
     return {
         display_label: data["role-title"],
         path: data.path,
-        department_name: data["department-name"],
+        department: data["department-name"],
         end_date: data["end-date"],
         address: data.organization.address,
         organization: data.organization.name,
@@ -201,7 +201,7 @@ function processRecordMemberships(record) {
     return {
         display_label: data["role-title"],
         path: data.path,
-        department_name: data["department-name"],
+        department: data["department-name"],
         end_date: data["end-date"],
         address: data.organization.address,
         organization: data.organization.name,
@@ -218,7 +218,7 @@ function processRecordService(record) {
     return {
         display_label: data["role-title"],
         path: data.path,
-        department_name: data["department-name"],
+        department: data["department-name"],
         end_date: data["end-date"],
         address: data.organization.address,
         organization: data.organization.name,
@@ -228,7 +228,7 @@ function processRecordService(record) {
 }
 
 export function getProcessedData(profile) {
-    let a = Object.keys(sections)
+    let a = Object.keys(sections);
     let o = {};
     a.map((item) => {
         let sorted = getSortedItems(item, profile);

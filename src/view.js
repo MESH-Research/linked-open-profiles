@@ -130,11 +130,15 @@ function OrcidDataBlock2({ attributes }) {
                                         <ItemGroup>
                                             {items[section].map(
                                                 (item) =>
-                                                    excludedItems(section, sections, attributes)[
-                                                        item.path
-                                                    ] !== false && (
+                                                    excludedItems(
+                                                        section,
+                                                        sections,
+                                                        attributes,
+                                                    )[item.path] !== false && (
                                                         <Item key={item.path}>
-                                                            {item.display_label}
+                                                            {sections[
+                                                                section
+                                                            ].model(item)}
                                                         </Item>
                                                     ),
                                             )}

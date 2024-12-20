@@ -127,7 +127,10 @@ export default function Edit({ attributes, setAttributes }) {
                     <div role="alert">
                         <Card>
                             <CardBody>
-                                <p>An error occurred while fetching the data from ORCID</p>
+                                <p>
+                                    An error occurred while fetching the data
+                                    from ORCID
+                                </p>
                             </CardBody>
                         </Card>
                     </div>
@@ -177,9 +180,9 @@ export default function Edit({ attributes, setAttributes }) {
                                                             <Item
                                                                 key={item.path}
                                                             >
-                                                                {
-                                                                    item.display_label
-                                                                }
+                                                                {sections[
+                                                                    section
+                                                                ].model(item)}
                                                             </Item>
                                                         ),
                                                 )}
