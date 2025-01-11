@@ -10,6 +10,9 @@ export function getItems(type, profile) {
         case "group":
             items = records.group;
             break;
+        case "person":
+            items = profile.person;
+            break;
         default:
             return [];
     }
@@ -19,6 +22,9 @@ export function getItems(type, profile) {
 export function getSortedItems(type, profile) {
     const cat = sections[type];
     const items = getItems(type, profile);
+    if (type === "bio") {
+        return items;
+    }
     return items.sort((a, b) => {
         return (
             makeDate(b, cat.summary_name, cat.date_name, cat.format) -
@@ -48,6 +54,17 @@ function makeDate(item, summary_name, date_name, format) {
     } else {
         return new Date();
     }
+}
+
+function processRecordBio(data) {
+    return {
+        given_names: data.name["given-names"].value,
+        family_name: data.name["family-name"].value,
+        credit_name: data.name["credit-name"].value,
+        other_names: data["other-names"]?.["other-name"],
+        biography: data?.biography?.content,
+        urls: data["researcher-urls"]?.["researcher-url"],
+    };
 }
 
 function processRecordDistinction(record) {
@@ -234,6 +251,10 @@ export function getProcessedData(profile) {
         let sorted = getSortedItems(item, profile);
         o[item] = sorted;
     });
+    if (o.bio) {
+        let b = [processRecordBio(o.bio)];
+        o.bio = b;
+    }
     if (o?.distinctions) {
         let d = o.distinctions.map((item) => {
             return processRecordDistinction(item);

@@ -127,22 +127,31 @@ function OrcidDataBlock2({ attributes }) {
                                         <Heading level={starting_heading_level}>
                                             {sections[section].term}
                                         </Heading>
-                                        <ItemGroup>
-                                            {items[section].map(
-                                                (item) =>
-                                                    excludedItems(
-                                                        section,
-                                                        sections,
-                                                        attributes,
-                                                    )[item.path] !== false && (
-                                                        <Item key={item.path}>
-                                                            {sections[
-                                                                section
-                                                            ].model(item)}
-                                                        </Item>
-                                                    ),
+                                        {sections[section].id === "bio" &&
+                                            sections[section].model(
+                                                items[section][0],
                                             )}
-                                        </ItemGroup>
+                                        {sections[section].id !== "bio" && (
+                                            <ItemGroup>
+                                                {items[section].map(
+                                                    (item) =>
+                                                        excludedItems(
+                                                            section,
+                                                            sections,
+                                                            attributes,
+                                                        )[item.path] !==
+                                                            false && (
+                                                            <Item
+                                                                key={item.path}
+                                                            >
+                                                                {sections[
+                                                                    section
+                                                                ].model(item)}
+                                                            </Item>
+                                                        ),
+                                                )}
+                                            </ItemGroup>
+                                        )}
                                     </section>
                                 ),
                         )

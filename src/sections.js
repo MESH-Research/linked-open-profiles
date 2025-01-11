@@ -1,22 +1,27 @@
 import {
     addressMarkup,
+    bioMarkup,
     dateMarkup,
     degreeMarkup,
     departmentMarkup,
     doiMarkup,
     issnMarkup,
     journalMarkup,
+    nameMarkup,
     organizationMarkup,
+    researcherUrlMarkup,
     reviewSourceMarkup,
     roleMarkup,
     titleMarkup,
     typeMarkup,
     urlMarkup,
 } from "./markupfunctions";
-const bio = function () {
+const bio = function (data) {
     return (
         <>
-            <strong>Biography</strong> <br />
+            {nameMarkup(data)}
+            {bioMarkup(data)}
+            {researcherUrlMarkup(data)}
         </>
     );
 };

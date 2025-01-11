@@ -1,3 +1,7 @@
+import {
+    __experimentalItemGroup as ItemGroup,
+    __experimentalItem as Item,
+} from "@wordpress/components";
 export function addressMarkup(data) {
     let city,
         comma1,
@@ -39,6 +43,18 @@ export function addressMarkup(data) {
     } else {
         return <></>;
     }
+}
+export function bioMarkup(data) {
+    let markup = "";
+    if (data?.biography) {
+        markup = (
+            <>
+                <br />
+                <span>{data.biography}</span> <br />
+            </>
+        );
+    }
+    return markup;
 }
 export function dateMarkup(data) {
     let dateOnlyMarkup,
@@ -186,6 +202,79 @@ export function journalMarkup(data) {
     }
     return markup;
 }
+function nameGivenMarkup(data) {
+    let markup = "";
+    if (data?.given_names) {
+        markup = (
+            <>
+                <strong>Given Name</strong>
+                <br />
+                <span>{data.given_names}</span>
+                <br />
+            </>
+        );
+    }
+    return markup;
+}
+function nameFamilyMarkup(data) {
+    let markup = "";
+    if (data?.family_name) {
+        markup = (
+            <>
+                <strong>Family Name</strong>
+                <br />
+                <span>{data.family_name}</span>
+                <br />
+            </>
+        );
+    }
+    return markup;
+}
+function nameCreditMarkup(data) {
+    let markup = "";
+    if (data?.credit_name) {
+        markup = (
+            <>
+                <strong>Credit Name</strong>
+                <br />
+                <span>{data.credit_name}</span>
+                <br />
+            </>
+        );
+    }
+    return markup;
+}
+function nameOtherMarkup(data) {
+    let markup = "";
+    if (data?.other_names.length > 0) {
+        markup = (
+            <>
+                <strong>Other Names</strong>
+                <br />
+                <ItemGroup>
+                    {data.other_names.map((name) => (
+                        <Item>
+                            <span>{name}</span>
+                        </Item>
+                    ))}
+                </ItemGroup>
+            </>
+        );
+    }
+    return markup;
+}
+export function nameMarkup(data) {
+    let markup = "";
+    markup = (
+        <>
+            {nameGivenMarkup(data)}
+            {nameFamilyMarkup(data)}
+            {nameCreditMarkup(data)}
+            {nameOtherMarkup(data)}
+        </>
+    );
+    return markup;
+}
 export function organizationMarkup(data, firstline = false) {
     let markup = "";
     if (data?.organization && firstline) {
@@ -205,6 +294,32 @@ export function organizationMarkup(data, firstline = false) {
     }
     return markup;
 }
+export function researcherUrlMarkup(data) {
+    let markup = "";
+    if (data?.urls.length > 0) {
+        markup = (
+            <>
+                <br />
+                <strong>Websites & social links</strong>
+                <ItemGroup>
+                    {data.urls.map((url) => (
+                        <Item>
+                            <a
+                                href={url.url.value}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {url.url.value}
+                            </a>
+                        </Item>
+                    ))}
+                </ItemGroup>
+            </>
+        );
+    }
+    return markup;
+}
+
 export function reviewSourceMarkup(data) {
     let markup = "";
     if (data?.review_source) {
@@ -279,7 +394,7 @@ export function typeMarkup(data) {
     }
     return markup;
 }
-export function urlMarkup(data) {
+export function urlMarkup(data, firstline) {
     let markup = "";
     if (data?.url) {
         markup = (
@@ -291,5 +406,15 @@ export function urlMarkup(data) {
             </>
         );
     }
+    if (data?.url && firstline) {
+        markup = (
+            <>
+                <a href={data.url} target="_blank" rel="noopener noreferrer">
+                    {data.url}
+                </a>
+            </>
+        );
+    }
+
     return markup;
 }
