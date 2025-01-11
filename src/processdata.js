@@ -58,9 +58,9 @@ function makeDate(item, summary_name, date_name, format) {
 
 function processRecordBio(data) {
     return {
-        given_names: data.name["given-names"].value,
-        family_name: data.name["family-name"].value,
-        credit_name: data.name["credit-name"].value,
+        given_names: data.name["given-names"]?.value,
+        family_name: data.name["family-name"]?.value,
+        credit_name: data.name["credit-name"]?.value,
         other_names: data["other-names"]?.["other-name"],
         biography: data?.biography?.content,
         urls: data["researcher-urls"]?.["researcher-url"],

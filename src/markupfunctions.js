@@ -206,12 +206,11 @@ function nameGivenMarkup(data) {
     let markup = "";
     if (data?.given_names) {
         markup = (
-            <>
+            <Item>
                 <strong>Given Name</strong>
                 <br />
                 <span>{data.given_names}</span>
-                <br />
-            </>
+            </Item>
         );
     }
     return markup;
@@ -220,12 +219,11 @@ function nameFamilyMarkup(data) {
     let markup = "";
     if (data?.family_name) {
         markup = (
-            <>
+            <Item>
                 <strong>Family Name</strong>
                 <br />
                 <span>{data.family_name}</span>
-                <br />
-            </>
+            </Item>
         );
     }
     return markup;
@@ -234,12 +232,11 @@ function nameCreditMarkup(data) {
     let markup = "";
     if (data?.credit_name) {
         markup = (
-            <>
+            <Item>
                 <strong>Credit Name</strong>
                 <br />
                 <span>{data.credit_name}</span>
-                <br />
-            </>
+            </Item>
         );
     }
     return markup;
@@ -248,17 +245,17 @@ function nameOtherMarkup(data) {
     let markup = "";
     if (data?.other_names.length > 0) {
         markup = (
-            <>
+            <Item>
                 <strong>Other Names</strong>
                 <br />
                 <ItemGroup>
                     {data.other_names.map((name) => (
                         <Item>
-                            <span>{name}</span>
+                            <span>{name.content}</span>
                         </Item>
                     ))}
                 </ItemGroup>
-            </>
+            </Item>
         );
     }
     return markup;
@@ -266,12 +263,12 @@ function nameOtherMarkup(data) {
 export function nameMarkup(data) {
     let markup = "";
     markup = (
-        <>
+        <ItemGroup>
             {nameGivenMarkup(data)}
             {nameFamilyMarkup(data)}
             {nameCreditMarkup(data)}
             {nameOtherMarkup(data)}
-        </>
+        </ItemGroup>
     );
     return markup;
 }
