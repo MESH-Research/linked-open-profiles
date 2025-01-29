@@ -128,8 +128,10 @@ export default function Edit({ attributes, setAttributes }) {
                         <Card>
                             <CardBody>
                                 <p>
-                                    An error occurred while fetching the data
-                                    from ORCID
+                                    {__(
+                                        "An error occurred while fetching the data from ORCID",
+                                        "orcid-data-block-2",
+                                    )}
                                 </p>
                             </CardBody>
                         </Card>
@@ -143,7 +145,9 @@ export default function Edit({ attributes, setAttributes }) {
                     <div role="alert">
                         <Card>
                             <CardBody isShady={true}>
-                                <p>Please provide your ORCID iD</p>
+                                <p>
+                                    {__("Please provide an ORCID iD", "orcid-data-block-2")}
+                                </p>
                             </CardBody>
                         </Card>
                     </div>

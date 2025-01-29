@@ -1,0 +1,174 @@
+# Copyright (C) 2025 Grant Eben
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: ORCID Data Block 2 0.2.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/orcid-data-2\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-01-27T20:55:02+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: orcid-data-block-2\n"
+
+#. Plugin Name of the plugin
+#: orcid-data-block-2.php
+msgid "ORCID Data Block 2"
+msgstr ""
+
+#. Description of the plugin
+#: orcid-data-block-2.php
+msgid "Display public profile data from multiple ORCID profiles"
+msgstr ""
+
+#. Author of the plugin
+#: orcid-data-block-2.php
+msgid "Grant Eben"
+msgstr ""
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/markupfunctions.js:211
+msgid "Given Name"
+msgstr ""
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/markupfunctions.js:224
+msgid "Family Name"
+msgstr ""
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/markupfunctions.js:237
+msgid "Credit Name"
+msgstr ""
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/markupfunctions.js:250
+msgid "Other Names"
+msgstr ""
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/markupfunctions.js:301
+msgid "Websites & social links"
+msgstr ""
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:147
+msgid "Biography"
+msgstr ""
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:156
+msgid "Distinctions"
+msgstr ""
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:165
+msgid "Education"
+msgstr ""
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:174
+msgid "Employment"
+msgstr ""
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:183
+msgid "Fundings"
+msgstr ""
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:192
+msgid "Invited Positions"
+msgstr ""
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:201
+msgid "Memberships"
+msgstr ""
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:210
+msgid "Peer Reviews"
+msgstr ""
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:219
+msgid "Qualifications"
+msgstr ""
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:236
+msgid "Services"
+msgstr ""
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:244
+msgid "Works"
+msgstr ""
+
+#: build/index.js:1
+#: src/components/DataBlockInspectorControls.js:107
+msgid "Customize Items"
+msgstr ""
+
+#: build/index.js:1
+#: src/components/DataBlockInspectorControls.js:180
+msgid "ORCID iD"
+msgstr ""
+
+#: build/index.js:1
+#: src/components/DataBlockInspectorControls.js:209
+msgid "Please provide a valid ORCID iD."
+msgstr ""
+
+#: build/index.js:1
+#: src/components/DataBlockInspectorControls.js:229
+msgid "Sections"
+msgstr ""
+
+#: build/index.js:1
+#: src/edit.js:131
+msgid "An error occurred while fetching the data from ORCID"
+msgstr ""
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/edit.js:149
+#: src/view.js:111
+msgid "Please provide an ORCID iD"
+msgstr ""
+
+#: src/components/DataBlockInspectorControls.js:190
+msgid "Set"
+msgstr ""
+
+#: build/block.json
+#: src/block.json
+msgctxt "block title"
+msgid "ORCID Data Block 2"
+msgstr ""
+
+#: build/block.json
+#: src/block.json
+msgctxt "block description"
+msgid "Display public profile data from multiple ORCID profiles"
+msgstr ""

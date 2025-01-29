@@ -1,8 +1,8 @@
 {
-	"name": "orcid-data-2",
-	"version": "0.1.0",
-	"description": "Example block scaffolded with Create Block tool.",
-	"author": "The WordPress Contributors",
+	"name": "orcid-data-block-2",
+	"version": "0.2.0",
+	"description": "Display public profile data from multiple ORCID profiles",
+	"author": "Grant Eben",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
 	"scripts": {

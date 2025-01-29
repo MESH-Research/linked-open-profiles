@@ -1,3 +1,4 @@
+import { __ } from "@wordpress/i18n";
 import {
     __experimentalItemGroup as ItemGroup,
     __experimentalItem as Item,
@@ -207,7 +208,7 @@ function nameGivenMarkup(data) {
     if (data?.given_names) {
         markup = (
             <Item>
-                <strong>Given Name</strong>
+                <strong>{__("Given Name", "orcid-data-block-2")}</strong>
                 <br />
                 <span>{data.given_names}</span>
             </Item>
@@ -220,7 +221,7 @@ function nameFamilyMarkup(data) {
     if (data?.family_name) {
         markup = (
             <Item>
-                <strong>Family Name</strong>
+                <strong>{__("Family Name", "orcid-data-block-2")}</strong>
                 <br />
                 <span>{data.family_name}</span>
             </Item>
@@ -233,7 +234,7 @@ function nameCreditMarkup(data) {
     if (data?.credit_name) {
         markup = (
             <Item>
-                <strong>Credit Name</strong>
+                <strong>{__("Credit Name", "orcid-data-block-2")}</strong>
                 <br />
                 <span>{data.credit_name}</span>
             </Item>
@@ -246,7 +247,7 @@ function nameOtherMarkup(data) {
     if (data?.other_names.length > 0) {
         markup = (
             <Item>
-                <strong>Other Names</strong>
+                <strong>{__("Other Names", "orcid-data-block-2")}</strong>
                 <br />
                 <ItemGroup>
                     {data.other_names.map((name) => (
@@ -297,7 +298,7 @@ export function researcherUrlMarkup(data) {
         markup = (
             <>
                 <br />
-                <strong>Websites & social links</strong>
+                <strong>{__("Websites & social links", "orcid-data-block-2")}</strong>
                 <ItemGroup>
                     {data.urls.map((url) => (
                         <Item>

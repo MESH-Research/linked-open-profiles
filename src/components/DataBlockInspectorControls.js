@@ -24,7 +24,14 @@ function toggleSection(section, value, setAttributes) {
     setAttributes({ [`${sections[section].id}_show`]: value });
 }
 
-function modifyExcludedItems(section, sections, item, attributes, setAttributes, value) {
+function modifyExcludedItems(
+    section,
+    sections,
+    item,
+    attributes,
+    setAttributes,
+    value,
+) {
     let excluded = { ...excludedItems(section, sections, attributes) };
     excluded[item.path] = value;
     setAttributes({ [`${sections[section].id}_excluded`]: excluded });
@@ -44,7 +51,14 @@ function getItemCheckboxes(section, items, attributes, setAttributes) {
             className="odb-medium-margin-top"
             label={item.display_label}
             onChange={(value) => {
-                modifyExcludedItems(section, sections, item, attributes, setAttributes, value);
+                modifyExcludedItems(
+                    section,
+                    sections,
+                    item,
+                    attributes,
+                    setAttributes,
+                    value,
+                );
             }}
         />
     ));
@@ -54,13 +68,22 @@ function getSectionTitle(section, sections, items) {
     if (!section || items[section] === undefined) {
         return "";
     }
+    if (sections[section].term === "Biography") {
+        return __(sections[section].term, "orcid-data-block-2");
+    }
     return __(
         `${sections[section].term} (${items[section].length})`,
-        "orcid-data-2",
+        "orcid-data-block-2",
     );
 }
 
-function getSectionControls(section, sections, items, attributes, setAttributes) {
+function getSectionControls(
+    section,
+    sections,
+    items,
+    attributes,
+    setAttributes,
+) {
     const show = isSectionShown(section, sections, attributes);
     let sectionControls = (
         <div style={{ opacity: hasNoItems(section, items) ? 0.5 : 1 }}>
@@ -68,7 +91,10 @@ function getSectionControls(section, sections, items, attributes, setAttributes)
                 __nextHasNoMarginBottom={true}
                 checked={show}
                 className="odb-medium-margin-top"
-                label={__(`Include ${sections[section].term}`, "orcid-data-2")}
+                label={__(
+                    `Include ${sections[section].term}`,
+                    "orcid-data-block-2",
+                )}
                 onChange={(value) => {
                     toggleSection(section, value, setAttributes);
                 }}
@@ -76,8 +102,16 @@ function getSectionControls(section, sections, items, attributes, setAttributes)
             {show &&
                 canExclude(section, sections) &&
                 !hasNoItems(section, items) && (
-                    <PanelBody initialOpen={false} title="Customize Items">
-                        {getItemCheckboxes(section, items, attributes, setAttributes)}
+                    <PanelBody
+                        initialOpen={false}
+                        title={__("Customize Items", "orcid-data-block-2")}
+                    >
+                        {getItemCheckboxes(
+                            section,
+                            items,
+                            attributes,
+                            setAttributes,
+                        )}
                     </PanelBody>
                 )}
         </div>
@@ -143,7 +177,7 @@ const DataBlockInspectorControls = ({
                     <TextControl
                         __nextHasNoMarginBottom={true}
                         className="odb-small-margin-bottom"
-                        label={__("ORCID iD", "orcid-data-2")}
+                        label={__("ORCID iD", "orcid-data-block-2")}
                         value={orcid_id}
                         onChange={(value) => {
                             setInvalidId(false);
@@ -153,7 +187,7 @@ const DataBlockInspectorControls = ({
                     <Button
                         variant="primary"
                         onClick={() => buttonHandler()}
-                        text="Set"
+                        text={__("Set", "orcid-data-block-2")}
                     />
                     <div role="alert" aria-atomic="true">
                         {invalidId && (
@@ -171,7 +205,12 @@ const DataBlockInspectorControls = ({
                                 >
                                     ❕
                                 </i>{" "}
-                                <span>Please provide a valid ORCID iD.</span>
+                                <span>
+                                    {__(
+                                        "Please provide a valid ORCID iD.",
+                                        "orcid-data-block-2",
+                                    )}
+                                </span>
                             </p>
                         )}
                     </div>
@@ -187,7 +226,7 @@ const DataBlockInspectorControls = ({
                         starting_heading_level={starting_heading_level}
                         setAttributes={setAttributes}
                     />
-                    <Panel header="Sections">
+                    <Panel header={__("Sections", "orcid-data-block-2")}>
                         {Object.keys(sections).map(function (section) {
                             return (
                                 <PanelBody
@@ -232,7 +271,7 @@ const DataBlockInspectorControls = ({
                                     max={6}
                                     label={__(
                                         "Starting Heading Level",
-                                        "orcid-data-2",
+                                        "orcid-data-block-2",
                                     )}
                                     value={starting_heading_level}
                                     onChange={(value) => {
@@ -242,7 +281,7 @@ const DataBlockInspectorControls = ({
                                 <Button
                                     variant="primary"
                                     onClick={() => buttonHandler()}
-                                    text="Set"
+                                    text={__("Set", "orcid-data-block-2")}
                                 />
                             </PanelBody>
                         </Panel>

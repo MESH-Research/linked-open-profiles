@@ -84,26 +84,6 @@ function processRecordDistinction(record) {
     };
 }
 
-function processRecordWork(record) {
-    let data = record?.[sections.works.summary_name][0];
-    if (!data) {
-        return {};
-    }
-    return {
-        display_label: data.title.title.value,
-        journal_title: data["journal-title"]?.value,
-        date: data["publication-date"],
-        doi_url:
-            data["external-ids"]?.["external-id"][0]?.["external-id-url"]
-                ?.value,
-        path: data.path,
-        source: data.source["source-name"]?.value,
-        subtitle: data.title.subtitle?.value,
-        title: data.title.title.value,
-        type: data?.type,
-    };
-}
-
 function processRecordEducation(record) {
     let data = record?.summaries[0]?.[sections.educations.summary_name];
     if (!data) {
@@ -172,6 +152,23 @@ function processRecordInvitedPositions(record) {
     };
 }
 
+function processRecordMemberships(record) {
+    let data = record?.summaries[0]?.[sections.memberships.summary_name];
+    if (!data) {
+        return {};
+    }
+    return {
+        display_label: data["role-title"],
+        path: data.path,
+        department: data["department-name"],
+        end_date: data["end-date"],
+        address: data.organization.address,
+        organization: data.organization.name,
+        role: data["role-title"],
+        start_date: data["start-date"],
+    };
+}
+
 function processRecordPeerReviews(record) {
     let data =
         record?.["peer-review-group"][0][
@@ -210,8 +207,8 @@ function processRecordQualifications(record) {
     };
 }
 
-function processRecordMemberships(record) {
-    let data = record?.summaries[0]?.[sections.memberships.summary_name];
+function processRecordService(record) {
+    let data = record?.summaries[0]?.[sections.services.summary_name];
     if (!data) {
         return {};
     }
@@ -227,20 +224,23 @@ function processRecordMemberships(record) {
     };
 }
 
-function processRecordService(record) {
-    let data = record?.summaries[0]?.[sections.services.summary_name];
+function processRecordWork(record) {
+    let data = record?.[sections.works.summary_name][0];
     if (!data) {
         return {};
     }
     return {
-        display_label: data["role-title"],
+        display_label: data.title.title.value,
+        journal_title: data["journal-title"]?.value,
+        date: data["publication-date"],
+        doi_url:
+            data["external-ids"]?.["external-id"][0]?.["external-id-url"]
+                ?.value,
         path: data.path,
-        department: data["department-name"],
-        end_date: data["end-date"],
-        address: data.organization.address,
-        organization: data.organization.name,
-        role: data["role-title"],
-        start_date: data["start-date"],
+        source: data.source["source-name"]?.value,
+        subtitle: data.title.subtitle?.value,
+        title: data.title.title.value,
+        type: data?.type,
     };
 }
 
