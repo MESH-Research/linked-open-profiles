@@ -1,6 +1,6 @@
 {
 	"name": "orcid-data-block-2",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "Display public profile data from multiple ORCID profiles",
 	"author": "Grant Eben",
 	"license": "GPL-2.0-or-later",

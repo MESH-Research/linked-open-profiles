@@ -165,6 +165,7 @@ export default function Edit({ attributes, setAttributes }) {
                                     !hasNoItems(section, items) && (
                                         <section
                                             style={{ marginBottom: "2rem" }}
+                                            className={`odb2-section odb2-section-${section}`}
                                             key={section}
                                         >
                                             <Heading
