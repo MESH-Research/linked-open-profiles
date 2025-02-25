@@ -1,9 +1,7 @@
 # ORCID Data Block 2
 
 This is a WordPress plugin for displaying data from the public scope of multiple ORCID profiles on pages, posts, and sites in WordPress. It's a successor to
-ORCID Data Block. It does not require an ORCID account. The only requirement is a [valid 16-digit ORCID iD](https://support.orcid.org/hc/en-us/articles/360006897674-Structure-of-the-ORCID-Identifier).
-
-This plugin is a successor to [ORCID Data Block](https://github.com/MESH-Research/orcid-data-block).
+[ORCID Data Block](https://github.com/MESH-Research/orcid-data-block). It does not require an ORCID account. The only requirement is a [valid 16-digit ORCID iD](https://support.orcid.org/hc/en-us/articles/360006897674-Structure-of-the-ORCID-Identifier).
 
 This work is funded by the [ORCID Global Participation Fund](https://info.orcid.org/global-participation-fund-announces-fourth-round-of-awardees/).
 
