@@ -40,6 +40,9 @@ import {
 import LoadingSpinner from "./components/LoadingSpinner.js";
 import DataBlockInspectorControls from "./components/DataBlockInspectorControls.js";
 
+import apiFetch from "@wordpress/api-fetch";
+import { addQueryArgs } from "@wordpress/url";
+
 /**
  * The edit function describes the structure of your block in the context of the
  * editor. This represents what the editor will render when the block is used.
@@ -66,24 +69,23 @@ export default function Edit({ attributes, setAttributes }) {
     }, []);
 
     async function fetchData() {
-        try {
-            setFetchError(false);
-            setDataFetched(false);
-            const response = await fetch(
-                `/wp-json/custom/v1/orcid-proxy?orcid_id=${orcid_id}`,
-            );
-            if (!response.ok) {
-                throw new Error("Network response was not ok");
-            }
-            const result = await response.json();
-            setItems(getProcessedData(result));
-            setDataFetched(true);
-        } catch (error) {
-            setFetchError(true);
-            console.error("Error fetching data:", error);
-        } finally {
-            setLoading(false);
-        }
+        setFetchError(false);
+        setDataFetched(false);
+        const queryParams = { orcid_id: `${orcid_id}` };
+        apiFetch({
+            path: addQueryArgs("/custom/v1/orcid-proxy", queryParams),
+        })
+            .then((data) => {
+                setItems(getProcessedData(data));
+                setDataFetched(true);
+            })
+            .catch((error) => {
+                setFetchError(true);
+                console.error(error);
+            })
+            .finally(() => {
+                setLoading(false);
+            });
     }
 
     const verifyOrcidId = (orcidId) => {
@@ -146,7 +148,10 @@ export default function Edit({ attributes, setAttributes }) {
                         <Card>
                             <CardBody isShady={true}>
                                 <p>
-                                    {__("Please provide an ORCID iD", "orcid-data-block-2")}
+                                    {__(
+                                        "Please provide an ORCID iD",
+                                        "orcid-data-block-2",
+                                    )}
                                 </p>
                             </CardBody>
                         </Card>
