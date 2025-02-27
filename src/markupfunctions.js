@@ -50,8 +50,10 @@ export function bioMarkup(data) {
     if (data?.biography) {
         markup = (
             <>
+                <br/>
+                <strong>{__("Biographical Information", "orcid-data-block-2")}</strong>
                 <br />
-                <span>{data.biography}</span> <br />
+                <div style={{paddingLeft:'12px'}}>{data.biography}</div> <br />
             </>
         );
     }
