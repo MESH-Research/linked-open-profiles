@@ -91,7 +91,10 @@ function getSectionControls(
                 __nextHasNoMarginBottom={true}
                 checked={show}
                 className="odb-medium-margin-top"
-                label={__(`Include ${sections[section].term}`, "orcid-data-block-2")}
+                label={__(
+                    `Include ${sections[section].term}`,
+                    "orcid-data-block-2",
+                )}
                 onChange={(value) => {
                     toggleSection(section, value, setAttributes);
                 }}
@@ -184,7 +187,7 @@ const DataBlockInspectorControls = ({
                     <Button
                         variant="primary"
                         onClick={() => buttonHandler()}
-                        text="Set"
+                        text={__("Apply", "orcid-data-block-2")}
                     />
                     <div role="alert" aria-atomic="true">
                         {invalidId && (
@@ -223,7 +226,7 @@ const DataBlockInspectorControls = ({
                         starting_heading_level={starting_heading_level}
                         setAttributes={setAttributes}
                     />
-                    <Panel header={__("Sections","orcid-data-block-2")}>
+                    <Panel header={__("Sections", "orcid-data-block-2")}>
                         {Object.keys(sections).map(function (section) {
                             return (
                                 <PanelBody
@@ -278,7 +281,7 @@ const DataBlockInspectorControls = ({
                                 <Button
                                     variant="primary"
                                     onClick={() => buttonHandler()}
-                                    text="Set"
+                                    text={__("Set", "orcid-data-block-2")}
                                 />
                             </PanelBody>
                         </Panel>
