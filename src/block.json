@@ -1,8 +1,8 @@
 {
     "$schema": "https://schemas.wp.org/trunk/block.json",
     "apiVersion": 3,
-    "version": "0.2.2",
     "name": "mesh-research/orcid-data-block-2",
+    "version": "0.2.3",
     "title": "ORCID Data Block 2",
     "category": "widgets",
     "icon": "",
