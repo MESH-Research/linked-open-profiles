@@ -3,7 +3,7 @@
  * Plugin Name:       ORCID Data Block 2
  * Plugin URI:        https://github.com/MESH-Research/orcid-data-block-2
  * Description:       Display public profile data from multiple ORCID profiles
- * Requires at least: 6.6
+ * Requires at least: 6.7
  * Requires PHP:      7.2
  * Version:           0.2.3
  * Author:            ebengran
