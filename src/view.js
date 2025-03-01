@@ -108,7 +108,7 @@ function OrcidDataBlock2({ attributes }) {
                     }}
                     role="alert"
                 >
-                    {__("Please provide an ORCID iD", "orcid-data-block-2")}
+                    {__("Please provide an ORCID iD", "mesh-research")}
                 </p>
             ) : (
                 <>

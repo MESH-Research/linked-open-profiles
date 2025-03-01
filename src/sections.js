@@ -144,7 +144,7 @@ const work = function (data) {
 
 export const sections = {
     bio: {
-        term: __("Biography", "orcid-data-block-2"),
+        term: __("Biography", "mesh-research"),
         id: "bio",
         format: "person",
         summary_name: null,
@@ -153,7 +153,7 @@ export const sections = {
         model: bio,
     },
     distinctions: {
-        term: __("Distinctions", "orcid-data-block-2"),
+        term: __("Distinctions", "mesh-research"),
         id: "distinctions",
         format: "affiliation-group",
         summary_name: "distinction-summary",
@@ -162,7 +162,7 @@ export const sections = {
         model: distinction,
     },
     educations: {
-        term: __("Education", "orcid-data-block-2"),
+        term: __("Education", "mesh-research"),
         id: "educations",
         format: "affiliation-group",
         summary_name: "education-summary",
@@ -171,7 +171,7 @@ export const sections = {
         model: education,
     },
     employments: {
-        term: __("Employment", "orcid-data-block-2"),
+        term: __("Employment", "mesh-research"),
         id: "employments",
         format: "affiliation-group",
         summary_name: "employment-summary",
@@ -180,7 +180,7 @@ export const sections = {
         model: employment,
     },
     fundings: {
-        term: __("Fundings", "orcid-data-block-2"),
+        term: __("Fundings", "mesh-research"),
         id: "fundings",
         format: "group",
         summary_name: "funding-summary",
@@ -189,7 +189,7 @@ export const sections = {
         model: funding,
     },
     "invited-positions": {
-        term: __("Invited Positions", "orcid-data-block-2"),
+        term: __("Invited Positions", "mesh-research"),
         id: "invited-positions",
         format: "affiliation-group",
         summary_name: "invited-position-summary",
@@ -198,7 +198,7 @@ export const sections = {
         model: invitedPosition,
     },
     memberships: {
-        term: __("Memberships", "orcid-data-block-2"),
+        term: __("Memberships", "mesh-research"),
         id: "memberships",
         format: "affiliation-group",
         summary_name: "membership-summary",
@@ -207,7 +207,7 @@ export const sections = {
         model: membership,
     },
     "peer-reviews": {
-        term: __("Peer Reviews", "orcid-data-block-2"),
+        term: __("Peer Reviews", "mesh-research"),
         id: "peer-reviews",
         format: "group",
         summary_name: "peer-review-summary",
@@ -216,7 +216,7 @@ export const sections = {
         model: peerReview,
     },
     qualifications: {
-        term: __("Qualifications", "orcid-data-block-2"),
+        term: __("Qualifications", "mesh-research"),
         id: "qualifications",
         format: "affiliation-group",
         summary_name: "qualification-summary",
@@ -233,7 +233,7 @@ export const sections = {
     //  can_exclude: true,
     // },
     services: {
-        term: __("Services", "orcid-data-block-2"),
+        term: __("Services", "mesh-research"),
         id: "services",
         format: "affiliation-group",
         summary_name: "service-summary",
@@ -241,7 +241,7 @@ export const sections = {
         model: service,
     },
     works: {
-        term: __("Works", "orcid-data-block-2"),
+        term: __("Works", "mesh-research"),
         id: "works",
         format: "group",
         summary_name: "work-summary",
