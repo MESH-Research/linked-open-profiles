@@ -209,9 +209,11 @@ ORCID, it will not appear for that record in the plugin.
 
 ### Contributing
 
-1. Submit changes by opening pull requests on the Pull requests page:
+1. Fork a new branch from the `main` branch.
+2. Make changes to your forked branch.
+3. Submit changes by opening a pull request on the Pull requests page:
    - <https://github.com/MESH-Research/orcid-data-block-2/pulls>
-2. Include a description of your changes in the pull request comment.
+4. Include a description of your changes in the pull request comment.
 
 ### Code of Conduct
 
