@@ -132,7 +132,7 @@ export default function Edit({ attributes, setAttributes }) {
                                 <p>
                                     {__(
                                         "An error occurred while fetching the data from ORCID",
-                                        "mesh-research",
+                                        "orcid-data-block-2",
                                     )}
                                 </p>
                             </CardBody>
@@ -150,7 +150,7 @@ export default function Edit({ attributes, setAttributes }) {
                                 <p>
                                     {__(
                                         "Please provide an ORCID iD",
-                                        "mesh-research",
+                                        "orcid-data-block-2",
                                     )}
                                 </p>
                             </CardBody>

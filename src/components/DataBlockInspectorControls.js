@@ -69,11 +69,11 @@ function getSectionTitle(section, sections, items) {
         return "";
     }
     if (sections[section].term === "Biography") {
-        return __(sections[section].term, "mesh-research");
+        return __(sections[section].term, "orcid-data-block-2");
     }
     return __(
         `${sections[section].term} (${items[section].length})`,
-        "mesh-research",
+        "orcid-data-block-2",
     );
 }
 
@@ -93,7 +93,7 @@ function getSectionControls(
                 className="odb-medium-margin-top"
                 label={__(
                     `Include ${sections[section].term}`,
-                    "mesh-research",
+                    "orcid-data-block-2",
                 )}
                 onChange={(value) => {
                     toggleSection(section, value, setAttributes);
@@ -104,7 +104,7 @@ function getSectionControls(
                 !hasNoItems(section, items) && (
                     <PanelBody
                         initialOpen={false}
-                        title={__("Customize Items", "mesh-research")}
+                        title={__("Customize Items", "orcid-data-block-2")}
                     >
                         {getItemCheckboxes(
                             section,
@@ -177,7 +177,7 @@ const DataBlockInspectorControls = ({
                     <TextControl
                         __nextHasNoMarginBottom={true}
                         className="odb-small-margin-bottom"
-                        label={__("ORCID iD", "mesh-research")}
+                        label={__("ORCID iD", "orcid-data-block-2")}
                         value={orcid_id}
                         onChange={(value) => {
                             setInvalidId(false);
@@ -187,7 +187,7 @@ const DataBlockInspectorControls = ({
                     <Button
                         variant="primary"
                         onClick={() => buttonHandler()}
-                        text={__("Apply", "mesh-research")}
+                        text={__("Apply", "orcid-data-block-2")}
                     />
                     <div role="alert" aria-atomic="true">
                         {invalidId && (
@@ -208,7 +208,7 @@ const DataBlockInspectorControls = ({
                                 <span>
                                     {__(
                                         "Please provide a valid ORCID iD.",
-                                        "mesh-research",
+                                        "orcid-data-block-2",
                                     )}
                                 </span>
                             </p>
@@ -226,7 +226,7 @@ const DataBlockInspectorControls = ({
                         starting_heading_level={starting_heading_level}
                         setAttributes={setAttributes}
                     />
-                    <Panel header={__("Sections", "mesh-research")}>
+                    <Panel header={__("Sections", "orcid-data-block-2")}>
                         {Object.keys(sections).map(function (section) {
                             return (
                                 <PanelBody
@@ -271,7 +271,7 @@ const DataBlockInspectorControls = ({
                                     max={6}
                                     label={__(
                                         "Starting Heading Level",
-                                        "mesh-research",
+                                        "orcid-data-block-2",
                                     )}
                                     value={starting_heading_level}
                                     onChange={(value) => {
@@ -281,7 +281,7 @@ const DataBlockInspectorControls = ({
                                 <Button
                                     variant="primary"
                                     onClick={() => buttonHandler()}
-                                    text={__("Set", "mesh-research")}
+                                    text={__("Set", "orcid-data-block-2")}
                                 />
                             </PanelBody>
                         </Panel>

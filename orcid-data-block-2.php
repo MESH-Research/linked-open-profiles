@@ -9,7 +9,7 @@
  * Author:            ebengran
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       mesh-research
+ * Text Domain:       orcid-data-block-2
  *
  * @package CreateBlock
  */
@@ -34,9 +34,10 @@ require_once plugin_dir_path(__FILE__) . 'orcid_api.php';
         'orcid-data-block-2-script',
         plugins_url( 'build/index.js', __FILE__ ),
         array( 'wp-blocks', 'wp-element', 'wp-editor', 'wp-i18n' ),
-        filemtime( plugin_dir_path( __FILE__ ) . 'build/index.js' )
+        filemtime( plugin_dir_path( __FILE__ ) . 'build/index.js' ),
+        array( 'in_footer' => false )
     );
-    wp_set_script_translations( 'orcid-data-block-2-script', 'mesh-research', plugin_dir_path( __FILE__ ) . 'languages' );
+    wp_set_script_translations( 'orcid-data-block-2-script', 'orcid-data-block-2', plugin_dir_path( __FILE__ ) . 'languages' );
 	register_block_type( __DIR__ . '/build' );
 }
 add_action( 'init', 'create_block_orcid_data_block_2_block_init' );

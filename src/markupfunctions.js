@@ -51,7 +51,7 @@ export function bioMarkup(data) {
         markup = (
             <>
                 <br/>
-                <strong>{__("Biographical Information", "mesh-research")}</strong>
+                <strong>{__("Biographical Information", "orcid-data-block-2")}</strong>
                 <br />
                 <div style={{paddingLeft:'12px'}}>{data.biography}</div> <br />
             </>
@@ -210,7 +210,7 @@ function nameGivenMarkup(data) {
     if (data?.given_names) {
         markup = (
             <Item>
-                <strong>{__("Given Name", "mesh-research")}</strong>
+                <strong>{__("Given Name", "orcid-data-block-2")}</strong>
                 <br />
                 <span>{data.given_names}</span>
             </Item>
@@ -223,7 +223,7 @@ function nameFamilyMarkup(data) {
     if (data?.family_name) {
         markup = (
             <Item>
-                <strong>{__("Family Name", "mesh-research")}</strong>
+                <strong>{__("Family Name", "orcid-data-block-2")}</strong>
                 <br />
                 <span>{data.family_name}</span>
             </Item>
@@ -236,7 +236,7 @@ function nameCreditMarkup(data) {
     if (data?.credit_name) {
         markup = (
             <Item>
-                <strong>{__("Credit Name", "mesh-research")}</strong>
+                <strong>{__("Credit Name", "orcid-data-block-2")}</strong>
                 <br />
                 <span>{data.credit_name}</span>
             </Item>
@@ -249,7 +249,7 @@ function nameOtherMarkup(data) {
     if (data?.other_names.length > 0) {
         markup = (
             <Item>
-                <strong>{__("Other Names", "mesh-research")}</strong>
+                <strong>{__("Other Names", "orcid-data-block-2")}</strong>
                 <br />
                 <ItemGroup>
                     {data.other_names.map((name) => (
@@ -300,7 +300,7 @@ export function researcherUrlMarkup(data) {
         markup = (
             <>
                 <br />
-                <strong>{__("Websites & social links", "mesh-research")}</strong>
+                <strong>{__("Websites & social links", "orcid-data-block-2")}</strong>
                 <ItemGroup>
                     {data.urls.map((url) => (
                         <Item>
