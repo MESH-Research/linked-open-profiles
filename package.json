@@ -1,6 +1,6 @@
 {
 	"name": "linked-open-profiles",
-	"version": "0.2.3",
+	"version": "0.3.0",
 	"description": "Display public profile data from multiple ORCID profiles",
 	"author": "ebengran",
 	"license": "GPL-2.0-or-later",
