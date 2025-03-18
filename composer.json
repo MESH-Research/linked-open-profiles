@@ -1,12 +1,12 @@
 {
-    "name": "mesh-research/orcid-data-block-2",
+    "name": "mesh-research/linked-open-profiles",
     "description": "WordPress plugin for displaying data from the public scope of multiple ORCID profiles on pages, posts, and sites.",
     "type": "wordpress-plugin",
     "license": "MIT",
     "authors": [
         {
             "name": "Grant Eben",
-            "email": "gmeben@gmail.com"
+            "email": "ebengran@msu.edu"
         }
     ],
     "require": {}

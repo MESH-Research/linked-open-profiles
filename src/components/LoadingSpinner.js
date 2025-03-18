@@ -5,7 +5,7 @@ export default function LoadingSpinner() {
         <Card>
             <CardBody>
                 <p>
-                    <Spinner /> <span>{__("Loading ORCID Data","orcid-data-block-2")}</span>
+                    <Spinner /> <span>{__("Loading ORCID Data","linked-open-profiles")}</span>
                 </p>
             </CardBody>
         </Card>

@@ -69,11 +69,11 @@ function getSectionTitle(section, sections, items) {
         return "";
     }
     if (sections[section].term === "Biography") {
-        return __(sections[section].term, "orcid-data-block-2");
+        return __(sections[section].term, "linked-open-profiles");
     }
     return __(
         `${sections[section].term} (${items[section].length})`,
-        "orcid-data-block-2",
+        "linked-open-profiles",
     );
 }
 
@@ -93,7 +93,7 @@ function getSectionControls(
                 className="odb-medium-margin-top"
                 label={__(
                     `Include ${sections[section].term}`,
-                    "orcid-data-block-2",
+                    "linked-open-profiles",
                 )}
                 onChange={(value) => {
                     toggleSection(section, value, setAttributes);
@@ -104,7 +104,7 @@ function getSectionControls(
                 !hasNoItems(section, items) && (
                     <PanelBody
                         initialOpen={false}
-                        title={__("Customize Items", "orcid-data-block-2")}
+                        title={__("Customize Items", "linked-open-profiles")}
                     >
                         {getItemCheckboxes(
                             section,
@@ -177,7 +177,7 @@ const DataBlockInspectorControls = ({
                     <TextControl
                         __nextHasNoMarginBottom={true}
                         className="odb-small-margin-bottom"
-                        label={__("ORCID iD", "orcid-data-block-2")}
+                        label={__("ORCID iD", "linked-open-profiles")}
                         value={orcid_id}
                         onChange={(value) => {
                             setInvalidId(false);
@@ -187,7 +187,7 @@ const DataBlockInspectorControls = ({
                     <Button
                         variant="primary"
                         onClick={() => buttonHandler()}
-                        text={__("Apply", "orcid-data-block-2")}
+                        text={__("Apply", "linked-open-profiles")}
                     />
                     <div role="alert" aria-atomic="true">
                         {invalidId && (
@@ -208,7 +208,7 @@ const DataBlockInspectorControls = ({
                                 <span>
                                     {__(
                                         "Please provide a valid ORCID iD.",
-                                        "orcid-data-block-2",
+                                        "linked-open-profiles",
                                     )}
                                 </span>
                             </p>
@@ -226,7 +226,7 @@ const DataBlockInspectorControls = ({
                         starting_heading_level={starting_heading_level}
                         setAttributes={setAttributes}
                     />
-                    <Panel header={__("Sections", "orcid-data-block-2")}>
+                    <Panel header={__("Sections", "linked-open-profiles")}>
                         {Object.keys(sections).map(function (section) {
                             return (
                                 <PanelBody
@@ -271,7 +271,7 @@ const DataBlockInspectorControls = ({
                                     max={6}
                                     label={__(
                                         "Starting Heading Level",
-                                        "orcid-data-block-2",
+                                        "linked-open-profiles",
                                     )}
                                     value={starting_heading_level}
                                     onChange={(value) => {
@@ -281,7 +281,7 @@ const DataBlockInspectorControls = ({
                                 <Button
                                     variant="primary"
                                     onClick={() => buttonHandler()}
-                                    text={__("Set", "orcid-data-block-2")}
+                                    text={__("Set", "linked-open-profiles")}
                                 />
                             </PanelBody>
                         </Panel>

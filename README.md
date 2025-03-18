@@ -1,25 +1,29 @@
-# ORCID Data Block 2
+# Linked Open Profiles
 
 This is a WordPress plugin for displaying data from the public scope of multiple
-ORCID profiles on pages, posts, and sites. It's a successor to [ORCID Data
-Block][orcid_data_block]. It does not require registering or authenticating an
-ORCID account. The only requirement is a [valid 16-digit ORCID iD][orcid_ids].
+ORCID profiles on pages, posts, and sites. It's a successor to [Linked Open
+Profiles][linked_open_profiles]. It does not require registering or
+authenticating an ORCID account. The only requirement is a [valid 16-digit ORCID
+iD][orcid_ids].
 
-[orcid_data_block]: <https://github.com/MESH-Research/orcid-data-block>
+[linked_open_profiles]: <https://github.com/MESH-Research/linked-open-profiles>
 [orcid_ids]: https://support.orcid.org/hc/en-us/articles/360006897674-Structure-of-the-ORCID-Identifier
 
 This work is funded by the [ORCID Global Participation Fund][awardees].
 
 [awardees]: https://info.orcid.org/global-participation-fund-announces-fourth-round-of-awardees/
 
-![Screenshot of the plugin in use in a Gutenberg editor, featuring the Biography and Education sections excluded, the Employment section partially included, and the Works section fully included](screenshots/plugin.png)
+![Screenshot of the plugin in use in a Gutenberg editor, featuring the Biography
+and Education sections excluded, the Employment section partially included, and
+the Works section fully included](screenshots/plugin.png)
 
 ## Features
 
 - Provides a Gutenberg block in the WordPress block editor that allows users to
   - specify which sections are shown from their ORCID profiles
   - specify which items are shown within sections
-- Allows different ORCID profiles to be used in multiple blocks on the same post/page/site
+- Allows different ORCID profiles to be used in multiple blocks on the same
+  post/page/site
 - Info will remain automatically up-to-date with ORCID
 - All languages currently supported by ORCID will be supported (in progress)
 - Accessible to those with disabilities
@@ -169,7 +173,7 @@ ORCID, it will not appear for that record in the plugin.
 ## Installation
 
 1. Visit this plugin's Releases page on GitHub:
-    - <https://github.com/MESH-Research/orcid-data-block-2/releases>
+    - <https://github.com/MESH-Research/linked-open-profiles/releases>
 2. Download the zip file of the latest stable release.
 3. Visit the admin area of your WordPress installation.
 4. On the Plugins screen, click the "Add New Plugin" button.
@@ -184,7 +188,7 @@ ORCID, it will not appear for that record in the plugin.
 2. In a Gutenberg block editor, add a new block.
     - There are multiple ways to add blocks.
         - <https://wordpress.org/documentation/article/adding-a-new-block/>
-    - Search "ORCID Data Block 2" in the block browser and select it.
+    - Search "Linked Open Profiles" in the block browser and select it.
 3. Enter an ORCID iD in the plugin's inspector controls.
     - An ORCID iD can be found on a user's ORCID record page.
         - <https://support.orcid.org/hc/en-us/articles/360042767454-I-don-t-know-my-ORCID-ID>
@@ -214,7 +218,7 @@ ORCID, it will not appear for that record in the plugin.
 1. Fork a new branch from the `main` branch.
 2. Make changes to your forked branch.
 3. Submit changes by opening a pull request on the Pull requests page:
-   - <https://github.com/MESH-Research/orcid-data-block-2/pulls>
+   - <https://github.com/MESH-Research/linked-open-profiles/pulls>
 4. Include a description of your changes in the pull request comment.
 
 ### Code of Conduct

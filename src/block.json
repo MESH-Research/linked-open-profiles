@@ -1,9 +1,9 @@
 {
     "$schema": "https://schemas.wp.org/trunk/block.json",
     "apiVersion": 3,
-    "name": "mesh-research/orcid-data-block-2",
+    "name": "mesh-research/linked-open-profiles",
     "version": "0.2.3",
-    "title": "ORCID Data Block 2",
+    "title": "Linked Open Profiles",
     "category": "widgets",
     "icon": "",
     "description": "Display public profile data from multiple ORCID profiles",
@@ -122,7 +122,7 @@
             "blockGap": true
         }
     },
-    "textdomain": "orcid-data-block-2",
+    "textdomain": "linked-open-profiles",
     "editorScript": "file:./index.js",
     "editorStyle": "file:./index.css",
     "render": "file:./render.php",

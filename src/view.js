@@ -108,7 +108,7 @@ function OrcidDataBlock2({ attributes }) {
                     }}
                     role="alert"
                 >
-                    {__("Please provide an ORCID iD", "orcid-data-block-2")}
+                    {__("Please provide an ORCID iD", "linked-open-profiles")}
                 </p>
             ) : (
                 <>
@@ -119,7 +119,7 @@ function OrcidDataBlock2({ attributes }) {
                                 !hasNoItems(section, items) && (
                                     <section
                                         style={{ marginBottom: "2rem" }}
-                                        className={`odb2-section odb2-section-${section}`}
+                                        className={`lop-section lop-section-${section}`}
                                         key={section}
                                     >
                                         <Heading level={starting_heading_level}>
@@ -162,7 +162,7 @@ function OrcidDataBlock2({ attributes }) {
     );
 }
 window.addEventListener("DOMContentLoaded", () => {
-    const blocks = document.querySelectorAll(".orcid-data-block-2");
+    const blocks = document.querySelectorAll(".linked-open-profiles");
     blocks.forEach((block) => {
         const root = createRoot(block);
         const attributes = JSON.parse(block.getAttribute("data-attributes"));

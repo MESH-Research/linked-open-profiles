@@ -1,4 +1,4 @@
-=== ORCID Data Block 2 ===
+=== Linked Open Profiles ===
 Contributors: ebengran
 Tags: block, widget, orcid
 Requires at least: 6.7
@@ -17,7 +17,7 @@ ORCID profiles on pages, posts, and sites. It's a successor to [ORCID Data
 Block][orcid_data_block]. It does not require registering or authenticating an
 ORCID account. The only requirement is a [valid 16-digit ORCID iD][orcid_ids].
 
-[orcid_data_block]: <https://github.com/MESH-Research/orcid-data-block>
+[orcid_data_block]: <https://github.com/MESH-Research/linked-open-profiles>
 [orcid_ids]: https://support.orcid.org/hc/en-us/articles/360006897674-Structure-of-the-ORCID-Identifier
 
 This work is funded by the [ORCID Global Participation Fund][awardees].
@@ -41,7 +41,7 @@ This work is funded by the [ORCID Global Participation Fund][awardees].
 2. In a Gutenberg block editor, add a new block.
     - There are multiple ways to add blocks.
         - <https://wordpress.org/documentation/article/adding-a-new-block/>
-    - Search "ORCID Data Block 2" in the block browser and select it.
+    - Search "Linked Open Profiles" in the block browser and select it.
 3. Enter an ORCID iD in the plugin's inspector controls.
     - An ORCID iD can be found on a user's ORCID record page.
         - <https://support.orcid.org/hc/en-us/articles/360042767454-I-don-t-know-my-ORCID-ID>
@@ -56,17 +56,17 @@ This work is funded by the [ORCID Global Participation Fund][awardees].
 Send an email for general support: <mesh@msu.edu>
 
 Submit tech issues on GitHub:
-<https://github.com/MESH-Research/orcid-data-block-2/issues>
+<https://github.com/MESH-Research/linked-open-profiles/issues>
 
 
 == Development ==
 
 To contribute to the development of this plugin, visit the GitHub repository:
-<https://github.com/MESH-Research/orcid-data-block-2>
+<https://github.com/MESH-Research/linked-open-profiles>
 
 
 == Changelog ==
 
 Refer to the Releases page on this plugin's GitHub repository:
-<https://github.com/MESH-Research/orcid-data-block-2/releases>
+<https://github.com/MESH-Research/linked-open-profiles/releases>
 

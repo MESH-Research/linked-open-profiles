@@ -132,7 +132,7 @@ export default function Edit({ attributes, setAttributes }) {
                                 <p>
                                     {__(
                                         "An error occurred while fetching the data from ORCID",
-                                        "orcid-data-block-2",
+                                        "linked-open-profiles",
                                     )}
                                 </p>
                             </CardBody>
@@ -150,7 +150,7 @@ export default function Edit({ attributes, setAttributes }) {
                                 <p>
                                     {__(
                                         "Please provide an ORCID iD",
-                                        "orcid-data-block-2",
+                                        "linked-open-profiles",
                                     )}
                                 </p>
                             </CardBody>
@@ -170,7 +170,7 @@ export default function Edit({ attributes, setAttributes }) {
                                     !hasNoItems(section, items) && (
                                         <section
                                             style={{ marginBottom: "2rem" }}
-                                            className={`odb2-section odb2-section-${section}`}
+                                            className={`lop-section lop-section-${section}`}
                                             key={section}
                                         >
                                             <Heading
