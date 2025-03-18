@@ -25,8 +25,8 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
  */
-import { __ } from "@wordpress/i18n";
-import { useEffect, useState, createRoot } from "@wordpress/element";
+import { __ } from '@wordpress/i18n';
+import { useEffect, useState, createRoot } from '@wordpress/element';
 
 /**
  * React hook that is used to mark the block wrapper element.
@@ -34,7 +34,7 @@ import { useEffect, useState, createRoot } from "@wordpress/element";
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from "@wordpress/block-editor";
+import { useBlockProps } from '@wordpress/block-editor';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -42,22 +42,22 @@ import { useBlockProps } from "@wordpress/block-editor";
  *
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
-import "./editor.scss";
+import './editor.scss';
 
 import {
-    __experimentalHeading as Heading,
-    __experimentalItemGroup as ItemGroup,
-    __experimentalItem as Item,
-} from "@wordpress/components";
+	__experimentalHeading as Heading,
+	__experimentalItemGroup as ItemGroup,
+	__experimentalItem as Item,
+} from '@wordpress/components';
 import {
-    isSectionShown,
-    hasNoItems,
-    excludedItems,
-} from "./sharedfunctions.js";
-import LoadingSpinner from "./components/LoadingSpinner.js";
+	isSectionShown,
+	hasNoItems,
+	excludedItems,
+} from './sharedfunctions.js';
+import LoadingSpinner from './components/LoadingSpinner.js';
 
-import { sections } from "./sections";
-import { getProcessedData } from "./processdata";
+import { sections } from './sections';
+import { getProcessedData } from './processdata';
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -67,105 +67,120 @@ import { getProcessedData } from "./processdata";
  *
  * @return {Element} Element to render.
  */
-function OrcidDataBlock2({ attributes }) {
-    const { orcid_id, starting_heading_level, verified_orcid_id } = attributes;
-    const [items, setItems] = useState({});
-    const [dataFetched, setDataFetched] = useState(false);
-    const [loading, setLoading] = useState(true);
+function OrcidDataBlock2( { attributes } ) {
+	const { orcid_id, starting_heading_level, verified_orcid_id } = attributes;
+	const [ items, setItems ] = useState( {} );
+	const [ dataFetched, setDataFetched ] = useState( false );
+	const [ loading, setLoading ] = useState( true );
 
-    useEffect(() => {
-        if (orcid_id && verified_orcid_id) {
-            fetchData();
-        }
-    }, [orcid_id, verified_orcid_id]);
+	useEffect( () => {
+		if ( orcid_id && verified_orcid_id ) {
+			fetchData();
+		}
+	}, [ orcid_id, verified_orcid_id ] );
 
-    async function fetchData() {
-        try {
-            setDataFetched(false);
-            const response = await fetch(
-                `/wp-json/custom/v1/orcid-proxy?orcid_id=${orcid_id}`,
-            );
-            if (!response.ok) {
-                throw new Error("Network response was not ok");
-            }
-            const result = await response.json();
-            setItems(getProcessedData(result));
-            setDataFetched(true);
-        } catch (error) {
-            console.error("Error fetching data:", error);
-        } finally {
-            setLoading(false);
-        }
-    }
+	async function fetchData() {
+		try {
+			setDataFetched( false );
+			const response = await fetch(
+				`/wp-json/custom/v1/orcid-proxy?orcid_id=${ orcid_id }`
+			);
+			if ( ! response.ok ) {
+				throw new Error( 'Network response was not ok' );
+			}
+			const result = await response.json();
+			setItems( getProcessedData( result ) );
+			setDataFetched( true );
+		} catch ( error ) {
+			console.error( 'Error fetching data:', error );
+		} finally {
+			setLoading( false );
+		}
+	}
 
-    return (
-        <div {...useBlockProps()}>
-            {!verified_orcid_id && !dataFetched && !loading ? (
-                <p
-                    style={{
-                        padding: "2rem",
-                        border: "1px solid #ddd",
-                    }}
-                    role="alert"
-                >
-                    {__("Please provide an ORCID iD", "linked-open-profiles")}
-                </p>
-            ) : (
-                <>
-                    {!loading ? (
-                        Object.keys(sections).map(
-                            (section) =>
-                                isSectionShown(section, sections, attributes) &&
-                                !hasNoItems(section, items) && (
-                                    <section
-                                        style={{ marginBottom: "2rem" }}
-                                        className={`lop-section lop-section-${section}`}
-                                        key={section}
-                                    >
-                                        <Heading level={starting_heading_level}>
-                                            {sections[section].term}
-                                        </Heading>
-                                        {sections[section].id === "bio" &&
-                                            sections[section].model(
-                                                items[section][0],
-                                            )}
-                                        {sections[section].id !== "bio" && (
-                                            <ItemGroup>
-                                                {items[section].map(
-                                                    (item) =>
-                                                        excludedItems(
-                                                            section,
-                                                            sections,
-                                                            attributes,
-                                                        )[item.path] !==
-                                                            false && (
-                                                            <Item
-                                                                key={item.path}
-                                                            >
-                                                                {sections[
-                                                                    section
-                                                                ].model(item)}
-                                                            </Item>
-                                                        ),
-                                                )}
-                                            </ItemGroup>
-                                        )}
-                                    </section>
-                                ),
-                        )
-                    ) : (
-                        <LoadingSpinner />
-                    )}
-                </>
-            )}
-        </div>
-    );
+	return (
+		<div { ...useBlockProps() }>
+			{ ! verified_orcid_id && ! dataFetched && ! loading ? (
+				<p
+					style={ {
+						padding: '2rem',
+						border: '1px solid #ddd',
+					} }
+					role="alert"
+				>
+					{ __(
+						'Please provide an ORCID iD',
+						'linked-open-profiles'
+					) }
+				</p>
+			) : (
+				<>
+					{ ! loading ? (
+						Object.keys( sections ).map(
+							( section ) =>
+								isSectionShown(
+									section,
+									sections,
+									attributes
+								) &&
+								! hasNoItems( section, items ) && (
+									<section
+										style={ { marginBottom: '2rem' } }
+										className={ `lop-section lop-section-${ section }` }
+										key={ section }
+									>
+										<Heading
+											level={ starting_heading_level }
+										>
+											{ sections[ section ].term }
+										</Heading>
+										{ sections[ section ].id === 'bio' &&
+											sections[ section ].model(
+												items[ section ][ 0 ]
+											) }
+										{ sections[ section ].id !== 'bio' && (
+											<ItemGroup>
+												{ items[ section ].map(
+													( item ) =>
+														excludedItems(
+															section,
+															sections,
+															attributes
+														)[ item.path ] !==
+															false && (
+															<Item
+																key={
+																	item.path
+																}
+															>
+																{ sections[
+																	section
+																].model(
+																	item
+																) }
+															</Item>
+														)
+												) }
+											</ItemGroup>
+										) }
+									</section>
+								)
+						)
+					) : (
+						<LoadingSpinner />
+					) }
+				</>
+			) }
+		</div>
+	);
 }
-window.addEventListener("DOMContentLoaded", () => {
-    const blocks = document.querySelectorAll(".linked-open-profiles");
-    blocks.forEach((block) => {
-        const root = createRoot(block);
-        const attributes = JSON.parse(block.getAttribute("data-attributes"));
-        root.render(<OrcidDataBlock2 attributes={attributes} />);
-    });
-});
+window.addEventListener( 'DOMContentLoaded', () => {
+	const blocks = document.querySelectorAll( '.linked-open-profiles' );
+	blocks.forEach( ( block ) => {
+		const root = createRoot( block );
+		const attributes = JSON.parse(
+			block.getAttribute( 'data-attributes' )
+		);
+		root.render( <OrcidDataBlock2 attributes={ attributes } /> );
+	} );
+} );

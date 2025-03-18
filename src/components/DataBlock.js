@@ -1,1 +1,1 @@
-import { sections } from "./sections";
+import { sections } from './sections';
