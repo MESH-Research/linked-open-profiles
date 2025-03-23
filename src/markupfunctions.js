@@ -10,6 +10,7 @@ export function addressMarkup( data ) {
 		comma2,
 		country = '';
 
+	let markup = '<></>';
 	if ( data.address?.city ) {
 		city = data.address.city;
 	}
@@ -29,7 +30,7 @@ export function addressMarkup( data ) {
 		comma2 = ', ';
 	}
 	if ( data?.address !== undefined ) {
-		return (
+		markup = (
 			<>
 				<br />
 				<span>
@@ -41,9 +42,8 @@ export function addressMarkup( data ) {
 				</span>
 			</>
 		);
-	} else {
-		return <></>;
 	}
+	return markup;
 }
 export function bioMarkup( data ) {
 	let markup = '';
@@ -258,7 +258,7 @@ function nameOtherMarkup( data ) {
 				<br />
 				<ItemGroup>
 					{ data.other_names.map( ( name ) => (
-						<Item>
+						<Item key={ name.path }>
 							<span>{ name.content }</span>
 						</Item>
 					) ) }
@@ -310,7 +310,7 @@ export function researcherUrlMarkup( data ) {
 				</strong>
 				<ItemGroup>
 					{ data.urls.map( ( url ) => (
-						<Item>
+						<Item key={ url.url.value }>
 							<a
 								href={ url.url.value }
 								target="_blank"

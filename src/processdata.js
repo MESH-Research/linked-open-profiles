@@ -1,7 +1,7 @@
 import { sections } from './sections';
 
 export function getItems( type, profile ) {
-	let records = profile[ 'activities-summary' ][ type ];
+	const records = profile[ 'activities-summary' ][ type ];
 	let items;
 	switch ( sections[ type ].format ) {
 		case 'affiliation-group':
@@ -27,34 +27,34 @@ export function getSortedItems( type, profile ) {
 	}
 	return items.sort( ( a, b ) => {
 		return (
-			makeDate( b, cat.summary_name, cat.date_name, cat.format ) -
-			makeDate( a, cat.summary_name, cat.date_name, cat.format )
+			makeDate( b, cat.summaryName, cat.dateName, cat.format ) -
+			makeDate( a, cat.summaryName, cat.dateName, cat.format )
 		);
 	} );
 }
 
-function makeDate( item, summary_name, date_name, format ) {
+function makeDate( item, summaryName, dateName, format ) {
 	let dateObj;
-	if ( format == 'affiliation-group' ) {
-		dateObj = item.summaries[ 0 ][ summary_name ][ date_name ];
+	let response = new Date();
+	if ( format === 'affiliation-group' ) {
+		dateObj = item.summaries[ 0 ][ summaryName ][ dateName ];
 	} else if ( format === 'no-summaries' ) {
-		dateObj = item[ summary_name ][ 0 ][ date_name ];
-	} else if ( format == 'peer-review' ) {
+		dateObj = item[ summaryName ][ 0 ][ dateName ];
+	} else if ( format === 'peer-review' ) {
 		dateObj =
-			item[ 'peer-review-group' ][ 0 ][ summary_name ][ 0 ][ date_name ];
+			item[ 'peer-review-group' ][ 0 ][ summaryName ][ 0 ][ dateName ];
 	}
 	if ( dateObj ) {
-		let year = dateObj.year?.value;
-		let month = dateObj.month?.value;
-		let day = dateObj.day?.value;
-		return new Date(
+		const year = dateObj.year?.value;
+		const month = dateObj.month?.value;
+		const day = dateObj.day?.value;
+		response = new Date(
 			year ? year : new Date().getFullYear(),
 			month ? month - 1 : 6,
 			day ? day : 1
 		);
-	} else {
-		return new Date();
 	}
+	return response;
 }
 
 function processRecordBio( data ) {
@@ -69,7 +69,7 @@ function processRecordBio( data ) {
 }
 
 function processRecordDistinction( record ) {
-	let data = record?.summaries[ 0 ]?.[ sections.distinctions.summary_name ];
+	const data = record?.summaries[ 0 ]?.[ sections.distinctions.summaryName ];
 	if ( ! data ) {
 		return {};
 	}
@@ -86,7 +86,7 @@ function processRecordDistinction( record ) {
 }
 
 function processRecordEducation( record ) {
-	let data = record?.summaries[ 0 ]?.[ sections.educations.summary_name ];
+	const data = record?.summaries[ 0 ]?.[ sections.educations.summaryName ];
 	if ( ! data ) {
 		return {};
 	}
@@ -103,7 +103,7 @@ function processRecordEducation( record ) {
 }
 
 function processRecordEmployment( record ) {
-	let data = record?.summaries[ 0 ]?.[ sections.employments.summary_name ];
+	const data = record?.summaries[ 0 ]?.[ sections.employments.summaryName ];
 	if ( ! data ) {
 		return {};
 	}
@@ -120,7 +120,7 @@ function processRecordEmployment( record ) {
 }
 
 function processRecordFunding( record ) {
-	let data = record?.[ sections.fundings.summary_name ][ 0 ];
+	const data = record?.[ sections.fundings.summaryName ][ 0 ];
 	if ( ! data ) {
 		return {};
 	}
@@ -136,10 +136,8 @@ function processRecordFunding( record ) {
 }
 
 function processRecordInvitedPositions( record ) {
-	let data =
-		record?.summaries[ 0 ]?.[
-			sections[ 'invited-positions' ].summary_name
-		];
+	const data =
+		record?.summaries[ 0 ]?.[ sections[ 'invited-positions' ].summaryName ];
 	if ( ! data ) {
 		return {};
 	}
@@ -156,7 +154,7 @@ function processRecordInvitedPositions( record ) {
 }
 
 function processRecordMemberships( record ) {
-	let data = record?.summaries[ 0 ]?.[ sections.memberships.summary_name ];
+	const data = record?.summaries[ 0 ]?.[ sections.memberships.summaryName ];
 	if ( ! data ) {
 		return {};
 	}
@@ -173,9 +171,9 @@ function processRecordMemberships( record ) {
 }
 
 function processRecordPeerReviews( record ) {
-	let data =
+	const data =
 		record?.[ 'peer-review-group' ][ 0 ][
-			sections[ 'peer-reviews' ].summary_name
+			sections[ 'peer-reviews' ].summaryName
 		][ 0 ];
 	if ( ! data ) {
 		return {};
@@ -189,12 +187,13 @@ function processRecordPeerReviews( record ) {
 		role: data[ 'reviewer-role' ],
 		url: data[ 'review-url' ]?.value,
 		issn: data[ 'review-group-id' ],
-		review_source: data[ 'source' ]?.[ 'source-name' ]?.value,
+		review_source: data.source?.[ 'source-name' ]?.value,
 	};
 }
 
 function processRecordQualifications( record ) {
-	let data = record?.summaries[ 0 ]?.[ sections.qualifications.summary_name ];
+	const data =
+		record?.summaries[ 0 ]?.[ sections.qualifications.summaryName ];
 	if ( ! data ) {
 		return {};
 	}
@@ -211,7 +210,7 @@ function processRecordQualifications( record ) {
 }
 
 function processRecordService( record ) {
-	let data = record?.summaries[ 0 ]?.[ sections.services.summary_name ];
+	const data = record?.summaries[ 0 ]?.[ sections.services.summaryName ];
 	if ( ! data ) {
 		return {};
 	}
@@ -228,7 +227,7 @@ function processRecordService( record ) {
 }
 
 function processRecordWork( record ) {
-	let data = record?.[ sections.works.summary_name ][ 0 ];
+	const data = record?.[ sections.works.summaryName ][ 0 ];
 	if ( ! data ) {
 		return {};
 	}
@@ -249,72 +248,72 @@ function processRecordWork( record ) {
 }
 
 export function getProcessedData( profile ) {
-	let a = Object.keys( sections );
-	let o = {};
+	const a = Object.keys( sections );
+	const o = {};
 	a.map( ( item ) => {
-		let sorted = getSortedItems( item, profile );
-		o[ item ] = sorted;
+		const sorted = getSortedItems( item, profile );
+		return ( o[ item ] = sorted );
 	} );
 	if ( o.bio ) {
-		let b = [ processRecordBio( o.bio ) ];
+		const b = [ processRecordBio( o.bio ) ];
 		o.bio = b;
 	}
 	if ( o?.distinctions ) {
-		let d = o.distinctions.map( ( item ) => {
+		const d = o.distinctions.map( ( item ) => {
 			return processRecordDistinction( item );
 		} );
 		o.distinctions = d;
 	}
 	if ( o?.educations ) {
-		let ed = o.educations.map( ( item ) => {
+		const ed = o.educations.map( ( item ) => {
 			return processRecordEducation( item );
 		} );
 		o.educations = ed;
 	}
 	if ( o?.employments ) {
-		let em = o.employments.map( ( item ) => {
+		const em = o.employments.map( ( item ) => {
 			return processRecordEmployment( item );
 		} );
 		o.employments = em;
 	}
 	if ( o?.fundings ) {
-		let f = o.fundings.map( ( item ) => {
+		const f = o.fundings.map( ( item ) => {
 			return processRecordFunding( item );
 		} );
 		o.fundings = f;
 	}
 	if ( o?.[ 'invited-positions' ] ) {
-		let inv = o[ 'invited-positions' ].map( ( item ) => {
+		const inv = o[ 'invited-positions' ].map( ( item ) => {
 			return processRecordInvitedPositions( item );
 		} );
 		o[ 'invited-positions' ] = inv;
 	}
 	if ( o?.memberships ) {
-		let mem = o.memberships.map( ( item ) => {
+		const mem = o.memberships.map( ( item ) => {
 			return processRecordMemberships( item );
 		} );
 		o.memberships = mem;
 	}
 	if ( o?.[ 'peer-reviews' ] ) {
-		let pr = o[ 'peer-reviews' ].map( ( item ) => {
+		const pr = o[ 'peer-reviews' ].map( ( item ) => {
 			return processRecordPeerReviews( item );
 		} );
 		o[ 'peer-reviews' ] = pr;
 	}
 	if ( o?.qualifications ) {
-		let q = o.qualifications.map( ( item ) => {
+		const q = o.qualifications.map( ( item ) => {
 			return processRecordQualifications( item );
 		} );
 		o.qualifications = q;
 	}
 	if ( o?.services ) {
-		let s = o.services.map( ( item ) => {
+		const s = o.services.map( ( item ) => {
 			return processRecordService( item );
 		} );
 		o.services = s;
 	}
 	if ( o?.works ) {
-		let w = o.works.map( ( item ) => {
+		const w = o.works.map( ( item ) => {
 			return processRecordWork( item );
 		} );
 		o.works = w;

@@ -9,14 +9,14 @@
 	"description": "Display public profile data from multiple ORCID profiles",
 	"example": {},
 	"attributes": {
-		"orcid_id": {
+		"orcidId": {
 			"type": "string"
 		},
-		"verified_orcid_id": {
+		"verifiedOrcidId": {
 			"type": "boolean",
 			"default": false
 		},
-		"starting_heading_level": {
+		"startingHeadingLevel": {
 			"type": "number",
 			"default": 2
 		},

@@ -6,17 +6,18 @@ import {
 	excludedItems,
 	canExclude,
 } from './../sharedfunctions.js';
-import { InspectorControls } from '@wordpress/block-editor';
-import { BlockControls, HeadingLevelDropdown } from '@wordpress/block-editor';
+import {
+	BlockControls,
+	HeadingLevelDropdown,
+	InspectorControls,
+} from '@wordpress/block-editor';
 import {
 	Button,
 	CheckboxControl,
 	Disabled,
-	DropdownMenu,
 	Panel,
 	PanelBody,
 	TextControl,
-	__experimentalNumberControl as NumberControl,
 } from '@wordpress/components';
 import LoadingSpinner from './LoadingSpinner.js';
 
@@ -26,13 +27,12 @@ function toggleSection( section, value, setAttributes ) {
 
 function modifyExcludedItems(
 	section,
-	sections,
 	item,
 	attributes,
 	setAttributes,
 	value
 ) {
-	let excluded = { ...excludedItems( section, sections, attributes ) };
+	const excluded = { ...excludedItems( section, sections, attributes ) };
 	excluded[ item.path ] = value;
 	setAttributes( { [ `${ sections[ section ].id }_excluded` ]: excluded } );
 }
@@ -43,6 +43,7 @@ function getItemCheckboxes( section, items, attributes, setAttributes ) {
 	}
 	return items[ section ].map( ( item ) => (
 		<CheckboxControl
+			key={ item.path }
 			__nextHasNoMarginBottom={ true }
 			checked={
 				excludedItems( section, sections, attributes )[ item.path ] !==
@@ -53,7 +54,6 @@ function getItemCheckboxes( section, items, attributes, setAttributes ) {
 			onChange={ ( value ) => {
 				modifyExcludedItems(
 					section,
-					sections,
 					item,
 					attributes,
 					setAttributes,
@@ -64,26 +64,17 @@ function getItemCheckboxes( section, items, attributes, setAttributes ) {
 	) );
 }
 
-function getSectionTitle( section, sections, items ) {
+function getSectionTitle( section, items ) {
 	if ( ! section || items[ section ] === undefined ) {
 		return '';
 	}
 	if ( sections[ section ].term === 'Biography' ) {
-		return __( sections[ section ].term, 'linked-open-profiles' );
+		return sections[ section ].term;
 	}
-	return __(
-		`${ sections[ section ].term } (${ items[ section ].length })`,
-		'linked-open-profiles'
-	);
+	return `${ sections[ section ].term } (${ items[ section ].length })`;
 }
 
-function getSectionControls(
-	section,
-	sections,
-	items,
-	attributes,
-	setAttributes
-) {
+function getSectionControls( section, items, attributes, setAttributes ) {
 	const show = isSectionShown( section, sections, attributes );
 	let sectionControls = (
 		<div style={ { opacity: hasNoItems( section, items ) ? 0.5 : 1 } }>
@@ -91,10 +82,7 @@ function getSectionControls(
 				__nextHasNoMarginBottom={ true }
 				checked={ show }
 				className="odb-medium-margin-top"
-				label={ __(
-					`Include ${ sections[ section ].term }`,
-					'linked-open-profiles'
-				) }
+				label={ sections[ section ].include }
 				onChange={ ( value ) => {
 					toggleSection( section, value, setAttributes );
 				} }
@@ -125,45 +113,20 @@ function getSectionControls(
 	return sectionControls;
 }
 
-const HeadingLevelToolbar = ( { starting_heading_level, setAttributes } ) => (
+const HeadingLevelToolbar = ( { startingHeadingLevel, setAttributes } ) => (
 	<BlockControls group="block">
 		<HeadingLevelDropdown
 			options={ [ 2, 3, 4, 5, 6 ] }
-			value={ starting_heading_level }
+			value={ startingHeadingLevel }
 			onChange={ ( newTag ) =>
-				setAttributes( { starting_heading_level: newTag } )
+				setAttributes( { startingHeadingLevel: newTag } )
 			}
 		/>
 	</BlockControls>
 );
 
-const MyDropdownMenu = () => (
-	<DropdownMenu
-		icon={ more }
-		label="Select a direction"
-		controls={ [
-			{
-				title: 'H2',
-				icon: () => (
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 24 24"
-						width="24"
-						height="24"
-						aria-hidden="true"
-						focusable="false"
-					>
-						<path d="M9 11.1H5v-4H3v10h2v-4h4v4h2v-10H9v4zm8 4c.5-.4.6-.6 1.1-1.1.4-.4.8-.8 1.2-1.3.3-.4.6-.8.9-1.3.2-.4.3-.8.3-1.3 0-.4-.1-.9-.3-1.3-.2-.4-.4-.7-.8-1-.3-.3-.7-.5-1.2-.6-.5-.2-1-.2-1.5-.2-.4 0-.7 0-1.1.1-.3.1-.7.2-1 .3-.3.1-.6.3-.9.5-.3.2-.6.4-.8.7l1.2 1.2c.3-.3.6-.5 1-.7.4-.2.7-.3 1.2-.3s.9.1 1.3.4c.3.3.5.7.5 1.1 0 .4-.1.8-.4 1.1-.3.5-.6.9-1 1.2-.4.4-1 .9-1.6 1.4-.6.5-1.4 1.1-2.2 1.6v1.5h8v-2H17z"></path>
-					</svg>
-				),
-				onClick: () => console.log( 'up' ),
-			},
-		] }
-	/>
-);
-
 const DataBlockInspectorControls = ( {
-	orcid_id,
+	orcidId,
 	invalidId,
 	setInvalidId,
 	buttonHandler,
@@ -171,7 +134,7 @@ const DataBlockInspectorControls = ( {
 	attributes,
 	setAttributes,
 	items,
-	starting_heading_level,
+	startingHeadingLevel,
 } ) => {
 	return (
 		<InspectorControls>
@@ -181,10 +144,10 @@ const DataBlockInspectorControls = ( {
 						__nextHasNoMarginBottom={ true }
 						className="odb-small-margin-bottom"
 						label={ __( 'ORCID iD', 'linked-open-profiles' ) }
-						value={ orcid_id }
+						value={ orcidId }
 						onChange={ ( value ) => {
 							setInvalidId( false );
-							setAttributes( { orcid_id: value } );
+							setAttributes( { orcidId: value } );
 						} }
 					/>
 					<Button
@@ -226,13 +189,14 @@ const DataBlockInspectorControls = ( {
 			) : (
 				<>
 					<HeadingLevelToolbar
-						starting_heading_level={ starting_heading_level }
+						startingHeadingLevel={ startingHeadingLevel }
 						setAttributes={ setAttributes }
 					/>
 					<Panel header={ __( 'Sections', 'linked-open-profiles' ) }>
 						{ Object.keys( sections ).map( function ( section ) {
 							return (
 								<PanelBody
+									key={ section.id }
 									initialOpen={ false }
 									icon={
 										! isSectionShown(
@@ -243,18 +207,18 @@ const DataBlockInspectorControls = ( {
 											? 'hidden'
 											: ''
 									}
-									title={ getSectionTitle(
-										section,
-										sections,
-										items
-									) }
+									title={ getSectionTitle( section, items ) }
 								>
 									{ hasNoItems( section, items ) && (
-										<p>No items detected.</p>
+										<p>
+											{ __(
+												'No items detected.',
+												'linked-open-profiles'
+											) }
+										</p>
 									) }
 									{ getSectionControls(
 										section,
-										sections,
 										items,
 										attributes,
 										setAttributes
@@ -276,9 +240,9 @@ const DataBlockInspectorControls = ( {
                                         "Starting Heading Level",
                                         "linked-open-profiles",
                                     )}
-                                    value={starting_heading_level}
+                                    value={startingHeadingLevel}
                                     onChange={(value) => {
-                                        setAttributes({ starting_heading_level: value });
+                                        setAttributes({ startingHeadingLevel: value });
                                     }}
                                 />
                                 <Button

@@ -17,12 +17,14 @@ ORCID profiles on pages, posts, and sites. It's a successor to [ORCID Data
 Block][orcid_data_block]. It does not require registering or authenticating an
 ORCID account. The only requirement is a [valid 16-digit ORCID iD][orcid_ids].
 
-[orcid_data_block]: <https://github.com/MESH-Research/linked-open-profiles>
+[orcid_data_block]: <https://github.com/MESH-Research/orcid-data-block>
 [orcid_ids]: https://support.orcid.org/hc/en-us/articles/360006897674-Structure-of-the-ORCID-Identifier
 
 This work is funded by the [ORCID Global Participation Fund][awardees].
 
 [awardees]: https://info.orcid.org/global-participation-fund-announces-fourth-round-of-awardees/
+
+![Screenshot of the plugin in use in a Gutenberg editor, featuring the Biography and Education sections excluded, the Employment section partially included, and the Works section fully included](screenshots/plugin.png)
 
 = Features =
 
@@ -38,6 +40,7 @@ This work is funded by the [ORCID Global Participation Fund][awardees].
 == Usage ==
 
 1. Make sure the plugin is activated on your WordPress installation.
+    - This can be done on the Plugins screen.
 2. In a Gutenberg block editor, add a new block.
     - There are multiple ways to add blocks.
         - <https://wordpress.org/documentation/article/adding-a-new-block/>
@@ -48,7 +51,7 @@ This work is funded by the [ORCID Global Participation Fund][awardees].
 4. Make customizations in the plugin's inspector controls.
     - Customize which sections are shown.
     - Customize which items within sections are shown.
-5. Save draft or publish.
+5. Save as a draft or publish.
 
 
 == Support ==

@@ -6,7 +6,7 @@ export function hasNoItems( section, items ) {
 	if ( ! items[ section ] ) {
 		return true;
 	}
-	return items[ section ].length == 0;
+	return items[ section ].length === 0;
 }
 
 export function canExclude( section, sections ) {

@@ -15,11 +15,11 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
+    exit; // Exit if accessed directly.
 }
 
 // Include the custom API file
-require_once plugin_dir_path(__FILE__) . 'orcid_api.php';
+require_once plugin_dir_path(__FILE__) . 'orcid-api.php';
 
 /**
  * Registers the block using the metadata loaded from the `block.json` file.
@@ -29,7 +29,7 @@ require_once plugin_dir_path(__FILE__) . 'orcid_api.php';
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
 
- function create_block_orcid_data_block_2_block_init() {
+function mesh_research_linked_open_profiles_block_init() {
     wp_register_script(
         'linked-open-profiles-script',
         plugins_url( 'build/index.js', __FILE__ ),
@@ -37,7 +37,20 @@ require_once plugin_dir_path(__FILE__) . 'orcid_api.php';
         filemtime( plugin_dir_path( __FILE__ ) . 'build/index.js' ),
         array( 'in_footer' => false )
     );
-    wp_set_script_translations( 'linked-open-profiles-script', 'linked-open-profiles', plugin_dir_path( __FILE__ ) . 'languages' );
-	register_block_type( __DIR__ . '/build' );
+    register_block_type( __DIR__ . '/build' );
 }
-add_action( 'init', 'create_block_orcid_data_block_2_block_init' );
+add_action( 'init', 'mesh_research_linked_open_profiles_block_init' );
+
+function mesh_research_linked_open_profiles_set_script_translations() {
+    wp_set_script_translations(
+        'mesh-research-linked-open-profiles-editor-script',
+        'linked-open-profiles',
+        plugin_dir_path( __FILE__ ) . 'languages'
+    );
+    wp_set_script_translations(
+        'mesh-research-linked-open-profiles-view-script',
+        'linked-open-profiles',
+        plugin_dir_path( __FILE__ ) . 'languages'
+    );
+}
+add_action( 'init', 'mesh_research_linked_open_profiles_set_script_translations' );

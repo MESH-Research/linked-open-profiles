@@ -4,7 +4,7 @@
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
  */
 import { __ } from '@wordpress/i18n';
-import { useEffect, useState } from '@wordpress/element';
+import { useCallback, useEffect, useState } from '@wordpress/element';
 
 /**
  * React hook that is used to mark the block wrapper element.
@@ -48,30 +48,23 @@ import { addQueryArgs } from '@wordpress/url';
  * editor. This represents what the editor will render when the block is used.
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
- *
- * @return {Element} Element to render.
+ * @param {Object}   root0
+ * @param {Object}   root0.attributes
+ * @param {Function} root0.setAttributes
+ * @return {Element} Element to render
  */
 export default function Edit( { attributes, setAttributes } ) {
-	const { orcid_id, starting_heading_level, verified_orcid_id } = attributes;
+	const { orcidId, startingHeadingLevel, verifiedOrcidId } = attributes;
 	const [ items, setItems ] = useState( {} );
 	const [ invalidId, setInvalidId ] = useState( false );
 	const [ dataFetched, setDataFetched ] = useState( false );
 	const [ loading, setLoading ] = useState( true );
 	const [ fetchError, setFetchError ] = useState( false );
 
-	useEffect( () => {
-		if ( orcid_id && verifyOrcidId( orcid_id ) ) {
-			fetchData();
-		}
-		if ( ! orcid_id ) {
-			setLoading( false );
-		}
-	}, [] );
-
-	async function fetchData() {
+	const fetchData = useCallback( async () => {
 		setFetchError( false );
 		setDataFetched( false );
-		const queryParams = { orcid_id: `${ orcid_id }` };
+		const queryParams = { orcidId: `${ orcidId }` };
 		apiFetch( {
 			path: addQueryArgs( '/custom/v1/orcid-proxy', queryParams ),
 		} )
@@ -79,20 +72,32 @@ export default function Edit( { attributes, setAttributes } ) {
 				setItems( getProcessedData( data ) );
 				setDataFetched( true );
 			} )
-			.catch( ( error ) => {
+			.catch( () => {
 				setFetchError( true );
-				console.error( error );
 			} )
 			.finally( () => {
 				setLoading( false );
 			} );
-	}
+	}, [ orcidId ] );
 
-	const verifyOrcidId = ( orcidId ) => {
-		if ( orcidId === undefined || orcidId === null || orcidId === '' ) {
+	useEffect( () => {
+		if ( orcidId && verifiedOrcidId && ! dataFetched ) {
+			fetchData();
+		}
+		if ( ! orcidId ) {
+			setLoading( false );
+		}
+	}, [ orcidId, verifiedOrcidId, dataFetched, fetchData ] );
+
+	const verifyOrcidId = ( thisOrcidId ) => {
+		if (
+			thisOrcidId === undefined ||
+			thisOrcidId === null ||
+			thisOrcidId === ''
+		) {
 			return false;
 		}
-		if ( orcidId.length > 4 ) {
+		if ( thisOrcidId.length > 4 ) {
 			return true;
 		}
 		return false;
@@ -100,8 +105,8 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	function buttonHandler() {
 		setLoading( true );
-		const verification = verifyOrcidId( orcid_id );
-		setAttributes( { verified_orcid_id: verification } );
+		const verification = verifyOrcidId( orcidId );
+		setAttributes( { verifiedOrcidId: verification } );
 		if ( ! verification ) {
 			setInvalidId( true );
 			setLoading( false );
@@ -114,7 +119,7 @@ export default function Edit( { attributes, setAttributes } ) {
 	return (
 		<>
 			<DataBlockInspectorControls
-				orcid_id={ orcid_id }
+				orcidId={ orcidId }
 				invalidId={ invalidId }
 				setInvalidId={ setInvalidId }
 				buttonHandler={ buttonHandler }
@@ -122,7 +127,7 @@ export default function Edit( { attributes, setAttributes } ) {
 				attributes={ attributes }
 				setAttributes={ setAttributes }
 				items={ items }
-				starting_heading_level={ starting_heading_level }
+				startingHeadingLevel={ startingHeadingLevel }
 			/>
 			<div { ...useBlockProps() }>
 				{ fetchError && (
@@ -140,7 +145,7 @@ export default function Edit( { attributes, setAttributes } ) {
 					</div>
 				) }
 				{ loading && <LoadingSpinner /> }
-				{ ! verified_orcid_id &&
+				{ ! verifiedOrcidId &&
 				! dataFetched &&
 				! loading &&
 				! fetchError ? (
@@ -174,7 +179,7 @@ export default function Edit( { attributes, setAttributes } ) {
 											key={ section }
 										>
 											<Heading
-												level={ starting_heading_level }
+												level={ startingHeadingLevel }
 											>
 												{ sections[ section ].term }
 											</Heading>

@@ -56,34 +56,32 @@ import {
 } from './sharedfunctions.js';
 import LoadingSpinner from './components/LoadingSpinner.js';
 
-import { sections } from './sections';
-import { getProcessedData } from './processdata';
+import { sections } from './sections.js';
+import { getProcessedData } from './processdata.js';
 
 /**
- * The edit function describes the structure of your block in the context of the
- * editor. This represents what the editor will render when the block is used.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
- *
+ * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#save
+ * @param {Object} root0
+ * @param {Object} root0.attributes
  * @return {Element} Element to render.
  */
-function OrcidDataBlock2( { attributes } ) {
-	const { orcid_id, starting_heading_level, verified_orcid_id } = attributes;
+function LinkedOpenProfiles( { attributes } ) {
+	const { orcidId, startingHeadingLevel, verifiedOrcidId } = attributes;
 	const [ items, setItems ] = useState( {} );
 	const [ dataFetched, setDataFetched ] = useState( false );
 	const [ loading, setLoading ] = useState( true );
 
 	useEffect( () => {
-		if ( orcid_id && verified_orcid_id ) {
+		if ( orcidId && verifiedOrcidId && ! dataFetched ) {
 			fetchData();
 		}
-	}, [ orcid_id, verified_orcid_id ] );
+	} );
 
 	async function fetchData() {
 		try {
 			setDataFetched( false );
 			const response = await fetch(
-				`/wp-json/custom/v1/orcid-proxy?orcid_id=${ orcid_id }`
+				`/wp-json/custom/v1/orcid-proxy?orcidId=${ orcidId }`
 			);
 			if ( ! response.ok ) {
 				throw new Error( 'Network response was not ok' );
@@ -92,7 +90,7 @@ function OrcidDataBlock2( { attributes } ) {
 			setItems( getProcessedData( result ) );
 			setDataFetched( true );
 		} catch ( error ) {
-			console.error( 'Error fetching data:', error );
+			// console.error('Error fetching data:', error);
 		} finally {
 			setLoading( false );
 		}
@@ -100,7 +98,7 @@ function OrcidDataBlock2( { attributes } ) {
 
 	return (
 		<div { ...useBlockProps() }>
-			{ ! verified_orcid_id && ! dataFetched && ! loading ? (
+			{ ! orcidId ? (
 				<p
 					style={ {
 						padding: '2rem',
@@ -129,9 +127,7 @@ function OrcidDataBlock2( { attributes } ) {
 										className={ `lop-section lop-section-${ section }` }
 										key={ section }
 									>
-										<Heading
-											level={ starting_heading_level }
-										>
+										<Heading level={ startingHeadingLevel }>
 											{ sections[ section ].term }
 										</Heading>
 										{ sections[ section ].id === 'bio' &&
@@ -181,6 +177,6 @@ window.addEventListener( 'DOMContentLoaded', () => {
 		const attributes = JSON.parse(
 			block.getAttribute( 'data-attributes' )
 		);
-		root.render( <OrcidDataBlock2 attributes={ attributes } /> );
+		root.render( <LinkedOpenProfiles attributes={ attributes } /> );
 	} );
 } );
