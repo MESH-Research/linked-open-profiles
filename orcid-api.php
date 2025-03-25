@@ -9,7 +9,7 @@ function linked_open_profiles_handle_orcid_proxy_request(WP_REST_Request $reques
         return new WP_Error('missing_orcid_id', 'Missing ORCID ID', array('status' => 400));
     }
 
-    if (!lop_validate_orcid_id($orcid_id)) {
+    if (!linked_open_profiles_validate_orcid_id($orcid_id)) {
         return new WP_Error('invalid_orcid_id', 'Invalid ORCID ID', array('status' => 400));
     }
 
@@ -28,7 +28,7 @@ function linked_open_profiles_handle_orcid_proxy_request(WP_REST_Request $reques
 add_action('rest_api_init', function () {
     register_rest_route('custom/v1', '/orcid-proxy', array(
         'methods' => 'GET',
-        'callback' => 'lop_handle_orcid_proxy_request',
+        'callback' => 'linked_open_profiles_handle_orcid_proxy_request',
         'permission_callback' => '__return_true',
     ));
 });
@@ -39,7 +39,7 @@ add_action('rest_api_init', function () {
  * @param string $value
  * @return bool
  */
-function lop_validate_orcid_id($value) 
+function linked_open_profiles_validate_orcid_id($value) 
 {
     $correct_length = false;
     $number_only = false;
