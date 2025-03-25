@@ -1,5 +1,8 @@
 <?php
-function lop_handle_orcid_proxy_request(WP_REST_Request $request) 
+if ( ! defined( 'ABSPATH' ) ) {
+    exit; // Exit if accessed directly.
+}
+function linked_open_profiles_handle_orcid_proxy_request(WP_REST_Request $request) 
 {
     $orcid_id = sanitize_title_with_dashes($request->get_param('orcidId'));
     if (!isset($orcid_id) || empty($orcid_id)) {
