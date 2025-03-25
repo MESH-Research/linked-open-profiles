@@ -12,47 +12,86 @@ Display public data from multiple ORCID profiles on pages, posts, and sites.
 
 == Description ==
 
-This is a WordPress plugin for displaying data from the public scope of multiple
-ORCID profiles on pages, posts, and sites. It's a successor to [ORCID Data
-Block][orcid_data_block]. It does not require registering or authenticating an
-ORCID account. The only requirement is a [valid 16-digit ORCID iD][orcid_ids].
+This is a WordPress plugin for displaying public data from multiple
+ORCID records on pages, posts, and sites. It's a successor to [ORCID Data
+Block][orcid_data_block].
 
-[orcid_data_block]: <https://github.com/MESH-Research/orcid-data-block>
-[orcid_ids]: https://support.orcid.org/hc/en-us/articles/360006897674-Structure-of-the-ORCID-Identifier
+This plugin is developed and maintained by [Mesh Research Lab][mesh].
 
 This work is funded by the [ORCID Global Participation Fund][awardees].
 
+[orcid_data_block]: <https://github.com/MESH-Research/orcid-data-block>
+[mesh]: (https://meshresearch.commons.msu.edu).
 [awardees]: https://info.orcid.org/global-participation-fund-announces-fourth-round-of-awardees/
 
-![Screenshot of the plugin in use in a Gutenberg editor, featuring the Biography and Education sections excluded, the Employment section partially included, and the Works section fully included](screenshots/plugin.png)
+![Screenshot of the plugin in use in a Gutenberg editor, featuring the Biography
+and Education sections excluded, the Employment section partially included, and
+the Works section fully included](screenshots/plugin.png)
 
 = Features =
 
-- Provides a Gutenberg block in the WordPress block editor that allows users to
-  - specify which sections are shown from their ORCID profiles
-  - specify which items are shown within sections
-- Allows different ORCID profiles to be used in multiple blocks on the same post/page/site
-- Info will remain automatically up-to-date with ORCID
-- All languages currently supported by ORCID will be supported (in progress)
-- Accessible to those with disabilities
+* Provides a Gutenberg block in the WordPress block editor that allows users to
+  * specify which sections are shown from specified ORCID records
+  * specify which items are shown within sections
+* Allows different ORCID records to be used in multiple blocks on the same post/page/site
+* Info will remain automatically up-to-date with ORCID
+* All languages currently supported by ORCID will be supported (in progress)
+* Accessible to those with disabilities
 
 
 == Usage ==
 
 1. Make sure the plugin is activated on your WordPress installation.
-    - This can be done on the Plugins screen.
+    * This can be done on the Plugins screen.
 2. In a Gutenberg block editor, add a new block.
-    - There are multiple ways to add blocks.
-        - <https://wordpress.org/documentation/article/adding-a-new-block/>
-    - Search "Linked Open Profiles" in the block browser and select it.
-3. Enter an ORCID iD in the plugin's inspector controls.
-    - An ORCID iD can be found on a user's ORCID record page.
-        - <https://support.orcid.org/hc/en-us/articles/360042767454-I-don-t-know-my-ORCID-ID>
-4. Make customizations in the plugin's inspector controls.
-    - Customize which sections are shown.
-    - Customize which items within sections are shown.
-5. Save as a draft or publish.
+    * There are [multiple ways][adding_blocks] to add blocks.
+3. Search "Linked Open Profiles" in the block browser and select it.
+4. With the new block selected, provide an ORCID iD in the ORCID iD text input.
+    * This text input can be found in the sidebar (also known as the inspector
+      controls).
+    * An ORCID iD [can be found][finding_ids] on a user's ORCID record page.
+5. Click the "Apply" button.
+6. Make customizations as you see fit.
+    * Customize which sections are shown.
+    * Customize which items within sections are shown.
+7. Save as a draft or publish.
 
+[adding_blocks]: [https://wordpress.org/documentation/article/adding*a*new*block/]
+[finding_ids]: [https://support.orcid.org/hc/en*us/articles/360042767454*I*don*t*know*my*ORCID*ID]
+
+
+== Functionality ==
+
+This WordPress plugin uses the third party public REST API on
+<https://orcid.org> to query publicly available information for any ORCID record
+hosted on <https://orcid.org> and display this on a WordPress page, post, or
+site. Only publicly available data is retrieved from ORCID. You may provide
+multiple, different ORCID iDs for use with multiple, different blocks of this
+plugin within a Gutenberg editor. Registration and authentication with ORCID are
+not necessary to do this. The only necessity is to provide a [valid 16-digit
+ORCID iD][orcid_ids].
+
+=== Disclosure of Data Sent ===
+
+* **What:** ORCID iDs users provide
+* **Where:** <https://orcid.org>
+* **Why:** to query the public data of an ORCID record users wish to use with this
+  plugin
+* **Under What Circumstances:**
+  * whenever a user provides an ORCID iD to a block instance of this plugin
+  * whenever a post, page, or site that includes a block instance of this plugin
+    is loaded
+
+User-provided ORCID iDs are sent to the public third party REST API on
+<https://orcid.org>. This plugin uses the REST API located at
+`https://orcid.org/<user_provided_orcid_id>`. It is necessary to provide an
+ORCID iD to identify an ORCID record you wish to use when displaying ORCID
+record information on a WordPress post, page, or site.
+
+[orcid_ids]: https://support.orcid.org/hc/en-us/articles/360006897674-Structure-of-the-ORCID-Identifier
+
+* [ORCID Privacy Policy](https://info.orcid.org/privacy-policy/)
+* [ORCID Terms of Use](https://info.orcid.org/terms-of-use/)
 
 == Support ==
 
