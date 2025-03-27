@@ -66,7 +66,7 @@ export default function Edit( { attributes, setAttributes } ) {
 		setDataFetched( false );
 		const queryParams = { orcidId: `${ orcidId }` };
 		apiFetch( {
-			path: addQueryArgs( '/custom/v1/orcid-proxy', queryParams ),
+			path: addQueryArgs( '/mesh_research_linked_open_profiles/v1/orcid-proxy', queryParams ),
 		} )
 			.then( ( data ) => {
 				setItems( getProcessedData( data ) );

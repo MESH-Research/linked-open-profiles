@@ -81,7 +81,7 @@ function LinkedOpenProfiles( { attributes } ) {
 		try {
 			setDataFetched( false );
 			const response = await fetch(
-				`/wp-json/custom/v1/orcid-proxy?orcidId=${ orcidId }`
+				`/wp-json/mesh_research_linked_open_profiles/v1/orcid-proxy?orcidId=${ orcidId }`
 			);
 			if ( ! response.ok ) {
 				throw new Error( 'Network response was not ok' );
