@@ -24,10 +24,6 @@ This work is funded by the [ORCID Global Participation Fund][awardees].
 [mesh]: (https://meshresearch.commons.msu.edu).
 [awardees]: https://info.orcid.org/global-participation-fund-announces-fourth-round-of-awardees/
 
-![Screenshot of the plugin in use in a Gutenberg editor, featuring the Biography
-and Education sections excluded, the Employment section partially included, and
-the Works section fully included](screenshots/plugin.png)
-
 = Features =
 
 * Provides a Gutenberg block in the WordPress block editor that allows users to
@@ -38,6 +34,11 @@ the Works section fully included](screenshots/plugin.png)
 * All languages currently supported by ORCID will be supported (in progress)
 * Accessible to those with disabilities
 
+== Screenshots ==
+
+1. Screenshot of the plugin in use in a Gutenberg editor, featuring the Biography
+and Education sections excluded, the Employment section partially included, and
+the Works section fully included
 
 == Usage ==
 
@@ -58,7 +59,6 @@ the Works section fully included](screenshots/plugin.png)
 
 [adding_blocks]: [https://wordpress.org/documentation/article/adding*a*new*block/]
 [finding_ids]: [https://support.orcid.org/hc/en*us/articles/360042767454*I*don*t*know*my*ORCID*ID]
-
 
 == Functionality ==
 
@@ -100,12 +100,10 @@ Send an email for general support: <mesh@msu.edu>
 Submit tech issues on GitHub:
 <https://github.com/MESH-Research/linked-open-profiles/issues>
 
-
 == Development ==
 
 To contribute to the development of this plugin, visit the GitHub repository:
 <https://github.com/MESH-Research/linked-open-profiles>
-
 
 == Changelog ==
 
