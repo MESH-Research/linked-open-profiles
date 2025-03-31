@@ -224,9 +224,9 @@ ORCID iD][orcid_ids].
 
 User-provided ORCID iDs are sent to the public third party REST API on
 <https://orcid.org>. This plugin uses the REST API located at
-`https://orcid.org/<user_provided_orcid_id>`. It is necessary to provide an
-ORCID iD to identify an ORCID record you wish to use when displaying ORCID
-record information on a WordPress post, page, or site.
+`https://orcid.org/####-####-####-####`. It is necessary to provide an ORCID iD
+to identify an ORCID record you wish to use when displaying ORCID record
+information on a WordPress post, page, or site.
 
 [orcid_ids]: https://support.orcid.org/hc/en-us/articles/360006897674-Structure-of-the-ORCID-Identifier
 
