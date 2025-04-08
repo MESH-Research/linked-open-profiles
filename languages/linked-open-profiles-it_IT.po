@@ -1,0 +1,263 @@
+# Copyright (C) 2025 Mesh Research Lab
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Linked Open Profiles 0.3.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/linked-open-profiles\n"
+"Language-Team: MSU Translation Center <translat@msu.edu>\n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-04-01T20:41:58+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: linked-open-profiles\n"
+
+#. Plugin Name of the plugin
+#: linked-open-profiles.php
+msgid "Linked Open Profiles"
+msgstr "Linked Open Profiles"
+
+#. Plugin URI of the plugin
+#: linked-open-profiles.php
+msgid "https://github.com/MESH-Research/linked-open-profiles"
+msgstr "https://github.com/MESH-Research/linked-open-profiles"
+
+#. Description of the plugin
+#: linked-open-profiles.php
+msgid "Display public profile data from multiple ORCID profiles"
+msgstr "Visualizza i dati dai profili ORCID"
+
+#. Author of the plugin
+#: linked-open-profiles.php
+msgid "ebengran"
+msgstr "ebengran"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/markupfunctions.js:55
+msgid "Biographical Information"
+msgstr "Informazioni biografiche"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/markupfunctions.js:218
+msgid "Given Name"
+msgstr "Nome"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/markupfunctions.js:231
+msgid "Family Name"
+msgstr "Cognome"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/markupfunctions.js:244
+msgid "Credit Name"
+msgstr "Nome di credito"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/markupfunctions.js:257
+msgid "Other Names"
+msgstr "Altri nomi"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/markupfunctions.js:309
+msgid "Websites & social links"
+msgstr "Siti Web e Social Links"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:147
+msgid "Biography"
+msgstr "Biografia"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:148
+msgid "Include Biography"
+msgstr "Includere biografia"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:157
+msgid "Distinctions"
+msgstr "Distinzioni"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:158
+msgid "Include Distinctions"
+msgstr "Includere distinzioni"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:167
+msgid "Education"
+msgstr "Istruzione"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:168
+msgid "Include Education"
+msgstr "Includere istruzione"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:177
+msgid "Employment"
+msgstr "Occupazione"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:178
+msgid "Include Employment"
+msgstr "Includere occupazione"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:187
+msgid "Fundings"
+msgstr "Finanziamenti"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:188
+msgid "Include Fundings"
+msgstr "Includere finanziamenti"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:197
+msgid "Invited Positions"
+msgstr "Posizioni invitate"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:198
+msgid "Include Invited Positions"
+msgstr "Includere posizioni invitate"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:207
+msgid "Memberships"
+msgstr "Appartenenze"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:208
+msgid "Include Memberships"
+msgstr "Includere appartenenze"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:217
+msgid "Peer Reviews"
+msgstr "Revisioni tra pari"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:218
+msgid "Include Peer Reviews"
+msgstr "Includere revisioni tra pari"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:227
+msgid "Qualifications"
+msgstr "Qualifiche"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:228
+msgid "Include Qualifications"
+msgstr "Includere qualifiche"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:246
+msgid "Services"
+msgstr "Servizi"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:247
+msgid "Include Services"
+msgstr "Includere servizi"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:255
+msgid "Works"
+msgstr "Lavori"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:256
+msgid "Include Works"
+msgstr "Includere lavori"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/components/LoadingSpinner.js:10
+msgid "Loading ORCID Data"
+msgstr "Caricamento dati ORCID"
+
+#: build/index.js:1
+#: src/components/DataBlockInspectorControls.js:95
+msgid "Customize Items"
+msgstr "Personalizzare gli elementi"
+
+#: build/index.js:1
+#: src/components/DataBlockInspectorControls.js:146
+msgid "ORCID iD"
+msgstr "ORCID iD"
+
+#: build/index.js:1
+#: src/components/DataBlockInspectorControls.js:156
+msgid "Apply"
+msgstr "Postulare"
+
+#: build/index.js:1
+#: src/components/DataBlockInspectorControls.js:175
+msgid "Please provide a valid ORCID iD."
+msgstr "Si prega di fornire un identificatore ORCID valido"
+
+#: build/index.js:1
+#: src/components/DataBlockInspectorControls.js:195
+msgid "Sections"
+msgstr "Sezioni"
+
+#: build/index.js:1
+#: src/components/DataBlockInspectorControls.js:214
+msgid "No items detected."
+msgstr "Nessun elemento rilevato"
+
+#: build/index.js:1
+#: src/edit.js:138
+msgid "An error occurred while fetching the data from ORCID"
+msgstr "Si è verificato un errore durante il recupero dei dati da ORCID"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/edit.js:156
+#: src/view.js:109
+msgid "Please provide an ORCID iD"
+msgstr "Si prega di fornire un'identificazione ORCID"
+
+#: build/block.json
+#: src/block.json
+msgctxt "block title"
+msgid "Linked Open Profiles"
+msgstr "Linked Open Profiles"
+
+#: build/block.json
+#: src/block.json
+msgctxt "block description"
+msgid "Display public profile data from multiple ORCID profiles"
+msgstr "Visualizza i dati dai profili ORCID"
