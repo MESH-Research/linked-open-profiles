@@ -1,0 +1,263 @@
+# Copyright (C) 2025 Mesh Research Lab
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Linked Open Profiles 0.3.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/linked-open-profiles\n"
+"Language-Team: MSU Translation Center <translat@msu.edu>\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-04-01T20:41:58+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: linked-open-profiles\n"
+
+#. Plugin Name of the plugin
+#: linked-open-profiles.php
+msgid "Linked Open Profiles"
+msgstr "Linked Open Profiles"
+
+#. Plugin URI of the plugin
+#: linked-open-profiles.php
+msgid "https://github.com/MESH-Research/linked-open-profiles"
+msgstr "https://github.com/MESH-Research/linked-open-profiles"
+
+#. Description of the plugin
+#: linked-open-profiles.php
+msgid "Display public profile data from multiple ORCID profiles"
+msgstr "Daten aus ORCID-Profilen anzeigen"
+
+#. Author of the plugin
+#: linked-open-profiles.php
+msgid "ebengran"
+msgstr "ebengran"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/markupfunctions.js:55
+msgid "Biographical Information"
+msgstr "Biographische Angaben"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/markupfunctions.js:218
+msgid "Given Name"
+msgstr "Vorname"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/markupfunctions.js:231
+msgid "Family Name"
+msgstr "Nachname"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/markupfunctions.js:244
+msgid "Credit Name"
+msgstr "Veröffentlichter Name"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/markupfunctions.js:257
+msgid "Other Names"
+msgstr "Weitere Namen"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/markupfunctions.js:309
+msgid "Websites & social links"
+msgstr "Websiten & Social-Media-Links"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:147
+msgid "Biography"
+msgstr "Biografie"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:148
+msgid "Include Biography"
+msgstr "Biografie einbeziehen"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:157
+msgid "Distinctions"
+msgstr "Auszeichnungen"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:158
+msgid "Include Distinctions"
+msgstr "Auszeichnungen einbeziehen"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:167
+msgid "Education"
+msgstr "Auszeichnungen"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:168
+msgid "Include Education"
+msgstr "Ausbildung einbeziehen"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:177
+msgid "Employment"
+msgstr "Berufstätigkeit"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:178
+msgid "Include Employment"
+msgstr "Berufstätigkeit einbeziehen"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:187
+msgid "Fundings"
+msgstr "Finanzierungen"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:188
+msgid "Include Fundings"
+msgstr "Finanzierungen einbeziehen"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:197
+msgid "Invited Positions"
+msgstr "Eingeladene Positionen"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:198
+msgid "Include Invited Positions"
+msgstr "Eingeladene Positionen einbeziehen"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:207
+msgid "Memberships"
+msgstr "Mitgliedschaften"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:208
+msgid "Include Memberships"
+msgstr "Mitgliedschaften einbeziehen"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:217
+msgid "Peer Reviews"
+msgstr "Begutachtungen"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:218
+msgid "Include Peer Reviews"
+msgstr "Begutachtungen einbeziehen"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:227
+msgid "Qualifications"
+msgstr "Qualifikationen"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:228
+msgid "Include Qualifications"
+msgstr "Qualifikationen einbeziehen"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:246
+msgid "Services"
+msgstr "Dienstleistungen"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:247
+msgid "Include Services"
+msgstr "Dienstleistungen einbeziehen"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:255
+msgid "Works"
+msgstr "Werke"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/sections.js:256
+msgid "Include Works"
+msgstr "Werke einbeziehen"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/components/LoadingSpinner.js:10
+msgid "Loading ORCID Data"
+msgstr "ORCID-Daten werden geladen"
+
+#: build/index.js:1
+#: src/components/DataBlockInspectorControls.js:95
+msgid "Customize Items"
+msgstr "Elemente anpassen"
+
+#: build/index.js:1
+#: src/components/DataBlockInspectorControls.js:146
+msgid "ORCID iD"
+msgstr "ORCID iD"
+
+#: build/index.js:1
+#: src/components/DataBlockInspectorControls.js:156
+msgid "Apply"
+msgstr "Anwenden"
+
+#: build/index.js:1
+#: src/components/DataBlockInspectorControls.js:175
+msgid "Please provide a valid ORCID iD."
+msgstr "Bitte eine gültige ORCID iD eingeben"
+
+#: build/index.js:1
+#: src/components/DataBlockInspectorControls.js:195
+msgid "Sections"
+msgstr "Sektionen"
+
+#: build/index.js:1
+#: src/components/DataBlockInspectorControls.js:214
+msgid "No items detected."
+msgstr "Keine Einträge gefunden"
+
+#: build/index.js:1
+#: src/edit.js:138
+msgid "An error occurred while fetching the data from ORCID"
+msgstr "Fehler beim Abrufen der ORCID-Daten"
+
+#: build/index.js:1
+#: build/view.js:1
+#: src/edit.js:156
+#: src/view.js:109
+msgid "Please provide an ORCID iD"
+msgstr "Bitte eine ORCID iD eingeben"
+
+#: build/block.json
+#: src/block.json
+msgctxt "block title"
+msgid "Linked Open Profiles"
+msgstr "Linked Open Profiles"
+
+#: build/block.json
+#: src/block.json
+msgctxt "block description"
+msgid "Display public profile data from multiple ORCID profiles"
+msgstr "Daten aus ORCID-Profilen anzeigen"
