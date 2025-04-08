@@ -3,9 +3,9 @@
  * Plugin Name:       Linked Open Profiles
  * Plugin URI:        https://github.com/MESH-Research/linked-open-profiles
  * Description:       Display public profile data from multiple ORCID profiles
- * Requires at least: 6.7
- * Requires PHP:      7.2
- * Version:           0.3.2
+ * Requires at least: 6.6.2
+ * Requires PHP:      7.0
+ * Version:           0.3.11
  * Author:            ebengran
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
