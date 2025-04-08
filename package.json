@@ -7,6 +7,7 @@
 	"main": "build/index.js",
 	"files": [
 		"build",
+		"languages",
 		"screenshots",
 		"linked-open-profiles.php",
 		"orcid-api.php"
