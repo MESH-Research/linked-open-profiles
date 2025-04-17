@@ -25,27 +25,27 @@ This work is funded by the [ORCID Global Participation Fund][awardees].
 = Features =
 
 * Provides a Gutenberg block in the WordPress block editor that allows users to
-  * specify which sections are shown from specified ORCID records
-  * specify which items are shown within sections
+    * specify which sections are shown from specified ORCID records
+    * specify which items are shown within sections
 * Allows different ORCID records to be used in multiple blocks on the same post/page/site
 * Info will remain automatically up-to-date with ORCID
 * All languages currently supported by ORCID will be supported (in progress)
-  * Translated
-    * Arabic
-    * Chinese (Simplified)
-    * Chinese (Traditional)
-    * Czech
-    * French
-    * German
-    * Italian
-    * Japanese
-    * Polish
-    * Russian
-    * Spanish
-  * Pending Translation
-    * Korean
-    * Portuguese
-    * Turkish
+    * Translated
+        * Arabic
+        * Chinese (Simplified)
+        * Chinese (Traditional)
+        * Czech
+        * French
+        * German
+        * Italian
+        * Japanese
+        * Polish
+        * Russian
+        * Spanish
+    * Pending Translation
+        * Korean
+        * Portuguese
+        * Turkish
 * Accessible to those with disabilities
 
 == Screenshots ==
@@ -85,8 +85,8 @@ This WordPress plugin uses the third party public REST API on <https://orcid.org
 * **Where:** <https://orcid.org>
 * **Why:** to query the public data of an ORCID record users wish to use with this plugin
 * **Under What Circumstances:**
-  * whenever a user provides an ORCID iD to a block instance of this plugin
-  * whenever a post, page, or site that includes a block instance of this plugin is loaded
+    * whenever a user provides an ORCID iD to a block instance of this plugin
+    * whenever a post, page, or site that includes a block instance of this plugin is loaded
 
 User-provided ORCID iDs are sent to the public third party REST API on <https://orcid.org>. This plugin uses the REST API located at `https://orcid.org/####-####-####-####`. It is necessary to provide an ORCID iD to identify an ORCID record you wish to use when displaying ORCID record information on a WordPress post, page, or site.
 
