@@ -24,6 +24,22 @@ the Works section fully included](assets/screenshot-1.png)
 * Allows different ORCID records to be used in multiple blocks on the same post/page/site
 * Info will remain automatically up-to-date with ORCID
 * All languages currently supported by ORCID will be supported (in progress)
+  * Translated
+    * Arabic
+    * Chinese (Simplified)
+    * Chinese (Tranditional)
+    * Czech
+    * French
+    * German
+    * Italian
+    * Japanese
+    * Polish
+    * Russian
+    * Spanish
+  * Pending Translation
+    * Korean
+    * Portuguese
+    * Turkish
 * Accessible to those with disabilities
 
 ## Information Supported
