@@ -33,7 +33,7 @@ This work is funded by the [ORCID Global Participation Fund][awardees].
   * Translated
     * Arabic
     * Chinese (Simplified)
-    * Chinese (Tranditional)
+    * Chinese (Traditional)
     * Czech
     * French
     * German

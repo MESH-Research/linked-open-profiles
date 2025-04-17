@@ -27,7 +27,7 @@ the Works section fully included](assets/screenshot-1.png)
   * Translated
     * Arabic
     * Chinese (Simplified)
-    * Chinese (Tranditional)
+    * Chinese (Traditional)
     * Czech
     * French
     * German
