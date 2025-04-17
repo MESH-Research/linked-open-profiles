@@ -51,6 +51,10 @@ This work is funded by the [ORCID Global Participation Fund][awardees].
 == Screenshots ==
 
 1. Screenshot of the plugin in use in a Gutenberg editor, featuring the Biography and Education sections excluded, the Employment section partially included, and the Works section fully included
+2. Screenshot of the plugin in use in a Gutenberg editor with the language set to Arabic
+3. Screenshot of the plugin in use in a Gutenberg editor with the language set to Spanish
+4. Screenshot of the plugin in use in a Gutenberg editor with the language set to Japanese
+5. Screenshot of the plugin on a published post with the Feel Good! theme activated, demonstrating the minimalistic design of the plugin respects and preserves the theme's styling
 
 == Usage ==
 
