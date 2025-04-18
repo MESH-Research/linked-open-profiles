@@ -19,8 +19,8 @@ This plugin is developed and maintained by [Mesh Research Lab][mesh].
 This work is funded by the [ORCID Global Participation Fund][awardees].
 
 [orcid_data_block]: <https://github.com/MESH-Research/orcid-data-block>
-[mesh]: (https://meshresearch.commons.msu.edu).
-[awardees]: https://info.orcid.org/global-participation-fund-announces-fourth-round-of-awardees/
+[mesh]: <https://meshresearch.commons.msu.edu>
+[awardees]: <https://info.orcid.org/global-participation-fund-announces-fourth-round-of-awardees/>
 
 = Features =
 
@@ -90,7 +90,7 @@ This WordPress plugin uses the third party public REST API on <https://orcid.org
 
 User-provided ORCID iDs are sent to the public third party REST API on <https://orcid.org>. This plugin uses the REST API located at `https://orcid.org/####-####-####-####`. It is necessary to provide an ORCID iD to identify an ORCID record you wish to use when displaying ORCID record information on a WordPress post, page, or site.
 
-[orcid_ids]: https://support.orcid.org/hc/en-us/articles/360006897674-Structure-of-the-ORCID-Identifier
+[orcid_ids]: <https://support.orcid.org/hc/en-us/articles/360006897674-Structure-of-the-ORCID-Identifier>
 
 * [ORCID Privacy Policy](https://info.orcid.org/privacy-policy/)
 * [ORCID Terms of Use](https://info.orcid.org/terms-of-use/)
