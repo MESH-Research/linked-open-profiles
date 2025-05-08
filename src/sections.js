@@ -138,6 +138,7 @@ const work = function ( data ) {
 			{ typeMarkup( data ) }
 			{ dateMarkup( data ) }
 			{ doiMarkup( data ) }
+			{ urlMarkup( data ) }
 		</>
 	);
 };

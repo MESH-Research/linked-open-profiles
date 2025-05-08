@@ -235,15 +235,16 @@ function processRecordWork( record ) {
 		display_label: data.title.title.value,
 		journal_title: data[ 'journal-title' ]?.value,
 		date: data[ 'publication-date' ],
-		doi_url:
+		doi_url: 
 			data[ 'external-ids' ]?.[ 'external-id' ][ 0 ]?.[
-				'external-id-url'
-			]?.value,
+				'external-id-value'
+			],
 		path: data.path,
 		source: data.source[ 'source-name' ]?.value,
 		subtitle: data.title.subtitle?.value,
 		title: data.title.title.value,
 		type: data?.type,
+		url: data[ 'url' ]?.value,
 	};
 }
 
