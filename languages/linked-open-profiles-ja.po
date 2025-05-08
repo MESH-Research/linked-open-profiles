@@ -206,7 +206,7 @@ msgstr "作品を含める"
 #: build/view.js:1
 #: src/components/LoadingSpinner.js:10
 msgid "Loading ORCID Data"
-msgstr ""
+msgstr "ORCID データの読み込み"
 
 #: build/index.js:1
 #: src/components/DataBlockInspectorControls.js:95
