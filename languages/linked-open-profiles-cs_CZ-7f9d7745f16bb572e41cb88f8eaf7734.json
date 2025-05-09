@@ -1,1 +1,18 @@
-{"translation-revision-date":"YEAR-MO-DA HO:MI+ZONE","generator":"WP-CLI\/2.11.0","source":"src\/view.js","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","lang":"cs_CZ","plural-forms":"nplurals=2; plural=(n != 1);"},"Please provide an ORCID iD":["Pros\u00edm, uve\u010fte platn\u00fd identifik\u00e1tor ORCID"]}}}
+{
+	"translation-revision-date": "YEAR-MO-DA HO:MI+ZONE",
+	"generator": "WP-CLI/2.11.0",
+	"source": "src/view.js",
+	"domain": "messages",
+	"locale_data": {
+		"messages": {
+			"": {
+				"domain": "messages",
+				"lang": "cs_CZ",
+				"plural-forms": "nplurals=2; plural=(n != 1);"
+			},
+			"Please provide an ORCID iD": [
+				"Pros\u00edm, uve\u010fte platn\u00fd identifik\u00e1tor ORCID"
+			]
+		}
+	}
+}

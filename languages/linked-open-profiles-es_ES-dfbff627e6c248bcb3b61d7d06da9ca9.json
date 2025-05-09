@@ -1,1 +1,64 @@
-{"translation-revision-date":"YEAR-MO-DA HO:MI+ZONE","generator":"WP-CLI\/2.11.0","source":"build\/index.js","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","lang":"es_ES","plural-forms":"nplurals=2; plural=(n != 1);"},"Biographical Information":["Informaci\u00f3n bibliogr\u00e1fica"],"Given Name":["Nombre"],"Family Name":["Apellido"],"Credit Name":["Nombre en publicaciones"],"Other Names":["Otros nombres"],"Websites & social links":["P\u00e1ginas web y enlaces sociales"],"Biography":["Biograf\u00eda"],"Include Biography":["Incluir biograf\u00eda"],"Distinctions":["Menciones especiales"],"Include Distinctions":["Incluir menciones especiales"],"Education":["Formaci\u00f3n"],"Include Education":["Incluir formaci\u00f3n"],"Employment":["Empleo"],"Include Employment":["Incluir empleo"],"Fundings":["Subvenciones"],"Include Fundings":["Incluir subvenciones"],"Invited Positions":["Puestos de invitado"],"Include Invited Positions":["Incluir puestos de invitado"],"Memberships":["Afiliaciones"],"Include Memberships":["Incluir afiliaciones"],"Peer Reviews":["Revisiones por pares"],"Include Peer Reviews":["Incluir revisiones por pares"],"Qualifications":["Acreditaciones y titulaciones"],"Include Qualifications":["Incluir acreditaciones y titulaciones"],"Services":["Servicios"],"Include Services":["Incluir servicios"],"Works":["Obras"],"Include Works":["Incluir obras"],"Loading ORCID Data":["Cargando datos de ORCID"],"Customize Items":["Personalizar registros"],"ORCID iD":["ORCID iD"],"Apply":["Solicitar"],"Please provide a valid ORCID iD.":["Introduzca un identificador de ORCID v\u00e1lido"],"Sections":["Secciones"],"No items detected.":["No se han detectado registros"],"An error occurred while fetching the data from ORCID":["Se ha producido un error al obtener los datos de ORCID"],"Please provide an ORCID iD":["Introduzca un identificador de ORCID"]}}}
+{
+	"translation-revision-date": "YEAR-MO-DA HO:MI+ZONE",
+	"generator": "WP-CLI/2.11.0",
+	"source": "build/index.js",
+	"domain": "messages",
+	"locale_data": {
+		"messages": {
+			"": {
+				"domain": "messages",
+				"lang": "es_ES",
+				"plural-forms": "nplurals=2; plural=(n != 1);"
+			},
+			"Biographical Information": [
+				"Informaci\u00f3n bibliogr\u00e1fica"
+			],
+			"Given Name": [ "Nombre" ],
+			"Family Name": [ "Apellido" ],
+			"Credit Name": [ "Nombre en publicaciones" ],
+			"Other Names": [ "Otros nombres" ],
+			"Websites & social links": [
+				"P\u00e1ginas web y enlaces sociales"
+			],
+			"Biography": [ "Biograf\u00eda" ],
+			"Include Biography": [ "Incluir biograf\u00eda" ],
+			"Distinctions": [ "Menciones especiales" ],
+			"Include Distinctions": [ "Incluir menciones especiales" ],
+			"Education": [ "Formaci\u00f3n" ],
+			"Include Education": [ "Incluir formaci\u00f3n" ],
+			"Employment": [ "Empleo" ],
+			"Include Employment": [ "Incluir empleo" ],
+			"Fundings": [ "Subvenciones" ],
+			"Include Fundings": [ "Incluir subvenciones" ],
+			"Invited Positions": [ "Puestos de invitado" ],
+			"Include Invited Positions": [ "Incluir puestos de invitado" ],
+			"Memberships": [ "Afiliaciones" ],
+			"Include Memberships": [ "Incluir afiliaciones" ],
+			"Peer Reviews": [ "Revisiones por pares" ],
+			"Include Peer Reviews": [ "Incluir revisiones por pares" ],
+			"Qualifications": [ "Acreditaciones y titulaciones" ],
+			"Include Qualifications": [
+				"Incluir acreditaciones y titulaciones"
+			],
+			"Services": [ "Servicios" ],
+			"Include Services": [ "Incluir servicios" ],
+			"Works": [ "Obras" ],
+			"Include Works": [ "Incluir obras" ],
+			"Loading ORCID Data": [ "Cargando datos de ORCID" ],
+			"Customize Items": [ "Personalizar registros" ],
+			"ORCID iD": [ "ORCID iD" ],
+			"Apply": [ "Solicitar" ],
+			"Please provide a valid ORCID iD.": [
+				"Introduzca un identificador de ORCID v\u00e1lido"
+			],
+			"Sections": [ "Secciones" ],
+			"No items detected.": [ "No se han detectado registros" ],
+			"An error occurred while fetching the data from ORCID": [
+				"Se ha producido un error al obtener los datos de ORCID"
+			],
+			"Please provide an ORCID iD": [
+				"Introduzca un identificador de ORCID"
+			]
+		}
+	}
+}

@@ -1,1 +1,23 @@
-{"translation-revision-date":"YEAR-MO-DA HO:MI+ZONE","generator":"WP-CLI\/2.11.0","source":"src\/components\/DataBlockInspectorControls.js","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","lang":"pl_PL","plural-forms":"nplurals=2; plural=(n != 1);"},"Customize Items":["Dostosuj elementy"],"ORCID iD":["ORCID iD"],"Apply":["Zastosuj"],"Please provide a valid ORCID iD.":["Prosz\u0119 poda\u0107 prawid\u0142owy identyfikator ORCID"],"Sections":["Sekcje"],"No items detected.":["Nie wykryto element\u00f3w"]}}}
+{
+	"translation-revision-date": "YEAR-MO-DA HO:MI+ZONE",
+	"generator": "WP-CLI/2.11.0",
+	"source": "src/components/DataBlockInspectorControls.js",
+	"domain": "messages",
+	"locale_data": {
+		"messages": {
+			"": {
+				"domain": "messages",
+				"lang": "pl_PL",
+				"plural-forms": "nplurals=2; plural=(n != 1);"
+			},
+			"Customize Items": [ "Dostosuj elementy" ],
+			"ORCID iD": [ "ORCID iD" ],
+			"Apply": [ "Zastosuj" ],
+			"Please provide a valid ORCID iD.": [
+				"Prosz\u0119 poda\u0107 prawid\u0142owy identyfikator ORCID"
+			],
+			"Sections": [ "Sekcje" ],
+			"No items detected.": [ "Nie wykryto element\u00f3w" ]
+		}
+	}
+}

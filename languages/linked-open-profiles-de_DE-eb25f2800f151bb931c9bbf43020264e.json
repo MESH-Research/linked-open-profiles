@@ -1,1 +1,39 @@
-{"translation-revision-date":"YEAR-MO-DA HO:MI+ZONE","generator":"WP-CLI\/2.11.0","source":"src\/sections.js","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","lang":"de_DE","plural-forms":"nplurals=2; plural=(n != 1);"},"Biography":["Biografie"],"Include Biography":["Biografie einbeziehen"],"Distinctions":["Auszeichnungen"],"Include Distinctions":["Auszeichnungen einbeziehen"],"Education":["Auszeichnungen"],"Include Education":["Ausbildung einbeziehen"],"Employment":["Berufst\u00e4tigkeit"],"Include Employment":["Berufst\u00e4tigkeit einbeziehen"],"Fundings":["Finanzierungen"],"Include Fundings":["Finanzierungen einbeziehen"],"Invited Positions":["Eingeladene Positionen"],"Include Invited Positions":["Eingeladene Positionen einbeziehen"],"Memberships":["Mitgliedschaften"],"Include Memberships":["Mitgliedschaften einbeziehen"],"Peer Reviews":["Begutachtungen"],"Include Peer Reviews":["Begutachtungen einbeziehen"],"Qualifications":["Qualifikationen"],"Include Qualifications":["Qualifikationen einbeziehen"],"Services":["Dienstleistungen"],"Include Services":["Dienstleistungen einbeziehen"],"Works":["Werke"],"Include Works":["Werke einbeziehen"]}}}
+{
+	"translation-revision-date": "YEAR-MO-DA HO:MI+ZONE",
+	"generator": "WP-CLI/2.11.0",
+	"source": "src/sections.js",
+	"domain": "messages",
+	"locale_data": {
+		"messages": {
+			"": {
+				"domain": "messages",
+				"lang": "de_DE",
+				"plural-forms": "nplurals=2; plural=(n != 1);"
+			},
+			"Biography": [ "Biografie" ],
+			"Include Biography": [ "Biografie einbeziehen" ],
+			"Distinctions": [ "Auszeichnungen" ],
+			"Include Distinctions": [ "Auszeichnungen einbeziehen" ],
+			"Education": [ "Auszeichnungen" ],
+			"Include Education": [ "Ausbildung einbeziehen" ],
+			"Employment": [ "Berufst\u00e4tigkeit" ],
+			"Include Employment": [ "Berufst\u00e4tigkeit einbeziehen" ],
+			"Fundings": [ "Finanzierungen" ],
+			"Include Fundings": [ "Finanzierungen einbeziehen" ],
+			"Invited Positions": [ "Eingeladene Positionen" ],
+			"Include Invited Positions": [
+				"Eingeladene Positionen einbeziehen"
+			],
+			"Memberships": [ "Mitgliedschaften" ],
+			"Include Memberships": [ "Mitgliedschaften einbeziehen" ],
+			"Peer Reviews": [ "Begutachtungen" ],
+			"Include Peer Reviews": [ "Begutachtungen einbeziehen" ],
+			"Qualifications": [ "Qualifikationen" ],
+			"Include Qualifications": [ "Qualifikationen einbeziehen" ],
+			"Services": [ "Dienstleistungen" ],
+			"Include Services": [ "Dienstleistungen einbeziehen" ],
+			"Works": [ "Werke" ],
+			"Include Works": [ "Werke einbeziehen" ]
+		}
+	}
+}

@@ -1,1 +1,66 @@
-{"translation-revision-date":"YEAR-MO-DA HO:MI+ZONE","generator":"WP-CLI\/2.11.0","source":"build\/index.js","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","lang":"fr_FR","plural-forms":"nplurals=2; plural=(n != 1);"},"Biographical Information":["Informations biographiques"],"Given Name":["Nom"],"Family Name":["Nom de famille"],"Credit Name":["Nom de cr\u00e9dit"],"Other Names":["Autres noms"],"Websites & social links":["Sites web et liens aux r\u00e9seaux sociaux"],"Biography":["Biographie"],"Include Biography":["Inclure la biographie"],"Distinctions":["R\u00e9compenses"],"Include Distinctions":["Inclure les r\u00e9compenses"],"Education":["Formation"],"Include Education":["Inclure la formation"],"Employment":["Emploi"],"Include Employment":["Inclure l'emploi"],"Fundings":["Financements"],"Include Fundings":["Inclure les financements"],"Invited Positions":["Positions invit\u00e9es"],"Include Invited Positions":["Inclure les positions invit\u00e9es"],"Memberships":["Adh\u00e9sions"],"Include Memberships":["Inclure les adh\u00e9sions"],"Peer Reviews":["\u00c9valuations par les pairs"],"Include Peer Reviews":["Inclure les \u00e9valuations par les pairs"],"Qualifications":["Qualifications"],"Include Qualifications":["Inclure les qualifications"],"Services":["Inclure les services"],"Include Services":["Services"],"Works":["\u0152uvres"],"Include Works":["Inclure les \u0153uvres"],"Loading ORCID Data":["Chargement des donn\u00e9es ORCID"],"Customize Items":["Personnaliser les \u00e9l\u00e9ments"],"ORCID iD":["ORCID iD"],"Apply":["Postuler"],"Please provide a valid ORCID iD.":["Veuillez saisir un identifiant ORCID valide"],"Sections":["Sections"],"No items detected.":["Aucun \u00e9l\u00e9ment d\u00e9tect\u00e9"],"An error occurred while fetching the data from ORCID":["Une erreur s'est produite lors de la r\u00e9cup\u00e9ration des donn\u00e9es depuis ORCID"],"Please provide an ORCID iD":["Veuillez saisir un identifiant ORCID"]}}}
+{
+	"translation-revision-date": "YEAR-MO-DA HO:MI+ZONE",
+	"generator": "WP-CLI/2.11.0",
+	"source": "build/index.js",
+	"domain": "messages",
+	"locale_data": {
+		"messages": {
+			"": {
+				"domain": "messages",
+				"lang": "fr_FR",
+				"plural-forms": "nplurals=2; plural=(n != 1);"
+			},
+			"Biographical Information": [ "Informations biographiques" ],
+			"Given Name": [ "Nom" ],
+			"Family Name": [ "Nom de famille" ],
+			"Credit Name": [ "Nom de cr\u00e9dit" ],
+			"Other Names": [ "Autres noms" ],
+			"Websites & social links": [
+				"Sites web et liens aux r\u00e9seaux sociaux"
+			],
+			"Biography": [ "Biographie" ],
+			"Include Biography": [ "Inclure la biographie" ],
+			"Distinctions": [ "R\u00e9compenses" ],
+			"Include Distinctions": [ "Inclure les r\u00e9compenses" ],
+			"Education": [ "Formation" ],
+			"Include Education": [ "Inclure la formation" ],
+			"Employment": [ "Emploi" ],
+			"Include Employment": [ "Inclure l'emploi" ],
+			"Fundings": [ "Financements" ],
+			"Include Fundings": [ "Inclure les financements" ],
+			"Invited Positions": [ "Positions invit\u00e9es" ],
+			"Include Invited Positions": [
+				"Inclure les positions invit\u00e9es"
+			],
+			"Memberships": [ "Adh\u00e9sions" ],
+			"Include Memberships": [ "Inclure les adh\u00e9sions" ],
+			"Peer Reviews": [ "\u00c9valuations par les pairs" ],
+			"Include Peer Reviews": [
+				"Inclure les \u00e9valuations par les pairs"
+			],
+			"Qualifications": [ "Qualifications" ],
+			"Include Qualifications": [ "Inclure les qualifications" ],
+			"Services": [ "Inclure les services" ],
+			"Include Services": [ "Services" ],
+			"Works": [ "\u0152uvres" ],
+			"Include Works": [ "Inclure les \u0153uvres" ],
+			"Loading ORCID Data": [ "Chargement des donn\u00e9es ORCID" ],
+			"Customize Items": [ "Personnaliser les \u00e9l\u00e9ments" ],
+			"ORCID iD": [ "ORCID iD" ],
+			"Apply": [ "Postuler" ],
+			"Please provide a valid ORCID iD.": [
+				"Veuillez saisir un identifiant ORCID valide"
+			],
+			"Sections": [ "Sections" ],
+			"No items detected.": [
+				"Aucun \u00e9l\u00e9ment d\u00e9tect\u00e9"
+			],
+			"An error occurred while fetching the data from ORCID": [
+				"Une erreur s'est produite lors de la r\u00e9cup\u00e9ration des donn\u00e9es depuis ORCID"
+			],
+			"Please provide an ORCID iD": [
+				"Veuillez saisir un identifiant ORCID"
+			]
+		}
+	}
+}
