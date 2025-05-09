@@ -17,12 +17,12 @@ import {
 	typeMarkup,
 	urlMarkup,
 } from './markupfunctions';
-const bio = function ( data ) {
+const bio = function ( data, attributes ) {
 	return (
 		<>
-			{ nameMarkup( data ) }
-			{ bioMarkup( data ) }
-			{ researcherUrlMarkup( data ) }
+			{ nameMarkup( data, attributes ) }
+			{ bioMarkup( data, attributes ) }
+			{ researcherUrlMarkup( data, attributes ) }
 		</>
 	);
 };
@@ -147,11 +147,37 @@ export const sections = {
 	bio: {
 		term: __( 'Biography', 'linked-open-profiles' ),
 		include: __( 'Include Biography', 'linked-open-profiles' ),
+		subsections: [
+			{
+				id: 'given_name',
+				label: __( 'Given Name', 'linked-open-profiles' ),
+			},
+			{
+				id: 'family_name',
+				label: __( 'Family Name', 'linked-open-profiles' ),
+			},
+			{
+				id: 'credit_name',
+				label: __( 'Credit Name', 'linked-open-profiles' ),
+			},
+			{
+				id: 'other_names',
+				label: __( 'Other Names', 'linked-open-profiles' ),
+			},
+			{
+				id: 'bio_info',
+				label: __( 'Biographical Information', 'linked-open-profiles' ),
+			},
+			{
+				id: 'urls',
+				label: __( 'Websites & Social Links', 'linked-open-profiles' ),
+			},
+		],
 		id: 'bio',
 		format: 'person',
 		summaryName: null,
 		dateName: null,
-		can_exclude: false,
+		can_exclude_items: false,
 		model: bio,
 	},
 	distinctions: {
@@ -161,7 +187,7 @@ export const sections = {
 		format: 'affiliation-group',
 		summaryName: 'distinction-summary',
 		dateName: 'start-date',
-		can_exclude: true,
+		can_exclude_items: true,
 		model: distinction,
 	},
 	educations: {
@@ -171,7 +197,7 @@ export const sections = {
 		format: 'affiliation-group',
 		summaryName: 'education-summary',
 		dateName: 'start-date',
-		can_exclude: true,
+		can_exclude_items: true,
 		model: education,
 	},
 	employments: {
@@ -181,7 +207,7 @@ export const sections = {
 		format: 'affiliation-group',
 		summaryName: 'employment-summary',
 		dateName: 'start-date',
-		can_exclude: true,
+		can_exclude_items: true,
 		model: employment,
 	},
 	fundings: {
@@ -191,7 +217,7 @@ export const sections = {
 		format: 'group',
 		summaryName: 'funding-summary',
 		dateName: 'start-date',
-		can_exclude: true,
+		can_exclude_items: true,
 		model: funding,
 	},
 	'invited-positions': {
@@ -201,7 +227,7 @@ export const sections = {
 		format: 'affiliation-group',
 		summaryName: 'invited-position-summary',
 		dateName: 'start-date',
-		can_exclude: true,
+		can_exclude_items: true,
 		model: invitedPosition,
 	},
 	memberships: {
@@ -211,7 +237,7 @@ export const sections = {
 		format: 'affiliation-group',
 		summaryName: 'membership-summary',
 		dateName: '',
-		can_exclude: true,
+		can_exclude_items: true,
 		model: membership,
 	},
 	'peer-reviews': {
@@ -221,7 +247,7 @@ export const sections = {
 		format: 'group',
 		summaryName: 'peer-review-summary',
 		dateName: 'completion-date',
-		can_exclude: true,
+		can_exclude_items: true,
 		model: peerReview,
 	},
 	qualifications: {
@@ -231,7 +257,7 @@ export const sections = {
 		format: 'affiliation-group',
 		summaryName: 'qualification-summary',
 		dateName: 'start-date',
-		can_exclude: true,
+		can_exclude_items: true,
 		model: qualification,
 	},
 	// "research-resources": {
@@ -241,7 +267,7 @@ export const sections = {
 	// 	format: "affiliation-group", // unknown; this is a guess
 	// 	summaryName: "resource-resource-summary", // guess
 	// 	dateName: "start-date", // guess
-	//  can_exclude: true,
+	//  can_exclude_items: true,
 	// },
 	services: {
 		term: __( 'Services', 'linked-open-profiles' ),
@@ -249,7 +275,7 @@ export const sections = {
 		id: 'services',
 		format: 'affiliation-group',
 		summaryName: 'service-summary',
-		can_exclude: true,
+		can_exclude_items: true,
 		model: service,
 	},
 	works: {
@@ -258,7 +284,7 @@ export const sections = {
 		id: 'works',
 		format: 'group',
 		summaryName: 'work-summary',
-		can_exclude: true,
+		can_exclude_items: true,
 		model: work,
 	},
 };
