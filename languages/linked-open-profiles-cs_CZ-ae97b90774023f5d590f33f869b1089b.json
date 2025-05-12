@@ -1,1 +1,25 @@
-{"translation-revision-date":"YEAR-MO-DA HO:MI+ZONE","generator":"WP-CLI\/2.11.0","source":"src\/components\/DataBlockInspectorControls.js","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","lang":"cs_CZ","plural-forms":"nplurals=2; plural=(n != 1);"},"Customize Items":["P\u0159izp\u016fsobit polo\u017eky"],"ORCID iD":["ORCID iD"],"Apply":["Pou\u017e\u00edt"],"Please provide a valid ORCID iD.":["Pros\u00edm, uve\u010fte platn\u00fd identifik\u00e1tor ORCID"],"Sections":["Sekce"],"No items detected.":["Nebyly nalezeny \u017e\u00e1dn\u00e9 polo\u017eky"]}}}
+{
+	"translation-revision-date": "YEAR-MO-DA HO:MI+ZONE",
+	"generator": "WP-CLI/2.11.0",
+	"source": "src/components/DataBlockInspectorControls.js",
+	"domain": "messages",
+	"locale_data": {
+		"messages": {
+			"": {
+				"domain": "messages",
+				"lang": "cs_CZ",
+				"plural-forms": "nplurals=2; plural=(n != 1);"
+			},
+			"Customize Items": [ "P\u0159izp\u016fsobit polo\u017eky" ],
+			"ORCID iD": [ "ORCID iD" ],
+			"Apply": [ "Pou\u017e\u00edt" ],
+			"Please provide a valid ORCID iD.": [
+				"Pros\u00edm, uve\u010fte platn\u00fd identifik\u00e1tor ORCID"
+			],
+			"Sections": [ "Sekce" ],
+			"No items detected.": [
+				"Nebyly nalezeny \u017e\u00e1dn\u00e9 polo\u017eky"
+			]
+		}
+	}
+}

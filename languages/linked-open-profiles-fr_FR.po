@@ -67,7 +67,7 @@ msgstr "Autres noms"
 #: build/index.js:1
 #: build/view.js:1
 #: src/markupfunctions.js:309
-msgid "Websites & social links"
+msgid "Websites & Social Links"
 msgstr "Sites web et liens aux réseaux sociaux"
 
 #: build/index.js:1

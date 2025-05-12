@@ -1,1 +1,21 @@
-{"translation-revision-date":"YEAR-MO-DA HO:MI+ZONE","generator":"WP-CLI\/2.11.0","source":"src\/edit.js","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","lang":"cs_CZ","plural-forms":"nplurals=2; plural=(n != 1);"},"An error occurred while fetching the data from ORCID":["Do\u0161lo k chyb\u011b p\u0159i na\u010d\u00edt\u00e1n\u00ed dat z ORCID"],"Please provide an ORCID iD":["Pros\u00edm, uve\u010fte platn\u00fd identifik\u00e1tor ORCID"]}}}
+{
+	"translation-revision-date": "YEAR-MO-DA HO:MI+ZONE",
+	"generator": "WP-CLI/2.11.0",
+	"source": "src/edit.js",
+	"domain": "messages",
+	"locale_data": {
+		"messages": {
+			"": {
+				"domain": "messages",
+				"lang": "cs_CZ",
+				"plural-forms": "nplurals=2; plural=(n != 1);"
+			},
+			"An error occurred while fetching the data from ORCID": [
+				"Do\u0161lo k chyb\u011b p\u0159i na\u010d\u00edt\u00e1n\u00ed dat z ORCID"
+			],
+			"Please provide an ORCID iD": [
+				"Pros\u00edm, uve\u010fte platn\u00fd identifik\u00e1tor ORCID"
+			]
+		}
+	}
+}

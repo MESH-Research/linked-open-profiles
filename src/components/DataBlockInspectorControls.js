@@ -2,6 +2,7 @@ import { __ } from '@wordpress/i18n';
 import { sections } from './../sections';
 import {
 	isSectionShown,
+	isSubSectionShown,
 	hasNoItems,
 	excludedItems,
 	canExclude,
@@ -23,6 +24,9 @@ import LoadingSpinner from './LoadingSpinner.js';
 
 function toggleSection( section, value, setAttributes ) {
 	setAttributes( { [ `${ sections[ section ].id }_show` ]: value } );
+}
+function toggleSubSection( section, subsection, value, setAttributes ) {
+	setAttributes( { [ `${ section }_${ subsection }_show` ]: value } );
 }
 
 function modifyExcludedItems(
@@ -87,6 +91,35 @@ function getSectionControls( section, items, attributes, setAttributes ) {
 					toggleSection( section, value, setAttributes );
 				} }
 			/>
+			{ section == 'bio' && attributes[ 'bio_show' ] && (
+				<PanelBody
+					initialOpen={ false }
+					title={ __( 'Customize Items', 'linked-open-profiles' ) }
+				>
+					{ sections.bio.subsections.map( function ( subsection ) {
+						return (
+							<CheckboxControl
+								__nextHasNoMarginBottom={ true }
+								checked={ isSubSectionShown(
+									subsection.id,
+									section,
+									attributes
+								) }
+								className="odb-medium-margin-top"
+								label={ subsection.label }
+								onChange={ ( value ) => {
+									toggleSubSection(
+										section,
+										subsection.id,
+										value,
+										setAttributes
+									);
+								} }
+							/>
+						);
+					} ) }
+				</PanelBody>
+			) }
 			{ show &&
 				canExclude( section, sections ) &&
 				! hasNoItems( section, items ) && (

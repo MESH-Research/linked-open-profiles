@@ -52,12 +52,12 @@ ORCID, it will not appear for that item in the plugin.
 ### Biography
 
 * Name
-  * Given Names
+  * Given Name
   * Family Name
   * Credit Name
   * Other Names
 * Biographical Information
-* Websites & social links
+* Websites & Social Links
 
 ### Distinction
 

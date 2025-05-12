@@ -2,7 +2,7 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "mesh-research/linked-open-profiles",
-	"version": "0.3.12",
+	"version": "0.3.13",
 	"title": "Linked Open Profiles",
 	"category": "widgets",
 	"icon": "",
@@ -21,6 +21,30 @@
 			"default": 2
 		},
 		"bio_show": {
+			"type": "boolean",
+			"default": true
+		},
+		"bio_given_name_show": {
+			"type": "boolean",
+			"default": true
+		},
+		"bio_family_name_show": {
+			"type": "boolean",
+			"default": true
+		},
+		"bio_credit_name_show": {
+			"type": "boolean",
+			"default": true
+		},
+		"bio_other_names_show": {
+			"type": "boolean",
+			"default": true
+		},
+		"bio_bio_info_show": {
+			"type": "boolean",
+			"default": true
+		},
+		"bio_urls_show": {
 			"type": "boolean",
 			"default": true
 		},

@@ -235,7 +235,7 @@ function processRecordWork( record ) {
 		display_label: data.title.title.value,
 		journal_title: data[ 'journal-title' ]?.value,
 		date: data[ 'publication-date' ],
-		doi_url: 
+		doi_url:
 			data[ 'external-ids' ]?.[ 'external-id' ][ 0 ]?.[
 				'external-id-value'
 			],

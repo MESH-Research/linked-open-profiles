@@ -1,1 +1,21 @@
-{"translation-revision-date":"YEAR-MO-DA HO:MI+ZONE","generator":"WP-CLI\/2.11.0","source":"src\/markupfunctions.js","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","lang":"it_IT","plural-forms":"nplurals=2; plural=(n != 1);"},"Biographical Information":["Informazioni biografiche"],"Given Name":["Nome"],"Family Name":["Cognome"],"Credit Name":["Nome di credito"],"Other Names":["Altri nomi"],"Websites & social links":["Siti Web e Social Links"]}}}
+{
+	"translation-revision-date": "YEAR-MO-DA HO:MI+ZONE",
+	"generator": "WP-CLI/2.11.0",
+	"source": "src/markupfunctions.js",
+	"domain": "messages",
+	"locale_data": {
+		"messages": {
+			"": {
+				"domain": "messages",
+				"lang": "it_IT",
+				"plural-forms": "nplurals=2; plural=(n != 1);"
+			},
+			"Biographical Information": [ "Informazioni biografiche" ],
+			"Given Name": [ "Nome" ],
+			"Family Name": [ "Cognome" ],
+			"Credit Name": [ "Nome di credito" ],
+			"Other Names": [ "Altri nomi" ],
+			"Websites & Social Links": [ "Siti Web e Social Links" ]
+		}
+	}
+}

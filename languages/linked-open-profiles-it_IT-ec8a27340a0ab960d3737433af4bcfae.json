@@ -1,1 +1,47 @@
-{"translation-revision-date":"YEAR-MO-DA HO:MI+ZONE","generator":"WP-CLI\/2.11.0","source":"build\/view.js","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","lang":"it_IT","plural-forms":"nplurals=2; plural=(n != 1);"},"Biographical Information":["Informazioni biografiche"],"Given Name":["Nome"],"Family Name":["Cognome"],"Credit Name":["Nome di credito"],"Other Names":["Altri nomi"],"Websites & social links":["Siti Web e Social Links"],"Biography":["Biografia"],"Include Biography":["Includere biografia"],"Distinctions":["Distinzioni"],"Include Distinctions":["Includere distinzioni"],"Education":["Istruzione"],"Include Education":["Includere istruzione"],"Employment":["Occupazione"],"Include Employment":["Includere occupazione"],"Fundings":["Finanziamenti"],"Include Fundings":["Includere finanziamenti"],"Invited Positions":["Posizioni invitate"],"Include Invited Positions":["Includere posizioni invitate"],"Memberships":["Appartenenze"],"Include Memberships":["Includere appartenenze"],"Peer Reviews":["Revisioni tra pari"],"Include Peer Reviews":["Includere revisioni tra pari"],"Qualifications":["Qualifiche"],"Include Qualifications":["Includere qualifiche"],"Services":["Servizi"],"Include Services":["Includere servizi"],"Works":["Lavori"],"Include Works":["Includere lavori"],"Loading ORCID Data":["Caricamento dati ORCID"],"Please provide an ORCID iD":["Si prega di fornire un'identificazione ORCID"]}}}
+{
+	"translation-revision-date": "YEAR-MO-DA HO:MI+ZONE",
+	"generator": "WP-CLI/2.11.0",
+	"source": "build/view.js",
+	"domain": "messages",
+	"locale_data": {
+		"messages": {
+			"": {
+				"domain": "messages",
+				"lang": "it_IT",
+				"plural-forms": "nplurals=2; plural=(n != 1);"
+			},
+			"Biographical Information": [ "Informazioni biografiche" ],
+			"Given Name": [ "Nome" ],
+			"Family Name": [ "Cognome" ],
+			"Credit Name": [ "Nome di credito" ],
+			"Other Names": [ "Altri nomi" ],
+			"Websites & Social Links": [ "Siti Web e Social Links" ],
+			"Biography": [ "Biografia" ],
+			"Include Biography": [ "Includere biografia" ],
+			"Distinctions": [ "Distinzioni" ],
+			"Include Distinctions": [ "Includere distinzioni" ],
+			"Education": [ "Istruzione" ],
+			"Include Education": [ "Includere istruzione" ],
+			"Employment": [ "Occupazione" ],
+			"Include Employment": [ "Includere occupazione" ],
+			"Fundings": [ "Finanziamenti" ],
+			"Include Fundings": [ "Includere finanziamenti" ],
+			"Invited Positions": [ "Posizioni invitate" ],
+			"Include Invited Positions": [ "Includere posizioni invitate" ],
+			"Memberships": [ "Appartenenze" ],
+			"Include Memberships": [ "Includere appartenenze" ],
+			"Peer Reviews": [ "Revisioni tra pari" ],
+			"Include Peer Reviews": [ "Includere revisioni tra pari" ],
+			"Qualifications": [ "Qualifiche" ],
+			"Include Qualifications": [ "Includere qualifiche" ],
+			"Services": [ "Servizi" ],
+			"Include Services": [ "Includere servizi" ],
+			"Works": [ "Lavori" ],
+			"Include Works": [ "Includere lavori" ],
+			"Loading ORCID Data": [ "Caricamento dati ORCID" ],
+			"Please provide an ORCID iD": [
+				"Si prega di fornire un'identificazione ORCID"
+			]
+		}
+	}
+}

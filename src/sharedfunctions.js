@@ -2,6 +2,10 @@ export function isSectionShown( section, sections, attributes ) {
 	return attributes[ `${ sections[ section ].id }_show` ];
 }
 
+export function isSubSectionShown( subsection, section, attributes ) {
+	return attributes[ `${ section }_${ subsection }_show` ];
+}
+
 export function hasNoItems( section, items ) {
 	if ( ! items[ section ] ) {
 		return true;
@@ -10,7 +14,7 @@ export function hasNoItems( section, items ) {
 }
 
 export function canExclude( section, sections ) {
-	return sections[ section ].can_exclude;
+	return sections[ section ].can_exclude_items;
 }
 
 export function excludedItems( section, sections, attributes ) {
