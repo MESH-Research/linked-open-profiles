@@ -67,7 +67,7 @@ msgstr "Jiná jména a příjmení"
 #: build/index.js:1
 #: build/view.js:1
 #: src/markupfunctions.js:309
-msgid "Websites & social links"
+msgid "Websites & Social Links"
 msgstr "Webové stránky a odkazy na sociální sítě"
 
 #: build/index.js:1

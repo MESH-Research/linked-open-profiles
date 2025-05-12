@@ -312,7 +312,7 @@ export function researcherUrlMarkup( data, attributes ) {
 			<>
 				<br />
 				<strong>
-					{ __( 'Websites & social links', 'linked-open-profiles' ) }
+					{ __( 'Websites & Social Links', 'linked-open-profiles' ) }
 				</strong>
 				<ItemGroup>
 					{ data.urls.map( ( url ) => (
