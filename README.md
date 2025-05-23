@@ -213,8 +213,8 @@ ORCID, it will not appear for that item in the plugin.
     * Customize which items within sections are shown.
 7. Save as a draft or publish.
 
-[adding_blocks]: [https://wordpress.org/documentation/article/adding*a*new*block/]
-[finding_ids]: [https://support.orcid.org/hc/en*us/articles/360042767454*I*don*t*know*my*ORCID*ID]
+[adding_blocks]: [https://wordpress.org/documentation/article/adding-a-new-block/]
+[finding_ids]: [https://support.orcid.org/hc/en-us/articles/360042767454-I-don-t-know-my-ORCID-ID]
 
 ## Functionality
 
