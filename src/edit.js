@@ -211,7 +211,8 @@ export default function Edit( { attributes, setAttributes } ) {
 																	{ sections[
 																		section
 																	].model(
-																		item
+																		item,
+																		attributes
 																	) }
 																</Item>
 															)

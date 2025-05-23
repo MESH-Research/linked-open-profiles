@@ -132,7 +132,8 @@ function LinkedOpenProfiles( { attributes } ) {
 										</Heading>
 										{ sections[ section ].id === 'bio' &&
 											sections[ section ].model(
-												items[ section ][ 0 ]
+												items[ section ][ 0 ],
+												attributes
 											) }
 										{ sections[ section ].id !== 'bio' && (
 											<ItemGroup>
