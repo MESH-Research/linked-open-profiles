@@ -178,11 +178,11 @@ export function doiMarkup( data ) {
 			<>
 				<br />
 				<a
-					href={ data.doi_url }
+					href={`https://doi.org/${ data.doi_url }`}
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					{ data.doi_url }
+					https://doi.org/{ data.doi_url }
 				</a>
 			</>
 		);
