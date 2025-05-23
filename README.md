@@ -194,7 +194,7 @@ ORCID, it will not appear for that item in the plugin.
 6. Choose the zip file that was previously downloaded.
 7. Click the "Install Now" button.
 
-[releases]: [https://github.com/MESH-Research/linked-open-profiles/releases]
+[releases]: <https://github.com/MESH-Research/linked-open-profiles/releases>
 
 ## Usage
 
@@ -213,8 +213,8 @@ ORCID, it will not appear for that item in the plugin.
     * Customize which items within sections are shown.
 7. Save as a draft or publish.
 
-[adding_blocks]: [https://wordpress.org/documentation/article/adding-a-new-block/]
-[finding_ids]: [https://support.orcid.org/hc/en-us/articles/360042767454-I-don-t-know-my-ORCID-ID]
+[adding_blocks]: <https://wordpress.org/documentation/article/adding-a-new-block/>
+[finding_ids]: <https://support.orcid.org/hc/en-us/articles/360042767454-I-don-t-know-my-ORCID-ID>
 
 ## Functionality
 
@@ -244,7 +244,7 @@ User-provided ORCID iDs are sent to the public third party REST API on
 to identify an ORCID record you wish to use when displaying ORCID record
 information on a WordPress post, page, or site.
 
-[orcid_ids]: https://support.orcid.org/hc/en-us/articles/360006897674-Structure-of-the-ORCID-Identifier
+[orcid_ids]: <https://support.orcid.org/hc/en-us/articles/360006897674-Structure-of-the-ORCID-Identifier>
 
 * [ORCID Privacy Policy](https://info.orcid.org/privacy-policy/)
 * [ORCID Terms of Use](https://info.orcid.org/terms-of-use/)
