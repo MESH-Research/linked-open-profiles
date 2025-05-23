@@ -33,12 +33,12 @@ the Works section fully included](assets/screenshot-1.png)
     * German
     * Italian
     * Japanese
+    * Korean
     * Polish
+    * Portuguese
     * Russian
     * Spanish
   * Pending Translation
-    * Korean
-    * Portuguese
     * Turkish
 * Accessible to those with disabilities
 

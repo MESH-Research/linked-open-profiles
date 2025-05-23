@@ -39,12 +39,12 @@ This work is funded by the [ORCID Global Participation Fund][awardees].
         * German
         * Italian
         * Japanese
+        * Korean
         * Polish
+        * Portuguese
         * Russian
         * Spanish
     * Pending Translation
-        * Korean
-        * Portuguese
         * Turkish
 * Accessible to those with disabilities
 
