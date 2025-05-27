@@ -153,7 +153,8 @@ function LinkedOpenProfiles( { attributes } ) {
 																{ sections[
 																	section
 																].model(
-																	item
+																	item,
+																	attributes
 																) }
 															</Item>
 														)

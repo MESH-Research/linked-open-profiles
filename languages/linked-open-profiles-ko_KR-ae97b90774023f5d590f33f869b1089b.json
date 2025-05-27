@@ -1,1 +1,25 @@
-{"translation-revision-date":"YEAR-MO-DA HO:MI+ZONE","generator":"WP-CLI\/2.11.0","source":"src\/components\/DataBlockInspectorControls.js","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","lang":"ko_KR","plural-forms":"nplurals=2; plural=(n != 1);"},"Customize Items":["\ud56d\ubaa9 \ub9de\ucda4 \uc124\uc815"],"ORCID iD":["ORCID iD"],"Apply":["\uc801\uc6a9"],"Please provide a valid ORCID iD.":["\uc720\ud6a8\ud55c ORCID \uc2e0\ubd84\uc99d\uc744 \uc81c\ucd9c\ud574 \uc8fc\uc138\uc694"],"Sections":["\ud56d\ubaa9"],"No items detected.":["\ud56d\ubaa9\uc774 \uc5c6\uc2b5\ub2c8\ub2e4"]}}}
+{
+	"translation-revision-date": "YEAR-MO-DA HO:MI+ZONE",
+	"generator": "WP-CLI/2.11.0",
+	"source": "src/components/DataBlockInspectorControls.js",
+	"domain": "messages",
+	"locale_data": {
+		"messages": {
+			"": {
+				"domain": "messages",
+				"lang": "ko_KR",
+				"plural-forms": "nplurals=2; plural=(n != 1);"
+			},
+			"Customize Items": [ "\ud56d\ubaa9 \ub9de\ucda4 \uc124\uc815" ],
+			"ORCID iD": [ "ORCID iD" ],
+			"Apply": [ "\uc801\uc6a9" ],
+			"Please provide a valid ORCID iD.": [
+				"\uc720\ud6a8\ud55c ORCID \uc2e0\ubd84\uc99d\uc744 \uc81c\ucd9c\ud574 \uc8fc\uc138\uc694"
+			],
+			"Sections": [ "\ud56d\ubaa9" ],
+			"No items detected.": [
+				"\ud56d\ubaa9\uc774 \uc5c6\uc2b5\ub2c8\ub2e4"
+			]
+		}
+	}
+}
