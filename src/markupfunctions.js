@@ -178,7 +178,7 @@ export function doiMarkup( data ) {
 			<>
 				<br />
 				<a
-					href={`https://doi.org/${ data.doi_url }`}
+					href={ `https://doi.org/${ data.doi_url }` }
 					target="_blank"
 					rel="noopener noreferrer"
 				>
@@ -275,10 +275,13 @@ export function nameMarkup( data, attributes ) {
 	let markup = '';
 	markup = (
 		<ItemGroup>
-			{ attributes[ 'bio_given_name_show' ] && nameGivenMarkup( data ) }
-			{ attributes[ 'bio_family_name_show' ] && nameFamilyMarkup( data ) }
-			{ attributes[ 'bio_credit_name_show' ] && nameCreditMarkup( data ) }
-			{ attributes[ 'bio_other_names_show' ] && nameOtherMarkup( data ) }
+			{ attributes?.[ 'bio_given_name_show' ] && nameGivenMarkup( data ) }
+			{ attributes?.[ 'bio_family_name_show' ] &&
+				nameFamilyMarkup( data ) }
+			{ attributes?.[ 'bio_credit_name_show' ] &&
+				nameCreditMarkup( data ) }
+			{ attributes?.[ 'bio_other_names_show' ] &&
+				nameOtherMarkup( data ) }
 		</ItemGroup>
 	);
 	return markup;
