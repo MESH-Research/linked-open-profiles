@@ -50,9 +50,10 @@ import {
 	__experimentalItem as Item,
 } from '@wordpress/components';
 import {
-	isSectionShown,
 	hasNoItems,
-	excludedItems,
+	isHeadingShown,
+	isSectionShown,
+	renderSectionItems,
 } from './sharedfunctions.js';
 import LoadingSpinner from './components/LoadingSpinner.js';
 
@@ -127,39 +128,21 @@ function LinkedOpenProfiles( { attributes } ) {
 										className={ `lop-section lop-section-${ section }` }
 										key={ section }
 									>
-										<Heading level={ startingHeadingLevel }>
-											{ sections[ section ].term }
-										</Heading>
-										{ sections[ section ].id === 'bio' &&
-											sections[ section ].model(
-												items[ section ][ 0 ],
-												attributes
-											) }
-										{ sections[ section ].id !== 'bio' && (
-											<ItemGroup>
-												{ items[ section ].map(
-													( item ) =>
-														excludedItems(
-															section,
-															sections,
-															attributes
-														)[ item.path ] !==
-															false && (
-															<Item
-																key={
-																	item.path
-																}
-															>
-																{ sections[
-																	section
-																].model(
-																	item,
-																	attributes
-																) }
-															</Item>
-														)
-												) }
-											</ItemGroup>
+										{ isHeadingShown(
+											section,
+											attributes
+										) && (
+											<Heading
+												level={ startingHeadingLevel }
+											>
+												{ sections[ section ].term }
+											</Heading>
+										) }
+										{ renderSectionItems(
+											section,
+											sections,
+											items,
+											attributes
 										) }
 									</section>
 								)

@@ -1,11 +1,13 @@
 import { __ } from '@wordpress/i18n';
 import { sections } from './../sections';
 import {
+	canExclude,
+	excludedItems,
+	hasNoItems,
+	isHeadingShown,
+	areSectionItemsLimited,
 	isSectionShown,
 	isSubSectionShown,
-	hasNoItems,
-	excludedItems,
-	canExclude,
 } from './../sharedfunctions.js';
 import {
 	BlockControls,
@@ -18,15 +20,24 @@ import {
 	Disabled,
 	Panel,
 	PanelBody,
+	Snackbar,
 	TextControl,
+	__experimentalNumberControl as NumberControl,
 } from '@wordpress/components';
 import LoadingSpinner from './LoadingSpinner.js';
 
 function toggleSection( section, value, setAttributes ) {
-	setAttributes( { [ `${ sections[ section ].id }_show` ]: value } );
+	setAttributes( { [ `${ section }_show` ]: value } );
 }
 function toggleSubSection( section, subsection, value, setAttributes ) {
 	setAttributes( { [ `${ section }_${ subsection }_show` ]: value } );
+}
+function toggleLimitItems( section, value, setAttributes ) {
+	console.log( section, value );
+	setAttributes( { [ `${ section }_limit_items` ]: value } );
+}
+function setLimitItemsCount( section, value, setAttributes ) {
+	setAttributes( { [ `${ section }_limit_items_count` ]: value } );
 }
 
 function modifyExcludedItems(
@@ -78,6 +89,10 @@ function getSectionTitle( section, items ) {
 	return `${ sections[ section ].term } (${ items[ section ].length })`;
 }
 
+function toggleSectionHeading( section, value, setAttributes ) {
+	setAttributes( { [ `${ section }_heading_show` ]: value } );
+}
+
 function getSectionControls( section, items, attributes, setAttributes ) {
 	const show = isSectionShown( section, sections, attributes );
 	let sectionControls = (
@@ -98,45 +113,114 @@ function getSectionControls( section, items, attributes, setAttributes ) {
 				>
 					{ sections.bio.subsections.map( function ( subsection ) {
 						return (
-							<CheckboxControl
-								__nextHasNoMarginBottom={ true }
-								checked={ isSubSectionShown(
-									subsection.id,
-									section,
-									attributes
-								) }
-								className="odb-medium-margin-top"
-								label={ subsection.label }
-								onChange={ ( value ) => {
-									toggleSubSection(
-										section,
+							<>
+								<CheckboxControl
+									__nextHasNoMarginBottom={ true }
+									checked={ isSubSectionShown(
 										subsection.id,
-										value,
-										setAttributes
-									);
-								} }
-							/>
+										section,
+										attributes
+									) }
+									className="odb-medium-margin-top"
+									label={ subsection.label }
+									onChange={ ( value ) => {
+										toggleSubSection(
+											section,
+											subsection.id,
+											value,
+											setAttributes
+										);
+									} }
+								/>
+							</>
 						);
 					} ) }
 				</PanelBody>
 			) }
+			{ show && (
+				<CheckboxControl
+					__nextHasNoMarginBottom={ true }
+					checked={ isHeadingShown( section, attributes ) }
+					label={ __( 'Include Heading', 'linked-open-profiles' ) }
+					onChange={ ( value ) => {
+						toggleSectionHeading( section, value, setAttributes );
+					} }
+				/>
+			) }
+			{ show && ! isHeadingShown( section, attributes ) && (
+				<Snackbar>
+					<p>
+						{ __(
+							'Excluding this heading could compromise the semantic structure of this content and negatively impact its accessibility. If this change was made while mindful of this, you may disregard this warning.',
+							'linked-open-profiles'
+						) }
+					</p>
+				</Snackbar>
+			) }
 			{ show &&
 				canExclude( section, sections ) &&
 				! hasNoItems( section, items ) && (
-					<PanelBody
-						initialOpen={ false }
-						title={ __(
-							'Customize Items',
-							'linked-open-profiles'
-						) }
-					>
-						{ getItemCheckboxes(
+					<div>
+						<CheckboxControl
+							__nextHasNoMarginBottom={ true }
+							checked={ areSectionItemsLimited(
+								section,
+								sections,
+								attributes
+							) }
+							className="odb-medium-margin-top"
+							label="Limit Items"
+							onChange={ ( value ) => {
+								toggleLimitItems(
+									section,
+									value,
+									setAttributes
+								);
+							} }
+						/>
+						{ areSectionItemsLimited(
 							section,
-							items,
-							attributes,
-							setAttributes
+							sections,
+							attributes
+						) && (
+							<NumberControl
+								label={ __(
+									'Items to Show',
+									'linked-open-profiles'
+								) }
+								min={ 1 }
+								__next40pxDefaultSize
+								isShiftStepEnabled={ false }
+								onChange={ ( value ) => {
+									setLimitItemsCount(
+										section,
+										value,
+										setAttributes
+									);
+								} }
+								shiftStep={ 1 }
+								value={
+									attributes[
+										`${ section }_limit_items_count`
+									]
+								}
+							/>
 						) }
-					</PanelBody>
+						<PanelBody
+							initialOpen={ false }
+							title={ __(
+								'Customize Items',
+								'linked-open-profiles'
+							) }
+						>
+							{ getItemCheckboxes(
+								section,
+								items,
+								attributes,
+								setAttributes
+							) }
+						</PanelBody>
+					</div>
 				) }
 		</div>
 	);

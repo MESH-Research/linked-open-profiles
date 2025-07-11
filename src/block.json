@@ -24,6 +24,10 @@
 			"type": "boolean",
 			"default": true
 		},
+		"bio_heading_show": {
+			"type": "boolean",
+			"default": true
+		},
 		"bio_given_name_show": {
 			"type": "boolean",
 			"default": true
@@ -52,7 +56,19 @@
 			"type": "object",
 			"default": {}
 		},
+		"distinctions_limit_items": {
+			"type": "boolean",
+			"default": false
+		},
+		"distinctions_limit_items_count": {
+			"type": "integer",
+			"default": 3
+		},
 		"distinctions_show": {
+			"type": "boolean",
+			"default": true
+		},
+		"distinctions_heading_show": {
 			"type": "boolean",
 			"default": true
 		},
@@ -60,7 +76,19 @@
 			"type": "object",
 			"default": {}
 		},
+		"educations_limit_items": {
+			"type": "boolean",
+			"default": false
+		},
+		"educations_limit_items_count": {
+			"type": "integer",
+			"default": 3
+		},
 		"educations_show": {
+			"type": "boolean",
+			"default": true
+		},
+		"educations_heading_show": {
 			"type": "boolean",
 			"default": true
 		},
@@ -68,7 +96,19 @@
 			"type": "object",
 			"default": {}
 		},
+		"employments_limit_items": {
+			"type": "boolean",
+			"default": false
+		},
+		"employments_limit_items_count": {
+			"type": "integer",
+			"default": 3
+		},
 		"employments_show": {
+			"type": "boolean",
+			"default": true
+		},
+		"employments_heading_show": {
 			"type": "boolean",
 			"default": true
 		},
@@ -76,7 +116,19 @@
 			"type": "object",
 			"default": {}
 		},
+		"fundings_limit_items": {
+			"type": "boolean",
+			"default": false
+		},
+		"fundings_limit_items_count": {
+			"type": "integer",
+			"default": 3
+		},
 		"fundings_show": {
+			"type": "boolean",
+			"default": true
+		},
+		"fundings_heading_show": {
 			"type": "boolean",
 			"default": true
 		},
@@ -84,7 +136,19 @@
 			"type": "object",
 			"default": {}
 		},
+		"invited-positions_limit_items": {
+			"type": "boolean",
+			"default": false
+		},
+		"invited-positions_limit_items_count": {
+			"type": "integer",
+			"default": 3
+		},
 		"invited-positions_show": {
+			"type": "boolean",
+			"default": true
+		},
+		"invited-positions_heading_show": {
 			"type": "boolean",
 			"default": true
 		},
@@ -92,7 +156,19 @@
 			"type": "object",
 			"default": {}
 		},
+		"memberships_limit_items": {
+			"type": "boolean",
+			"default": false
+		},
+		"memberships_limit_items_count": {
+			"type": "integer",
+			"default": 3
+		},
 		"memberships_show": {
+			"type": "boolean",
+			"default": true
+		},
+		"memberships_heading_show": {
 			"type": "boolean",
 			"default": true
 		},
@@ -100,7 +176,19 @@
 			"type": "object",
 			"default": {}
 		},
+		"peer-reviews_limit_items": {
+			"type": "boolean",
+			"default": false
+		},
+		"peer-reviews_limit_items_count": {
+			"type": "integer",
+			"default": 3
+		},
 		"peer-reviews_show": {
+			"type": "boolean",
+			"default": true
+		},
+		"peer-reviews_heading_show": {
 			"type": "boolean",
 			"default": true
 		},
@@ -108,7 +196,19 @@
 			"type": "object",
 			"default": {}
 		},
+		"qualifications_limit_items": {
+			"type": "boolean",
+			"default": false
+		},
+		"qualifications_limit_items_count": {
+			"type": "integer",
+			"default": 3
+		},
 		"qualifications_show": {
+			"type": "boolean",
+			"default": true
+		},
+		"qualifications_heading_show": {
 			"type": "boolean",
 			"default": true
 		},
@@ -116,7 +216,19 @@
 			"type": "object",
 			"default": {}
 		},
+		"services_limit_items": {
+			"type": "boolean",
+			"default": false
+		},
+		"services_limit_items_count": {
+			"type": "integer",
+			"default": 3
+		},
 		"services_show": {
+			"type": "boolean",
+			"default": true
+		},
+		"services_heading_show": {
 			"type": "boolean",
 			"default": true
 		},
@@ -124,7 +236,19 @@
 			"type": "object",
 			"default": {}
 		},
+		"works_limit_items": {
+			"type": "boolean",
+			"default": false
+		},
+		"works_limit_items_count": {
+			"type": "integer",
+			"default": 3
+		},
 		"works_show": {
+			"type": "boolean",
+			"default": true
+		},
+		"works_heading_show": {
 			"type": "boolean",
 			"default": true
 		}
