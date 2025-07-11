@@ -1,6 +1,6 @@
 {
 	"name": "linked-open-profiles",
-	"version": "0.3.15",
+	"version": "0.3.16",
 	"description": "Display public profile data from multiple ORCID profiles",
 	"author": "ebengran",
 	"license": "GPL-2.0-or-later",
@@ -23,6 +23,6 @@
 		"prettier": "prettier"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^30.7.0"
+		"@wordpress/scripts": "^30.19.0"
 	}
 }
