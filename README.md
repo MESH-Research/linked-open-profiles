@@ -22,25 +22,27 @@ the Works section fully included](assets/screenshot-1.png)
   * specify which sections are shown from specified ORCID records
   * specify which items are shown within sections
 * Allows different ORCID records to be used in multiple blocks on the same post/page/site
+* Allows the numbers of items within sections to be limited to a specified amount
 * Info will remain automatically up-to-date with ORCID
-* All languages currently supported by ORCID will be supported (in progress)
-  * Translated
-    * Arabic
-    * Chinese (Simplified)
-    * Chinese (Traditional)
-    * Czech
-    * French
-    * German
-    * Italian
-    * Japanese
-    * Korean
-    * Polish
-    * Portuguese
-    * Russian
-    * Spanish
-  * Pending Translation
-    * Turkish
 * Accessible to those with disabilities
+* All languages currently supported by ORCID will be supported (subject to translator availability)
+
+    | Language              | Translation Completion |
+    | --------------------- | -----------------------|
+    | Arabic                | 78%                    |
+    | Chinese (Simplified)  | 78%                    |
+    | Chinese (Traditional) | 78%                    |
+    | Czech                 | 78%                    |
+    | French                | 78%                    |
+    | German                | 78%                    |
+    | Italian:              | 78%                    |
+    | Japanese:             | 78%                    |
+    | Korean:               | 78%                    |
+    | Polish:               | 78%                    |
+    | Portuguese:           | 74%                    |
+    | Russian:              | 78%                    |
+    | Spanish:              | 78%                    |
+    | Turkish:              | 0%                     |
 
 ## Information Supported
 
