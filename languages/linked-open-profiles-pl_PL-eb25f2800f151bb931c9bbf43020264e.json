@@ -10,6 +10,14 @@
 				"lang": "pl_PL",
 				"plural-forms": "nplurals=2; plural=(n != 1);"
 			},
+			"Biographical Information": [ "Informacje biograficzne" ],
+			"Given Name": [ "Imi\u0119" ],
+			"Family Name": [ "Nazwisko" ],
+			"Credit Name": [ "Nazwisko do przypisania autorstwa" ],
+			"Other Names": [ "Inne Imiona i Nazwiska" ],
+			"Websites & Social Links": [
+				"Strony internetowe i linki do medi\u00f3w spo\u0142eczno\u015bciowych"
+			],
 			"Biography": [ "Biografi\u0119" ],
 			"Include Biography": [ "Dodaj Biografi\u0119" ],
 			"Distinctions": [ "Wyr\u00f3\u017cnienia" ],

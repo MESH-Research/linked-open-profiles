@@ -10,6 +10,10 @@
 				"lang": "pl_PL",
 				"plural-forms": "nplurals=2; plural=(n != 1);"
 			},
+			"Loading ORCID Data": [ "\u0141adowanie danych ORCID" ],
+			"Please provide an ORCID iD": [
+				"Prosz\u0119 poda\u0107 identyfikator ORCID"
+			],
 			"Biographical Information": [ "Informacje biograficzne" ],
 			"Given Name": [ "Imi\u0119" ],
 			"Family Name": [ "Nazwisko" ],
@@ -39,11 +43,7 @@
 			"Services": [ "Us\u0142ugi" ],
 			"Include Services": [ "Dodaj Us\u0142ugi" ],
 			"Works": [ "Prace" ],
-			"Include Works": [ "Dodaj Prace" ],
-			"Loading ORCID Data": [ "\u0141adowanie danych ORCID" ],
-			"Please provide an ORCID iD": [
-				"Prosz\u0119 poda\u0107 identyfikator ORCID"
-			]
+			"Include Works": [ "Dodaj Prace" ]
 		}
 	}
 }

@@ -10,6 +10,31 @@
 				"lang": "ko_KR",
 				"plural-forms": "nplurals=2; plural=(n != 1);"
 			},
+			"Customize Items": [ "\ud56d\ubaa9 \ub9de\ucda4 \uc124\uc815" ],
+			"Include Heading": [ "" ],
+			"Excluding this heading could compromise the semantic structure of this content and negatively impact its accessibility. If this change was made while mindful of this, you may disregard this warning.": [
+				""
+			],
+			"Limit Items": [ "" ],
+			"Items to Show": [ "" ],
+			"ORCID iD": [ "ORCID iD" ],
+			"Apply": [ "\uc801\uc6a9" ],
+			"Please provide a valid ORCID iD.": [
+				"\uc720\ud6a8\ud55c ORCID \uc2e0\ubd84\uc99d\uc744 \uc81c\ucd9c\ud574 \uc8fc\uc138\uc694"
+			],
+			"Sections": [ "\ud56d\ubaa9" ],
+			"No items detected.": [
+				"\ud56d\ubaa9\uc774 \uc5c6\uc2b5\ub2c8\ub2e4"
+			],
+			"Loading ORCID Data": [
+				"ORCID \ub370\uc774\ud130 \ubd88\ub7ec\uc624\ub294 \uc911"
+			],
+			"An error occurred while fetching the data from ORCID": [
+				"ORCID \ub370\uc774\ud130\ub97c \uac00\uc838\uc624\ub294 \uc911 \uc624\ub958\uac00 \uc0dd\uacbc\uc2b5\ub2c8\ub2e4"
+			],
+			"Please provide an ORCID iD": [
+				"ORCID \uc2e0\ubd84\uc99d\uc744 \uc81c\ucd9c\ud574 \uc8fc\uc138\uc694"
+			],
 			"Biographical Information": [ "\uc778\uc801 \uc0ac\ud56d" ],
 			"Given Name": [ "\uc774\ub984" ],
 			"Family Name": [ "\uc131" ],
@@ -45,26 +70,7 @@
 			"Services": [ "\uc11c\ube44\uc2a4" ],
 			"Include Services": [ "\uc11c\ube44\uc2a4 \ud3ec\ud568" ],
 			"Works": [ "\uc791\ud488" ],
-			"Include Works": [ "\uc791\ud488 \ud3ec\ud568" ],
-			"Loading ORCID Data": [
-				"ORCID \ub370\uc774\ud130 \ubd88\ub7ec\uc624\ub294 \uc911"
-			],
-			"Customize Items": [ "\ud56d\ubaa9 \ub9de\ucda4 \uc124\uc815" ],
-			"ORCID iD": [ "ORCID iD" ],
-			"Apply": [ "\uc801\uc6a9" ],
-			"Please provide a valid ORCID iD.": [
-				"\uc720\ud6a8\ud55c ORCID \uc2e0\ubd84\uc99d\uc744 \uc81c\ucd9c\ud574 \uc8fc\uc138\uc694"
-			],
-			"Sections": [ "\ud56d\ubaa9" ],
-			"No items detected.": [
-				"\ud56d\ubaa9\uc774 \uc5c6\uc2b5\ub2c8\ub2e4"
-			],
-			"An error occurred while fetching the data from ORCID": [
-				"ORCID \ub370\uc774\ud130\ub97c \uac00\uc838\uc624\ub294 \uc911 \uc624\ub958\uac00 \uc0dd\uacbc\uc2b5\ub2c8\ub2e4"
-			],
-			"Please provide an ORCID iD": [
-				"ORCID \uc2e0\ubd84\uc99d\uc744 \uc81c\ucd9c\ud574 \uc8fc\uc138\uc694"
-			]
+			"Include Works": [ "\uc791\ud488 \ud3ec\ud568" ]
 		}
 	}
 }

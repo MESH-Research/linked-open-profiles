@@ -10,6 +10,14 @@
 				"lang": "zh_TW",
 				"plural-forms": "nplurals=2; plural=(n != 1);"
 			},
+			"Biographical Information": [ "\u500b\u4eba\u8cc7\u6599" ],
+			"Given Name": [ "\u540d" ],
+			"Family Name": [ "\u59d3" ],
+			"Credit Name": [ "\u4fe1\u7528\u540d\u7a31" ],
+			"Other Names": [ "\u5176\u4ed6\u540d\u5b57" ],
+			"Websites & Social Links": [
+				"\u7db2\u7ad9\u53ca\u793e\u4ea4\u5a92\u9ad4\u93c8\u63a5"
+			],
 			"Biography": [ "\u7c21\u6b77" ],
 			"Include Biography": [ "\u5305\u542b\u7c21\u6b77" ],
 			"Distinctions": [ "\u5340\u5225" ],

@@ -10,6 +10,8 @@
 				"lang": "zh_TW",
 				"plural-forms": "nplurals=2; plural=(n != 1);"
 			},
+			"Loading ORCID Data": [ "ORCID\u8cc7\u6599\u52a0\u8f09" ],
+			"Please provide an ORCID iD": [ "\u8acb\u63d0\u4f9bORCID iD" ],
 			"Biographical Information": [ "\u500b\u4eba\u8cc7\u6599" ],
 			"Given Name": [ "\u540d" ],
 			"Family Name": [ "\u59d3" ],
@@ -41,9 +43,7 @@
 			"Services": [ "\u670d\u52d9" ],
 			"Include Services": [ "\u5305\u542b\u670d\u52d9" ],
 			"Works": [ "\u4f5c\u54c1" ],
-			"Include Works": [ "\u5305\u542b\u4f5c\u54c1" ],
-			"Loading ORCID Data": [ "ORCID\u8cc7\u6599\u52a0\u8f09" ],
-			"Please provide an ORCID iD": [ "\u8acb\u63d0\u4f9bORCID iD" ]
+			"Include Works": [ "\u5305\u542b\u4f5c\u54c1" ]
 		}
 	}
 }

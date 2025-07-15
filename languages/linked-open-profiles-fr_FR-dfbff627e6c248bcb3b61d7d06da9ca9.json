@@ -10,6 +10,29 @@
 				"lang": "fr_FR",
 				"plural-forms": "nplurals=2; plural=(n != 1);"
 			},
+			"Customize Items": [ "Personnaliser les \u00e9l\u00e9ments" ],
+			"Include Heading": [ "" ],
+			"Excluding this heading could compromise the semantic structure of this content and negatively impact its accessibility. If this change was made while mindful of this, you may disregard this warning.": [
+				""
+			],
+			"Limit Items": [ "" ],
+			"Items to Show": [ "" ],
+			"ORCID iD": [ "ORCID iD" ],
+			"Apply": [ "Postuler" ],
+			"Please provide a valid ORCID iD.": [
+				"Veuillez saisir un identifiant ORCID valide"
+			],
+			"Sections": [ "Sections" ],
+			"No items detected.": [
+				"Aucun \u00e9l\u00e9ment d\u00e9tect\u00e9"
+			],
+			"Loading ORCID Data": [ "Chargement des donn\u00e9es ORCID" ],
+			"An error occurred while fetching the data from ORCID": [
+				"Une erreur s'est produite lors de la r\u00e9cup\u00e9ration des donn\u00e9es depuis ORCID"
+			],
+			"Please provide an ORCID iD": [
+				"Veuillez saisir un identifiant ORCID"
+			],
 			"Biographical Information": [ "Informations biographiques" ],
 			"Given Name": [ "Nom" ],
 			"Family Name": [ "Nom de famille" ],
@@ -43,24 +66,7 @@
 			"Services": [ "Inclure les services" ],
 			"Include Services": [ "Services" ],
 			"Works": [ "\u0152uvres" ],
-			"Include Works": [ "Inclure les \u0153uvres" ],
-			"Loading ORCID Data": [ "Chargement des donn\u00e9es ORCID" ],
-			"Customize Items": [ "Personnaliser les \u00e9l\u00e9ments" ],
-			"ORCID iD": [ "ORCID iD" ],
-			"Apply": [ "Postuler" ],
-			"Please provide a valid ORCID iD.": [
-				"Veuillez saisir un identifiant ORCID valide"
-			],
-			"Sections": [ "Sections" ],
-			"No items detected.": [
-				"Aucun \u00e9l\u00e9ment d\u00e9tect\u00e9"
-			],
-			"An error occurred while fetching the data from ORCID": [
-				"Une erreur s'est produite lors de la r\u00e9cup\u00e9ration des donn\u00e9es depuis ORCID"
-			],
-			"Please provide an ORCID iD": [
-				"Veuillez saisir un identifiant ORCID"
-			]
+			"Include Works": [ "Inclure les \u0153uvres" ]
 		}
 	}
 }

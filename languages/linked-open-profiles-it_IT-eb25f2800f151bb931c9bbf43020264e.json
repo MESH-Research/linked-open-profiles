@@ -10,6 +10,12 @@
 				"lang": "it_IT",
 				"plural-forms": "nplurals=2; plural=(n != 1);"
 			},
+			"Biographical Information": [ "Informazioni biografiche" ],
+			"Given Name": [ "Nome" ],
+			"Family Name": [ "Cognome" ],
+			"Credit Name": [ "Nome di credito" ],
+			"Other Names": [ "Altri nomi" ],
+			"Websites & Social Links": [ "Siti Web e Social Links" ],
 			"Biography": [ "Biografia" ],
 			"Include Biography": [ "Includere biografia" ],
 			"Distinctions": [ "Distinzioni" ],

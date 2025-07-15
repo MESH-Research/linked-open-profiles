@@ -11,6 +11,12 @@
 				"plural-forms": "nplurals=2; plural=(n != 1);"
 			},
 			"Customize Items": [ "\u81ea\u5b9a\u4e49\u9879\u76ee" ],
+			"Include Heading": [ "" ],
+			"Excluding this heading could compromise the semantic structure of this content and negatively impact its accessibility. If this change was made while mindful of this, you may disregard this warning.": [
+				""
+			],
+			"Limit Items": [ "" ],
+			"Items to Show": [ "" ],
 			"ORCID iD": [ "ORCID iD" ],
 			"Apply": [ "\u5e94\u7528" ],
 			"Please provide a valid ORCID iD.": [

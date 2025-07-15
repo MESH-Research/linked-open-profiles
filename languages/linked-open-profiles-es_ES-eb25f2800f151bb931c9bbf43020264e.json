@@ -10,6 +10,16 @@
 				"lang": "es_ES",
 				"plural-forms": "nplurals=2; plural=(n != 1);"
 			},
+			"Biographical Information": [
+				"Informaci\u00f3n bibliogr\u00e1fica"
+			],
+			"Given Name": [ "Nombre" ],
+			"Family Name": [ "Apellido" ],
+			"Credit Name": [ "Nombre en publicaciones" ],
+			"Other Names": [ "Otros nombres" ],
+			"Websites & Social Links": [
+				"P\u00e1ginas web y enlaces sociales"
+			],
 			"Biography": [ "Biograf\u00eda" ],
 			"Include Biography": [ "Incluir biograf\u00eda" ],
 			"Distinctions": [ "Menciones especiales" ],

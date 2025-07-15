@@ -169,7 +169,10 @@ function getSectionControls( section, items, attributes, setAttributes ) {
 								attributes
 							) }
 							className="odb-medium-margin-top"
-							label="Limit Items"
+							label={ __(
+								'Limit Items',
+								'linked-open-profiles'
+							) }
 							onChange={ ( value ) => {
 								toggleLimitItems(
 									section,

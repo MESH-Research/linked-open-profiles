@@ -10,6 +10,16 @@
 				"lang": "ko_KR",
 				"plural-forms": "nplurals=2; plural=(n != 1);"
 			},
+			"Biographical Information": [ "\uc778\uc801 \uc0ac\ud56d" ],
+			"Given Name": [ "\uc774\ub984" ],
+			"Family Name": [ "\uc131" ],
+			"Credit Name": [
+				"\uacf5\uc2dd \ud45c\uae30 \uc774\ub984(\ud06c\ub808\ub527 \uc774\ub984)"
+			],
+			"Other Names": [ "\ub2e4\ub978 \uc774" ],
+			"Websites & Social Links": [
+				"\uc6f9\uc0ac\uc774\ud2b8 \ubc0f \uc18c\uc15c \ubbf8\ub514\uc5b4 \ub9c1\ud06c"
+			],
 			"Biography": [ "\uc790\uae30\uc18c\uac1c" ],
 			"Include Biography": [ "\uc790\uae30\uc18c\uac1c \ud3ec\ud568" ],
 			"Distinctions": [ "\uad6c\ubcc4" ],

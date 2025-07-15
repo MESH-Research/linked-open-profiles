@@ -10,6 +10,10 @@
 				"lang": "cs_CZ",
 				"plural-forms": "nplurals=2; plural=(n != 1);"
 			},
+			"Loading ORCID Data": [ "Na\u010d\u00edt\u00e1n\u00ed dat ORCID" ],
+			"Please provide an ORCID iD": [
+				"Pros\u00edm, uve\u010fte platn\u00fd identifik\u00e1tor ORCID"
+			],
 			"Biographical Information": [ "Biografick\u00e9 informace" ],
 			"Given Name": [ "Jm\u00e9no" ],
 			"Family Name": [ "P\u0159\u00edjmen\u00ed" ],
@@ -43,11 +47,7 @@
 			"Services": [ "Slu\u017eby" ],
 			"Include Services": [ "P\u0159idat slu\u017eby" ],
 			"Works": [ "Pr\u00e1ce" ],
-			"Include Works": [ "P\u0159idat pr\u00e1ce" ],
-			"Loading ORCID Data": [ "Na\u010d\u00edt\u00e1n\u00ed dat ORCID" ],
-			"Please provide an ORCID iD": [
-				"Pros\u00edm, uve\u010fte platn\u00fd identifik\u00e1tor ORCID"
-			]
+			"Include Works": [ "P\u0159idat pr\u00e1ce" ]
 		}
 	}
 }

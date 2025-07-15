@@ -13,6 +13,12 @@
 			"Customize Items": [
 				"\u30a2\u30a4\u30c6\u30e0\u3092\u30ab\u30b9\u30bf\u30de\u30a4\u30ba"
 			],
+			"Include Heading": [ "" ],
+			"Excluding this heading could compromise the semantic structure of this content and negatively impact its accessibility. If this change was made while mindful of this, you may disregard this warning.": [
+				""
+			],
+			"Limit Items": [ "" ],
+			"Items to Show": [ "" ],
 			"ORCID iD": [ "ORCID iD" ],
 			"Apply": [ "\u9069\u7528" ],
 			"Please provide a valid ORCID iD.": [

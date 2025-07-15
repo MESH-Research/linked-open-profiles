@@ -10,6 +10,12 @@
 				"lang": "ko_KR",
 				"plural-forms": "nplurals=2; plural=(n != 1);"
 			},
+			"Loading ORCID Data": [
+				"ORCID \ub370\uc774\ud130 \ubd88\ub7ec\uc624\ub294 \uc911"
+			],
+			"Please provide an ORCID iD": [
+				"ORCID \uc2e0\ubd84\uc99d\uc744 \uc81c\ucd9c\ud574 \uc8fc\uc138\uc694"
+			],
 			"Biographical Information": [ "\uc778\uc801 \uc0ac\ud56d" ],
 			"Given Name": [ "\uc774\ub984" ],
 			"Family Name": [ "\uc131" ],
@@ -45,13 +51,7 @@
 			"Services": [ "\uc11c\ube44\uc2a4" ],
 			"Include Services": [ "\uc11c\ube44\uc2a4 \ud3ec\ud568" ],
 			"Works": [ "\uc791\ud488" ],
-			"Include Works": [ "\uc791\ud488 \ud3ec\ud568" ],
-			"Loading ORCID Data": [
-				"ORCID \ub370\uc774\ud130 \ubd88\ub7ec\uc624\ub294 \uc911"
-			],
-			"Please provide an ORCID iD": [
-				"ORCID \uc2e0\ubd84\uc99d\uc744 \uc81c\ucd9c\ud574 \uc8fc\uc138\uc694"
-			]
+			"Include Works": [ "\uc791\ud488 \ud3ec\ud568" ]
 		}
 	}
 }

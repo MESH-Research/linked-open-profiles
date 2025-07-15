@@ -10,6 +10,27 @@
 				"lang": "pl_PL",
 				"plural-forms": "nplurals=2; plural=(n != 1);"
 			},
+			"Customize Items": [ "Dostosuj elementy" ],
+			"Include Heading": [ "" ],
+			"Excluding this heading could compromise the semantic structure of this content and negatively impact its accessibility. If this change was made while mindful of this, you may disregard this warning.": [
+				""
+			],
+			"Limit Items": [ "" ],
+			"Items to Show": [ "" ],
+			"ORCID iD": [ "ORCID iD" ],
+			"Apply": [ "Zastosuj" ],
+			"Please provide a valid ORCID iD.": [
+				"Prosz\u0119 poda\u0107 prawid\u0142owy identyfikator ORCID"
+			],
+			"Sections": [ "Sekcje" ],
+			"No items detected.": [ "Nie wykryto element\u00f3w" ],
+			"Loading ORCID Data": [ "\u0141adowanie danych ORCID" ],
+			"An error occurred while fetching the data from ORCID": [
+				"Wyst\u0105pi\u0142 b\u0142\u0105d podczas pobierania danych z ORCID"
+			],
+			"Please provide an ORCID iD": [
+				"Prosz\u0119 poda\u0107 identyfikator ORCID"
+			],
 			"Biographical Information": [ "Informacje biograficzne" ],
 			"Given Name": [ "Imi\u0119" ],
 			"Family Name": [ "Nazwisko" ],
@@ -39,22 +60,7 @@
 			"Services": [ "Us\u0142ugi" ],
 			"Include Services": [ "Dodaj Us\u0142ugi" ],
 			"Works": [ "Prace" ],
-			"Include Works": [ "Dodaj Prace" ],
-			"Loading ORCID Data": [ "\u0141adowanie danych ORCID" ],
-			"Customize Items": [ "Dostosuj elementy" ],
-			"ORCID iD": [ "ORCID iD" ],
-			"Apply": [ "Zastosuj" ],
-			"Please provide a valid ORCID iD.": [
-				"Prosz\u0119 poda\u0107 prawid\u0142owy identyfikator ORCID"
-			],
-			"Sections": [ "Sekcje" ],
-			"No items detected.": [ "Nie wykryto element\u00f3w" ],
-			"An error occurred while fetching the data from ORCID": [
-				"Wyst\u0105pi\u0142 b\u0142\u0105d podczas pobierania danych z ORCID"
-			],
-			"Please provide an ORCID iD": [
-				"Prosz\u0119 poda\u0107 identyfikator ORCID"
-			]
+			"Include Works": [ "Dodaj Prace" ]
 		}
 	}
 }

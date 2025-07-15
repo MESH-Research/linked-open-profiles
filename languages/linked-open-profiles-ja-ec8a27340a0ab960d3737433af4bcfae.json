@@ -10,6 +10,12 @@
 				"lang": "ja",
 				"plural-forms": "nplurals=2; plural=(n != 1);"
 			},
+			"Loading ORCID Data": [
+				"ORCID \u30c7\u30fc\u30bf\u306e\u8aad\u307f\u8fbc\u307f"
+			],
+			"Please provide an ORCID iD": [
+				"ORCID iD \u3092\u63d0\u4f9b\u3057\u3066\u304f\u3060\u3055\u3044"
+			],
 			"Biographical Information": [ "\u7d4c\u6b74\u60c5\u5831" ],
 			"Given Name": [ "\u540d" ],
 			"Family Name": [ "\u59d3" ],
@@ -55,13 +61,7 @@
 				"\u30b5\u30fc\u30d3\u30b9\u3092\u542b\u3081\u308b"
 			],
 			"Works": [ "\u4f5c\u54c1" ],
-			"Include Works": [ "\u4f5c\u54c1\u3092\u542b\u3081\u308b" ],
-			"Loading ORCID Data": [
-				"ORCID \u30c7\u30fc\u30bf\u306e\u8aad\u307f\u8fbc\u307f"
-			],
-			"Please provide an ORCID iD": [
-				"ORCID iD \u3092\u63d0\u4f9b\u3057\u3066\u304f\u3060\u3055\u3044"
-			]
+			"Include Works": [ "\u4f5c\u54c1\u3092\u542b\u3081\u308b" ]
 		}
 	}
 }

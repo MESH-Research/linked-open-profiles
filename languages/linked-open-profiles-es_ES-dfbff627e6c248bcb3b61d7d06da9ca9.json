@@ -10,6 +10,27 @@
 				"lang": "es_ES",
 				"plural-forms": "nplurals=2; plural=(n != 1);"
 			},
+			"Customize Items": [ "Personalizar registros" ],
+			"Include Heading": [ "" ],
+			"Excluding this heading could compromise the semantic structure of this content and negatively impact its accessibility. If this change was made while mindful of this, you may disregard this warning.": [
+				""
+			],
+			"Limit Items": [ "" ],
+			"Items to Show": [ "" ],
+			"ORCID iD": [ "ORCID iD" ],
+			"Apply": [ "Solicitar" ],
+			"Please provide a valid ORCID iD.": [
+				"Introduzca un identificador de ORCID v\u00e1lido"
+			],
+			"Sections": [ "Secciones" ],
+			"No items detected.": [ "No se han detectado registros" ],
+			"Loading ORCID Data": [ "Cargando datos de ORCID" ],
+			"An error occurred while fetching the data from ORCID": [
+				"Se ha producido un error al obtener los datos de ORCID"
+			],
+			"Please provide an ORCID iD": [
+				"Introduzca un identificador de ORCID"
+			],
 			"Biographical Information": [
 				"Informaci\u00f3n bibliogr\u00e1fica"
 			],
@@ -43,22 +64,7 @@
 			"Services": [ "Servicios" ],
 			"Include Services": [ "Incluir servicios" ],
 			"Works": [ "Obras" ],
-			"Include Works": [ "Incluir obras" ],
-			"Loading ORCID Data": [ "Cargando datos de ORCID" ],
-			"Customize Items": [ "Personalizar registros" ],
-			"ORCID iD": [ "ORCID iD" ],
-			"Apply": [ "Solicitar" ],
-			"Please provide a valid ORCID iD.": [
-				"Introduzca un identificador de ORCID v\u00e1lido"
-			],
-			"Sections": [ "Secciones" ],
-			"No items detected.": [ "No se han detectado registros" ],
-			"An error occurred while fetching the data from ORCID": [
-				"Se ha producido un error al obtener los datos de ORCID"
-			],
-			"Please provide an ORCID iD": [
-				"Introduzca un identificador de ORCID"
-			]
+			"Include Works": [ "Incluir obras" ]
 		}
 	}
 }

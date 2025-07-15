@@ -10,6 +10,12 @@
 				"lang": "de_DE",
 				"plural-forms": "nplurals=2; plural=(n != 1);"
 			},
+			"Biographical Information": [ "Biographische Angaben" ],
+			"Given Name": [ "Vorname" ],
+			"Family Name": [ "Nachname" ],
+			"Credit Name": [ "Ver\u00f6ffentlichter Name" ],
+			"Other Names": [ "Weitere Namen" ],
+			"Websites & Social Links": [ "Websiten & Social-Media-Links" ],
 			"Biography": [ "Biografie" ],
 			"Include Biography": [ "Biografie einbeziehen" ],
 			"Distinctions": [ "Auszeichnungen" ],

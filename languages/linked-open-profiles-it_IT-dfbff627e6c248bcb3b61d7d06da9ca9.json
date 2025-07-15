@@ -10,6 +10,27 @@
 				"lang": "it_IT",
 				"plural-forms": "nplurals=2; plural=(n != 1);"
 			},
+			"Customize Items": [ "Personalizzare gli elementi" ],
+			"Include Heading": [ "" ],
+			"Excluding this heading could compromise the semantic structure of this content and negatively impact its accessibility. If this change was made while mindful of this, you may disregard this warning.": [
+				""
+			],
+			"Limit Items": [ "" ],
+			"Items to Show": [ "" ],
+			"ORCID iD": [ "ORCID iD" ],
+			"Apply": [ "Postulare" ],
+			"Please provide a valid ORCID iD.": [
+				"Si prega di fornire un identificatore ORCID valido"
+			],
+			"Sections": [ "Sezioni" ],
+			"No items detected.": [ "Nessun elemento rilevato" ],
+			"Loading ORCID Data": [ "Caricamento dati ORCID" ],
+			"An error occurred while fetching the data from ORCID": [
+				"Si \u00e8 verificato un errore durante il recupero dei dati da ORCID"
+			],
+			"Please provide an ORCID iD": [
+				"Si prega di fornire un'identificazione ORCID"
+			],
 			"Biographical Information": [ "Informazioni biografiche" ],
 			"Given Name": [ "Nome" ],
 			"Family Name": [ "Cognome" ],
@@ -37,22 +58,7 @@
 			"Services": [ "Servizi" ],
 			"Include Services": [ "Includere servizi" ],
 			"Works": [ "Lavori" ],
-			"Include Works": [ "Includere lavori" ],
-			"Loading ORCID Data": [ "Caricamento dati ORCID" ],
-			"Customize Items": [ "Personalizzare gli elementi" ],
-			"ORCID iD": [ "ORCID iD" ],
-			"Apply": [ "Postulare" ],
-			"Please provide a valid ORCID iD.": [
-				"Si prega di fornire un identificatore ORCID valido"
-			],
-			"Sections": [ "Sezioni" ],
-			"No items detected.": [ "Nessun elemento rilevato" ],
-			"An error occurred while fetching the data from ORCID": [
-				"Si \u00e8 verificato un errore durante il recupero dei dati da ORCID"
-			],
-			"Please provide an ORCID iD": [
-				"Si prega di fornire un'identificazione ORCID"
-			]
+			"Include Works": [ "Includere lavori" ]
 		}
 	}
 }

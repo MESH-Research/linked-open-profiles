@@ -10,6 +10,16 @@
 				"lang": "cs_CZ",
 				"plural-forms": "nplurals=2; plural=(n != 1);"
 			},
+			"Biographical Information": [ "Biografick\u00e9 informace" ],
+			"Given Name": [ "Jm\u00e9no" ],
+			"Family Name": [ "P\u0159\u00edjmen\u00ed" ],
+			"Credit Name": [
+				"P\u0159\u00edjmen\u00ed pro p\u0159i\u0159azen\u00ed autorstv\u00ed"
+			],
+			"Other Names": [ "Jin\u00e1 jm\u00e9na a p\u0159\u00edjmen\u00ed" ],
+			"Websites & Social Links": [
+				"Webov\u00e9 str\u00e1nky a odkazy na soci\u00e1ln\u00ed s\u00edt\u011b"
+			],
 			"Biography": [ "Biografii" ],
 			"Include Biography": [ "P\u0159idat biografii" ],
 			"Distinctions": [ "Ocen\u011bn\u00ed" ],

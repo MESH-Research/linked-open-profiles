@@ -10,6 +10,25 @@
 				"lang": "de_DE",
 				"plural-forms": "nplurals=2; plural=(n != 1);"
 			},
+			"Customize Items": [ "Elemente anpassen" ],
+			"Include Heading": [ "" ],
+			"Excluding this heading could compromise the semantic structure of this content and negatively impact its accessibility. If this change was made while mindful of this, you may disregard this warning.": [
+				""
+			],
+			"Limit Items": [ "" ],
+			"Items to Show": [ "" ],
+			"ORCID iD": [ "ORCID iD" ],
+			"Apply": [ "Anwenden" ],
+			"Please provide a valid ORCID iD.": [
+				"Bitte eine g\u00fcltige ORCID iD eingeben"
+			],
+			"Sections": [ "Sektionen" ],
+			"No items detected.": [ "Keine Eintr\u00e4ge gefunden" ],
+			"Loading ORCID Data": [ "ORCID-Daten werden geladen" ],
+			"An error occurred while fetching the data from ORCID": [
+				"Fehler beim Abrufen der ORCID-Daten"
+			],
+			"Please provide an ORCID iD": [ "Bitte eine ORCID iD eingeben" ],
 			"Biographical Information": [ "Biographische Angaben" ],
 			"Given Name": [ "Vorname" ],
 			"Family Name": [ "Nachname" ],
@@ -39,20 +58,7 @@
 			"Services": [ "Dienstleistungen" ],
 			"Include Services": [ "Dienstleistungen einbeziehen" ],
 			"Works": [ "Werke" ],
-			"Include Works": [ "Werke einbeziehen" ],
-			"Loading ORCID Data": [ "ORCID-Daten werden geladen" ],
-			"Customize Items": [ "Elemente anpassen" ],
-			"ORCID iD": [ "ORCID iD" ],
-			"Apply": [ "Anwenden" ],
-			"Please provide a valid ORCID iD.": [
-				"Bitte eine g\u00fcltige ORCID iD eingeben"
-			],
-			"Sections": [ "Sektionen" ],
-			"No items detected.": [ "Keine Eintr\u00e4ge gefunden" ],
-			"An error occurred while fetching the data from ORCID": [
-				"Fehler beim Abrufen der ORCID-Daten"
-			],
-			"Please provide an ORCID iD": [ "Bitte eine ORCID iD eingeben" ]
+			"Include Works": [ "Werke einbeziehen" ]
 		}
 	}
 }

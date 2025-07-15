@@ -10,6 +10,25 @@
 				"lang": "zh_CN",
 				"plural-forms": "nplurals=2; plural=(n != 1);"
 			},
+			"Customize Items": [ "\u81ea\u5b9a\u4e49\u9879\u76ee" ],
+			"Include Heading": [ "" ],
+			"Excluding this heading could compromise the semantic structure of this content and negatively impact its accessibility. If this change was made while mindful of this, you may disregard this warning.": [
+				""
+			],
+			"Limit Items": [ "" ],
+			"Items to Show": [ "" ],
+			"ORCID iD": [ "ORCID iD" ],
+			"Apply": [ "\u5e94\u7528" ],
+			"Please provide a valid ORCID iD.": [
+				"\u8bf7\u63d0\u4f9b\u6709\u6548\u7684ORCID iD"
+			],
+			"Sections": [ "\u90e8\u5206" ],
+			"No items detected.": [ "\u672a\u68c0\u6d4b\u5230\u7ed3\u679c" ],
+			"Loading ORCID Data": [ "ORCID \u6570\u636e\u52a0\u8f7d" ],
+			"An error occurred while fetching the data from ORCID": [
+				"\u4ece ORCID \u83b7\u53d6\u6570\u636e\u65f6\u51fa\u9519"
+			],
+			"Please provide an ORCID iD": [ "\u8bf7\u63d0\u4f9bORCID iD" ],
 			"Biographical Information": [ "\u4e2a\u4eba\u8d44\u6599" ],
 			"Given Name": [ "\u540d" ],
 			"Family Name": [ "\u59d3" ],
@@ -41,20 +60,7 @@
 			"Services": [ "\u670d\u52a1" ],
 			"Include Services": [ "\u5305\u542b\u670d\u52a1" ],
 			"Works": [ "\u4f5c\u54c1" ],
-			"Include Works": [ "\u5305\u542b\u4f5c\u54c1" ],
-			"Loading ORCID Data": [ "ORCID \u6570\u636e\u52a0\u8f7d" ],
-			"Customize Items": [ "\u81ea\u5b9a\u4e49\u9879\u76ee" ],
-			"ORCID iD": [ "ORCID iD" ],
-			"Apply": [ "\u5e94\u7528" ],
-			"Please provide a valid ORCID iD.": [
-				"\u8bf7\u63d0\u4f9b\u6709\u6548\u7684ORCID iD"
-			],
-			"Sections": [ "\u90e8\u5206" ],
-			"No items detected.": [ "\u672a\u68c0\u6d4b\u5230\u7ed3\u679c" ],
-			"An error occurred while fetching the data from ORCID": [
-				"\u4ece ORCID \u83b7\u53d6\u6570\u636e\u65f6\u51fa\u9519"
-			],
-			"Please provide an ORCID iD": [ "\u8bf7\u63d0\u4f9bORCID iD" ]
+			"Include Works": [ "\u5305\u542b\u4f5c\u54c1" ]
 		}
 	}
 }
