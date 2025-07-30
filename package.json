@@ -23,6 +23,6 @@
 		"prettier": "prettier"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^30.19.0"
+		"@wordpress/scripts": "^30.20.0"
 	}
 }
