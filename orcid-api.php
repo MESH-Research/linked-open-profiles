@@ -48,8 +48,9 @@ function mesh_research_linked_open_profiles_validate_orcid_id($value)
     if (strlen($value) === 19 || strlen($value) === 16) {
         $correct_length = true;
     }
-    // Must be a number only
-    if (preg_match('/^[0-9]+$/', str_replace('-', '', $value))) {
+    // Must be a number which may end with the character 'X'
+    // Further reading: <https://support.orcid.org/hc/en-us/articles/360053289173-Why-does-my-ORCID-iD-have-an-X>
+    if (preg_match('/^[0-9]{15}[0-9X]$/', str_replace('-', '', $value))) {
         $number_only = true;
     }
 
