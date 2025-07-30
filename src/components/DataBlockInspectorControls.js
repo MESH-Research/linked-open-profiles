@@ -104,6 +104,26 @@ function getSectionControls( section, items, attributes, setAttributes ) {
 					toggleSection( section, value, setAttributes );
 				} }
 			/>
+			{ show && (
+				<CheckboxControl
+					__nextHasNoMarginBottom={ true }
+					checked={ isHeadingShown( section, attributes ) }
+					label={ __( 'Include Heading', 'linked-open-profiles' ) }
+					onChange={ ( value ) => {
+						toggleSectionHeading( section, value, setAttributes );
+					} }
+				/>
+			) }
+			{ show && ! isHeadingShown( section, attributes ) && (
+				<Snackbar>
+					<p>
+						{ __(
+							'Excluding this heading could make your content misleading and less accessible.',
+							'linked-open-profiles'
+						) }
+					</p>
+				</Snackbar>
+			) }
 			{ section == 'bio' && attributes[ 'bio_show' ] && (
 				<PanelBody
 					initialOpen={ false }
@@ -134,26 +154,6 @@ function getSectionControls( section, items, attributes, setAttributes ) {
 						);
 					} ) }
 				</PanelBody>
-			) }
-			{ show && (
-				<CheckboxControl
-					__nextHasNoMarginBottom={ true }
-					checked={ isHeadingShown( section, attributes ) }
-					label={ __( 'Include Heading', 'linked-open-profiles' ) }
-					onChange={ ( value ) => {
-						toggleSectionHeading( section, value, setAttributes );
-					} }
-				/>
-			) }
-			{ show && ! isHeadingShown( section, attributes ) && (
-				<Snackbar>
-					<p>
-						{ __(
-							'Excluding this heading could compromise the semantic structure of this content and negatively impact its accessibility. If this change was made while mindful of this, you may disregard this warning.',
-							'linked-open-profiles'
-						) }
-					</p>
-				</Snackbar>
 			) }
 			{ show &&
 				canExclude( section ) &&
