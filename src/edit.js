@@ -171,11 +171,7 @@ export default function Edit( { attributes, setAttributes } ) {
 							! fetchError &&
 							Object.keys( sections ).map(
 								( section ) =>
-									isSectionShown(
-										section,
-										sections,
-										attributes
-									) &&
+									isSectionShown( section, attributes ) &&
 									! hasNoItems( section, items ) && (
 										<section
 											style={ { marginBottom: '2rem' } }
@@ -197,7 +193,6 @@ export default function Edit( { attributes, setAttributes } ) {
 
 											{ renderSectionItems(
 												section,
-												sections,
 												items,
 												attributes
 											) }

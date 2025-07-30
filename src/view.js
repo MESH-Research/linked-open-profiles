@@ -117,11 +117,7 @@ function LinkedOpenProfiles( { attributes } ) {
 					{ ! loading ? (
 						Object.keys( sections ).map(
 							( section ) =>
-								isSectionShown(
-									section,
-									sections,
-									attributes
-								) &&
+								isSectionShown( section, attributes ) &&
 								! hasNoItems( section, items ) && (
 									<section
 										style={ { marginBottom: '2rem' } }
@@ -140,7 +136,6 @@ function LinkedOpenProfiles( { attributes } ) {
 										) }
 										{ renderSectionItems(
 											section,
-											sections,
 											items,
 											attributes
 										) }

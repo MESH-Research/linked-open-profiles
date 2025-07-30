@@ -47,9 +47,9 @@ function modifyExcludedItems(
 	setAttributes,
 	value
 ) {
-	const excluded = { ...excludedItems( section, sections, attributes ) };
+	const excluded = { ...excludedItems( section, attributes ) };
 	excluded[ item.path ] = value;
-	setAttributes( { [ `${ sections[ section ].id }_excluded` ]: excluded } );
+	setAttributes( { [ `${ section }_excluded` ]: excluded } );
 }
 
 function getItemCheckboxes( section, items, attributes, setAttributes ) {
@@ -61,8 +61,7 @@ function getItemCheckboxes( section, items, attributes, setAttributes ) {
 			key={ item.path }
 			__nextHasNoMarginBottom={ true }
 			checked={
-				excludedItems( section, sections, attributes )[ item.path ] !==
-				false
+				excludedItems( section, attributes )[ item.path ] !== false
 			}
 			className="odb-medium-margin-top"
 			label={ item.display_label }
@@ -94,7 +93,7 @@ function toggleSectionHeading( section, value, setAttributes ) {
 }
 
 function getSectionControls( section, items, attributes, setAttributes ) {
-	const show = isSectionShown( section, sections, attributes );
+	const show = isSectionShown( section, attributes );
 	let sectionControls = (
 		<div style={ { opacity: hasNoItems( section, items ) ? 0.5 : 1 } }>
 			<CheckboxControl
@@ -158,14 +157,13 @@ function getSectionControls( section, items, attributes, setAttributes ) {
 				</Snackbar>
 			) }
 			{ show &&
-				canExclude( section, sections ) &&
+				canExclude( section ) &&
 				! hasNoItems( section, items ) && (
 					<div>
 						<CheckboxControl
 							__nextHasNoMarginBottom={ true }
 							checked={ areSectionItemsLimited(
 								section,
-								sections,
 								attributes
 							) }
 							className="odb-medium-margin-top"
@@ -181,11 +179,7 @@ function getSectionControls( section, items, attributes, setAttributes ) {
 								);
 							} }
 						/>
-						{ areSectionItemsLimited(
-							section,
-							sections,
-							attributes
-						) && (
+						{ areSectionItemsLimited( section, attributes ) && (
 							<NumberControl
 								label={ __(
 									'Items to Show',
@@ -319,11 +313,7 @@ const DataBlockInspectorControls = ( {
 									key={ section.id }
 									initialOpen={ false }
 									icon={
-										! isSectionShown(
-											section,
-											sections,
-											attributes
-										)
+										! isSectionShown( section, attributes )
 											? 'hidden'
 											: ''
 									}

@@ -2,9 +2,10 @@ import {
 	__experimentalItemGroup as ItemGroup,
 	__experimentalItem as Item,
 } from '@wordpress/components';
+import { sections } from './sections';
 
-export function isSectionShown( section, sections, attributes ) {
-	return attributes[ `${ sections[ section ].id }_show` ];
+export function isSectionShown( section, attributes ) {
+	return attributes[ `${ section }_show` ];
 }
 
 export function isSubSectionShown( subsection, section, attributes ) {
@@ -18,14 +19,14 @@ export function hasNoItems( section, items ) {
 	return items[ section ].length === 0;
 }
 
-export function canExclude( section, sections ) {
+export function canExclude( section ) {
 	return sections[ section ].can_exclude_items;
 }
 
-export function excludedItems( section, sections, attributes ) {
+export function excludedItems( section, attributes ) {
 	let i = [];
-	if ( canExclude( section, sections ) ) {
-		i = attributes[ `${ sections[ section ].id }_excluded` ] || {};
+	if ( canExclude( section ) ) {
+		i = attributes[ `${ section }_excluded` ] || {};
 	}
 	return i;
 }
@@ -34,27 +35,19 @@ export function isHeadingShown( section, attributes ) {
 	return attributes?.[ `${ section }_heading_show` ];
 }
 
-export function areSectionItemsLimited( section, sections, attributes ) {
-	return attributes[ `${ sections[ section ].id }_limit_items` ];
+export function areSectionItemsLimited( section, attributes ) {
+	return attributes[ `${ section }_limit_items` ];
 }
 
-export function renderSectionItems( section, sections, items, attributes ) {
+export function renderSectionItems( section, items, attributes ) {
 	let markup = '';
 	if ( section === 'bio' ) {
 		markup = sections[ section ].model( items[ section ][ 0 ], attributes );
-	}
-	if ( section !== 'bio' ) {
+	} else {
 		const remainingItems = items[ section ].filter( ( item ) => {
-			return (
-				excludedItems( section, sections, attributes )[ item.path ] !==
-				false
-			);
+			return excludedItems( section, attributes )[ item.path ] !== false;
 		} );
-		const limitedItems = areSectionItemsLimited(
-			section,
-			sections,
-			attributes
-		)
+		const limitedItems = areSectionItemsLimited( section, attributes )
 			? remainingItems.slice(
 					0,
 					attributes?.[ `${ section }_limit_items_count` ]
