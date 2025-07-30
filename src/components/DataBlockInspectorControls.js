@@ -33,7 +33,6 @@ function toggleSubSection( section, subsection, value, setAttributes ) {
 	setAttributes( { [ `${ section }_${ subsection }_show` ]: value } );
 }
 function toggleLimitItems( section, value, setAttributes ) {
-	console.log( section, value );
 	setAttributes( { [ `${ section }_limit_items` ]: value } );
 }
 function setLimitItemsCount( section, value, setAttributes ) {
