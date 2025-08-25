@@ -26,7 +26,7 @@
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
  */
 import { __ } from '@wordpress/i18n';
-import { useEffect, useState, createRoot } from '@wordpress/element';
+import { useCallback, useEffect, useState, createRoot } from '@wordpress/element';
 
 /**
  * React hook that is used to mark the block wrapper element.
@@ -45,6 +45,8 @@ import { useBlockProps } from '@wordpress/block-editor';
 import './editor.scss';
 
 import {
+	Card,
+	CardBody,
 	__experimentalHeading as Heading,
 	__experimentalItemGroup as ItemGroup,
 	__experimentalItem as Item,
@@ -56,6 +58,9 @@ import {
 	renderSectionItems,
 } from './sharedfunctions.js';
 import LoadingSpinner from './components/LoadingSpinner.js';
+
+import apiFetch from '@wordpress/api-fetch';
+import { addQueryArgs } from '@wordpress/url';
 
 import { sections } from './sections.js';
 import { getProcessedData } from './processdata.js';
@@ -71,35 +76,53 @@ function LinkedOpenProfiles( { attributes } ) {
 	const [ items, setItems ] = useState( {} );
 	const [ dataFetched, setDataFetched ] = useState( false );
 	const [ loading, setLoading ] = useState( true );
+	const [ fetchError, setFetchError ] = useState( false );
+
+	const fetchData = useCallback( async () => {
+		setFetchError( false );
+		setDataFetched( false );
+		const queryParams = { orcidId: `${ orcidId }` };
+		apiFetch( {
+			path: addQueryArgs(
+				'/mesh_research_linked_open_profiles/v1/orcid-proxy',
+				queryParams
+			),
+		} )
+			.then( ( data ) => {
+				setItems( getProcessedData( data ) );
+				setDataFetched( true );
+			} )
+			.catch( () => {
+				setFetchError( true );
+			} )
+			.finally( () => {
+				setLoading( false );
+			} );
+	}, [ orcidId ] );
 
 	useEffect( () => {
 		if ( orcidId && verifiedOrcidId && ! dataFetched ) {
 			fetchData();
 		}
-	} );
-
-	async function fetchData() {
-		try {
-			setDataFetched( false );
-			const response = await fetch(
-				`/wp-json/mesh_research_linked_open_profiles/v1/orcid-proxy?orcidId=${ orcidId }`
-			);
-			if ( ! response.ok ) {
-				throw new Error( 'Network response was not ok' );
-			}
-			const result = await response.json();
-			setItems( getProcessedData( result ) );
-			setDataFetched( true );
-		} catch ( error ) {
-			// console.error('Error fetching data:', error);
-		} finally {
-			setLoading( false );
-		}
-	}
+	}, [ orcidId, verifiedOrcidId, dataFetched, fetchData ] );
 
 	return (
 		<div { ...useBlockProps() }>
-			{ ! orcidId ? (
+			{ fetchError && (
+				<div role="alert">
+					<Card>
+						<CardBody>
+							<p>
+								{ __(
+									'An error occurred while fetching the data from ORCID',
+									'linked-open-profiles'
+								) }
+							</p>
+						</CardBody>
+					</Card>
+				</div>
+			) }
+			{ ! orcidId && ! fetchError? (
 				<p
 					style={ {
 						padding: '2rem',
