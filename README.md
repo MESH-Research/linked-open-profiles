@@ -13,8 +13,8 @@ This work is funded by the [ORCID Global Participation Fund][awardees].
 [awardees]: https://info.orcid.org/global-participation-fund-announces-fourth-round-of-awardees/
 
 ![Screenshot of the plugin in use in a Gutenberg editor, featuring the Biography
-and Education sections excluded, the Employment section partially included, and
-the Works section fully included](assets/screenshot-1.png)
+section excluded, the Employment section partially included, and the Works
+section fully included](assets/screenshot-1.png)
 
 ## Features
 
