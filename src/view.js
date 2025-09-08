@@ -26,7 +26,13 @@
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
  */
 import { __ } from '@wordpress/i18n';
-import { useCallback, useEffect, useState, createRoot } from '@wordpress/element';
+import {
+	useCallback,
+	useEffect,
+	useState,
+	createRoot,
+} from '@wordpress/element';
+import orcidIcon from './images/ORCID-iD_icon_unauth_vector.svg';
 
 /**
  * React hook that is used to mark the block wrapper element.
@@ -72,7 +78,8 @@ import { getProcessedData } from './processdata.js';
  * @return {Element} Element to render.
  */
 function LinkedOpenProfiles( { attributes } ) {
-	const { orcidId, startingHeadingLevel, verifiedOrcidId } = attributes;
+	const { orcidId, startingHeadingLevel, verifiedOrcidId, visibleOrcidId } =
+		attributes;
 	const [ items, setItems ] = useState( {} );
 	const [ dataFetched, setDataFetched ] = useState( false );
 	const [ loading, setLoading ] = useState( true );
@@ -122,7 +129,7 @@ function LinkedOpenProfiles( { attributes } ) {
 					</Card>
 				</div>
 			) }
-			{ ! orcidId && ! fetchError? (
+			{ ! orcidId && ! fetchError ? (
 				<p
 					style={ {
 						padding: '2rem',
@@ -137,6 +144,45 @@ function LinkedOpenProfiles( { attributes } ) {
 				</p>
 			) : (
 				<>
+					{ orcidId &&
+						verifiedOrcidId &&
+						dataFetched &&
+						visibleOrcidId && (
+							<div
+								style={ {
+									float: 'right',
+									display: 'inline-flex',
+									gap: '4px',
+								} }
+							>
+								<a
+									href={ `https://orcid.org/${ orcidId }` }
+									style={ {
+										display: 'inline-flex',
+										alignItems: 'center',
+										gap: '8px',
+									} }
+								>
+									<img
+										src={ orcidIcon }
+										alt=""
+										style={ {
+											height: '24px',
+											width: '24px',
+										} }
+									/>
+									<span>{ orcidId }</span>
+								</a>
+								<span>
+									(
+									{ __(
+										'unauthenticated',
+										'linked-open-profiles'
+									) }
+									)
+								</span>
+							</div>
+						) }
 					{ ! loading ? (
 						Object.keys( sections ).map(
 							( section ) =>

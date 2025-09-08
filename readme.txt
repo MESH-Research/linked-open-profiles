@@ -4,7 +4,7 @@ Tags: block, widget, orcid
 Requires at least: 6.6.2
 Tested up to: 6.8.1
 Requires PHP: 7.0
-Stable tag: 0.3.18
+Stable tag: 0.4.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,19 +32,19 @@ This work is funded by the [ORCID Global Participation Fund][awardees].
 * Info will remain automatically up-to-date with ORCID
 * Accessible to those with disabilities
 * All languages currently supported by ORCID will be supported (subject to translator availability)
-    * Arabic: 78%
-    * Chinese (Simplified): 78%
-    * Chinese (Traditional): 78%
-    * Czech: 78%
-    * French: 78%
-    * German: 78%
-    * Italian: 78%
-    * Japanese: 78%
-    * Korean: 78%
-    * Polish: 78%
-    * Portuguese: 74%
-    * Russian: 78%
-    * Spanish: 78%
+    * Arabic: 72%
+    * Chinese (Simplified): 72%
+    * Chinese (Traditional): 72%
+    * Czech: 72%
+    * French: 72%
+    * German: 72%
+    * Italian: 72%
+    * Japanese: 72%
+    * Korean: 72%
+    * Polish: 72%
+    * Portuguese: 68%
+    * Russian: 72%
+    * Spanish: 72%
     * Turkish: 0%
 
 == Screenshots ==

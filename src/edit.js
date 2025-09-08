@@ -5,6 +5,7 @@
  */
 import { __ } from '@wordpress/i18n';
 import { useCallback, useEffect, useState } from '@wordpress/element';
+import orcidIcon from './images/ORCID-iD_icon_unauth_vector.svg';
 
 /**
  * React hook that is used to mark the block wrapper element.
@@ -55,7 +56,8 @@ import { addQueryArgs } from '@wordpress/url';
  * @return {Element} Element to render
  */
 export default function Edit( { attributes, setAttributes } ) {
-	const { orcidId, startingHeadingLevel, verifiedOrcidId } = attributes;
+	const { orcidId, startingHeadingLevel, verifiedOrcidId, visibleOrcidId } =
+		attributes;
 	const [ items, setItems ] = useState( {} );
 	const [ invalidId, setInvalidId ] = useState( false );
 	const [ dataFetched, setDataFetched ] = useState( false );
@@ -167,6 +169,45 @@ export default function Edit( { attributes, setAttributes } ) {
 					</div>
 				) : (
 					<>
+						{ orcidId &&
+							verifiedOrcidId &&
+							dataFetched &&
+							visibleOrcidId && (
+								<div
+									style={ {
+										float: 'right',
+										display: 'inline-flex',
+										gap: '4px',
+									} }
+								>
+									<a
+										href={ `https://orcid.org/${ orcidId }` }
+										style={ {
+											display: 'inline-flex',
+											alignItems: 'center',
+											gap: '8px',
+										} }
+									>
+										<img
+											src={ orcidIcon }
+											alt=""
+											style={ {
+												height: '24px',
+												width: '24px',
+											} }
+										/>
+										<span>{ orcidId }</span>
+									</a>
+									<span>
+										(
+										{ __(
+											'unauthenticated',
+											'linked-open-profiles'
+										) }
+										)
+									</span>
+								</div>
+							) }
 						{ ! loading &&
 							! fetchError &&
 							Object.keys( sections ).map(

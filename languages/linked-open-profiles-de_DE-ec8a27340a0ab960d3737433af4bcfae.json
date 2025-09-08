@@ -11,7 +11,11 @@
 				"plural-forms": "nplurals=2; plural=(n != 1);"
 			},
 			"Loading ORCID Data": [ "ORCID-Daten werden geladen" ],
+			"An error occurred while fetching the data from ORCID": [
+				"Fehler beim Abrufen der ORCID-Daten"
+			],
 			"Please provide an ORCID iD": [ "Bitte eine ORCID iD eingeben" ],
+			"unauthenticated": [ "" ],
 			"Biographical Information": [ "Biographische Angaben" ],
 			"Given Name": [ "Vorname" ],
 			"Family Name": [ "Nachname" ],

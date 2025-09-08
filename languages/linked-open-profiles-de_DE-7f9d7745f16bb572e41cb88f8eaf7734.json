@@ -10,7 +10,11 @@
 				"lang": "de_DE",
 				"plural-forms": "nplurals=2; plural=(n != 1);"
 			},
-			"Please provide an ORCID iD": [ "Bitte eine ORCID iD eingeben" ]
+			"An error occurred while fetching the data from ORCID": [
+				"Fehler beim Abrufen der ORCID-Daten"
+			],
+			"Please provide an ORCID iD": [ "Bitte eine ORCID iD eingeben" ],
+			"unauthenticated": [ "" ]
 		}
 	}
 }

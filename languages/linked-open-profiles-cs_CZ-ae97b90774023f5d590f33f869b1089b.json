@@ -10,11 +10,11 @@
 				"lang": "cs_CZ",
 				"plural-forms": "nplurals=2; plural=(n != 1);"
 			},
-			"Customize Items": [ "P\u0159izp\u016fsobit polo\u017eky" ],
 			"Include Heading": [ "" ],
-			"Excluding this heading could compromise the semantic structure of this content and negatively impact its accessibility. If this change was made while mindful of this, you may disregard this warning.": [
+			"Excluding this heading could make your content misleading and less accessible.": [
 				""
 			],
+			"Customize Items": [ "P\u0159izp\u016fsobit polo\u017eky" ],
 			"Limit Items": [ "" ],
 			"Items to Show": [ "" ],
 			"ORCID iD": [ "ORCID iD" ],
@@ -22,6 +22,7 @@
 			"Please provide a valid ORCID iD.": [
 				"Pros\u00edm, uve\u010fte platn\u00fd identifik\u00e1tor ORCID"
 			],
+			"Include ORCID iD": [ "" ],
 			"Sections": [ "Sekce" ],
 			"No items detected.": [
 				"Nebyly nalezeny \u017e\u00e1dn\u00e9 polo\u017eky"

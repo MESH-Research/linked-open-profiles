@@ -29,20 +29,20 @@ section fully included](assets/screenshot-1.png)
 
     | Language              | Translation Completion |
     | --------------------- | -----------------------|
-    | Arabic                | 78%                    |
-    | Chinese (Simplified)  | 78%                    |
-    | Chinese (Traditional) | 78%                    |
-    | Czech                 | 78%                    |
-    | French                | 78%                    |
-    | German                | 78%                    |
-    | Italian:              | 78%                    |
-    | Japanese:             | 78%                    |
-    | Korean:               | 78%                    |
-    | Polish:               | 78%                    |
-    | Portuguese:           | 74%                    |
-    | Russian:              | 78%                    |
-    | Spanish:              | 78%                    |
-    | Turkish:              | 0%                     |
+    | Arabic                | 72%                    |
+    | Chinese (Simplified)  | 72%                    |
+    | Chinese (Traditional) | 72%                    |
+    | Czech                 | 72%                    |
+    | French                | 72%                    |
+    | German                | 72%                    |
+    | Italian               | 72%                    |
+    | Japanese              | 72%                    |
+    | Korean                | 72%                    |
+    | Polish                | 72%                    |
+    | Portuguese            | 68%                    |
+    | Russian               | 72%                    |
+    | Spanish               | 72%                    |
+    | Turkish               | 0%                     |
 
 ## Information Supported
 
@@ -187,6 +187,16 @@ ORCID, it will not appear for that item in the plugin.
 * Digital Object Identifier (DOI)
 
 ## Installation
+
+### WordPress.org
+
+1. Visit the admin area of your WordPress installation.
+2. Visit the Plugins screen.
+3. Click the "Add Plugin" button.
+4. Search for "Linked Open Profiles"
+5. Click the "Install Now" button.
+
+### GitHub
 
 1. Visit this plugin's [Releases page][releases] on GitHub:
 2. Download the zip file of the latest stable release.

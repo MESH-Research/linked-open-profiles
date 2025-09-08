@@ -10,12 +10,12 @@
 				"lang": "ar",
 				"plural-forms": "nplurals=2; plural=(n != 1);"
 			},
+			"Include Heading": [ "" ],
+			"Excluding this heading could make your content misleading and less accessible.": [
+				""
+			],
 			"Customize Items": [
 				"\u062a\u062e\u0635\u064a\u0635 \u0628\u064a\u0627\u0646\u0627\u062a"
-			],
-			"Include Heading": [ "" ],
-			"Excluding this heading could compromise the semantic structure of this content and negatively impact its accessibility. If this change was made while mindful of this, you may disregard this warning.": [
-				""
 			],
 			"Limit Items": [ "" ],
 			"Items to Show": [ "" ],
@@ -24,6 +24,7 @@
 			"Please provide a valid ORCID iD.": [
 				"\u0635\u062d\u064a\u062d ORCID \u0627\u0644\u0631\u062c\u0627\u0621 \u0625\u062f\u062e\u0627\u0644 \u0628\u0631\u0648\u0641\u0627\u064a\u0644"
 			],
+			"Include ORCID iD": [ "" ],
 			"Sections": [ "\u0627\u0644\u0623\u0642\u0633\u0627\u0645" ],
 			"No items detected.": [
 				"\u0644\u0627 \u064a\u0648\u062c\u062f \u0628\u064a\u0627\u0646\u0627\u062a"

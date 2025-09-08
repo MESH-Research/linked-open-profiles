@@ -11,9 +11,13 @@
 				"plural-forms": "nplurals=2; plural=(n != 1);"
 			},
 			"Loading ORCID Data": [ "Na\u010d\u00edt\u00e1n\u00ed dat ORCID" ],
+			"An error occurred while fetching the data from ORCID": [
+				"Do\u0161lo k chyb\u011b p\u0159i na\u010d\u00edt\u00e1n\u00ed dat z ORCID"
+			],
 			"Please provide an ORCID iD": [
 				"Pros\u00edm, uve\u010fte platn\u00fd identifik\u00e1tor ORCID"
 			],
+			"unauthenticated": [ "" ],
 			"Biographical Information": [ "Biografick\u00e9 informace" ],
 			"Given Name": [ "Jm\u00e9no" ],
 			"Family Name": [ "P\u0159\u00edjmen\u00ed" ],

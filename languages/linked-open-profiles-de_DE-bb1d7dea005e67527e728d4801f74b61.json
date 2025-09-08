@@ -13,7 +13,8 @@
 			"An error occurred while fetching the data from ORCID": [
 				"Fehler beim Abrufen der ORCID-Daten"
 			],
-			"Please provide an ORCID iD": [ "Bitte eine ORCID iD eingeben" ]
+			"Please provide an ORCID iD": [ "Bitte eine ORCID iD eingeben" ],
+			"unauthenticated": [ "" ]
 		}
 	}
 }

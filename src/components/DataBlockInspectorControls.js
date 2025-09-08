@@ -38,6 +38,9 @@ function toggleLimitItems( section, value, setAttributes ) {
 function setLimitItemsCount( section, value, setAttributes ) {
 	setAttributes( { [ `${ section }_limit_items_count` ]: value } );
 }
+function toggleVisibleOrcidId( value, setAttributes ) {
+	setAttributes( { [ 'visibleOrcidId' ]: value } );
+}
 
 function modifyExcludedItems(
 	section,
@@ -305,6 +308,25 @@ const DataBlockInspectorControls = ( {
 						startingHeadingLevel={ startingHeadingLevel }
 						setAttributes={ setAttributes }
 					/>
+
+					<Panel>
+						<PanelBody>
+							<CheckboxControl
+								checked={ attributes[ `visibleOrcidId` ] }
+								className="odb-medium-margin-top"
+								label={ __(
+									'Include ORCID iD',
+									'linked-open-profiles'
+								) }
+								onChange={ ( value ) => {
+									toggleVisibleOrcidId(
+										value,
+										setAttributes
+									);
+								} }
+							/>
+						</PanelBody>
+					</Panel>
 					<Panel header={ __( 'Sections', 'linked-open-profiles' ) }>
 						{ Object.keys( sections ).map( function ( section ) {
 							return (

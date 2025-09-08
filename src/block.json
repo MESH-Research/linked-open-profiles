@@ -2,7 +2,7 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "mesh-research/linked-open-profiles",
-	"version": "0.3.17",
+	"version": "0.4.0",
 	"title": "Linked Open Profiles",
 	"category": "widgets",
 	"icon": "",
@@ -11,6 +11,10 @@
 	"attributes": {
 		"orcidId": {
 			"type": "string"
+		},
+		"visibleOrcidId": {
+			"type": "boolean",
+			"default": false
 		},
 		"verifiedOrcidId": {
 			"type": "boolean",

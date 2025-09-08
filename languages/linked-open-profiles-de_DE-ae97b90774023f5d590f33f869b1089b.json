@@ -10,11 +10,11 @@
 				"lang": "de_DE",
 				"plural-forms": "nplurals=2; plural=(n != 1);"
 			},
-			"Customize Items": [ "Elemente anpassen" ],
 			"Include Heading": [ "" ],
-			"Excluding this heading could compromise the semantic structure of this content and negatively impact its accessibility. If this change was made while mindful of this, you may disregard this warning.": [
+			"Excluding this heading could make your content misleading and less accessible.": [
 				""
 			],
+			"Customize Items": [ "Elemente anpassen" ],
 			"Limit Items": [ "" ],
 			"Items to Show": [ "" ],
 			"ORCID iD": [ "ORCID iD" ],
@@ -22,6 +22,7 @@
 			"Please provide a valid ORCID iD.": [
 				"Bitte eine g\u00fcltige ORCID iD eingeben"
 			],
+			"Include ORCID iD": [ "" ],
 			"Sections": [ "Sektionen" ],
 			"No items detected.": [ "Keine Eintr\u00e4ge gefunden" ]
 		}

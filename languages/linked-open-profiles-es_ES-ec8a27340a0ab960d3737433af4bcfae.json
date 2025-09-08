@@ -11,9 +11,13 @@
 				"plural-forms": "nplurals=2; plural=(n != 1);"
 			},
 			"Loading ORCID Data": [ "Cargando datos de ORCID" ],
+			"An error occurred while fetching the data from ORCID": [
+				"Se ha producido un error al obtener los datos de ORCID"
+			],
 			"Please provide an ORCID iD": [
 				"Introduzca un identificador de ORCID"
 			],
+			"unauthenticated": [ "" ],
 			"Biographical Information": [
 				"Informaci\u00f3n bibliogr\u00e1fica"
 			],
