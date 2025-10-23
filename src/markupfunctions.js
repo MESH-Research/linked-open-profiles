@@ -58,7 +58,7 @@ export function bioMarkup( data, attributes ) {
 					{ __( 'Biographical Information', 'linked-open-profiles' ) }
 				</strong>
 				<br />
-				<div style={ { paddingLeft: '12px' } }>
+				<div style={ { paddingLeft: '12px', whiteSpace: 'pre-line' } }>
 					{ data.biography }
 				</div>{ ' ' }
 				<br />
