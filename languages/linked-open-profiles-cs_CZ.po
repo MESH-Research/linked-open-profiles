@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Linked Open Profiles 0.4.0\n"
+"Project-Id-Version: Linked Open Profiles 0.4.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/linked-open-profiles\n"
 "Last-Translator: \n"
 "Language-Team: MSU Translation Center <translat@msu.edu>\n"
