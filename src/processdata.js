@@ -38,7 +38,7 @@ function makeDate( item, summaryName, dateName, format ) {
 	let response = new Date();
 	if ( format === 'affiliation-group' ) {
 		dateObj = item.summaries[ 0 ][ summaryName ][ dateName ];
-	} else if ( format === 'no-summaries' ) {
+	} else if ( format === 'group' ) {
 		dateObj = item[ summaryName ][ 0 ][ dateName ];
 	} else if ( format === 'peer-review' ) {
 		dateObj =
