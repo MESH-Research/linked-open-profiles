@@ -263,7 +263,7 @@ const DataBlockInspectorControls = ( {
 						value={ orcidId }
 						onChange={ ( value ) => {
 							setInvalidId( false );
-							setAttributes( { orcidId: value } );
+							setAttributes( { orcidId: value.toUpperCase() } );
 						} }
 					/>
 					<Button
