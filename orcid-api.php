@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 function mesh_research_linked_open_profiles_handle_orcid_proxy_request(WP_REST_Request $request) 
 {
-    $orcid_id = sanitize_title_with_dashes($request->get_param('orcidId'));
+    $orcid_id = sanitize_title_with_dashes($request->get_param('orcidId'), '', 'save');
     if (!isset($orcid_id) || empty($orcid_id)) {
         return new WP_Error('missing_orcid_id', 'Missing ORCID ID', array('status' => 400));
     }
