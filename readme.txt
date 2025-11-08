@@ -4,7 +4,7 @@ Tags: block, widget, orcid
 Requires at least: 6.6.2
 Tested up to: 6.8.1
 Requires PHP: 7.0
-Stable tag: 0.5.0
+Stable tag: 0.5.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
