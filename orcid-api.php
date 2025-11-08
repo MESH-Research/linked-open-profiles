@@ -50,7 +50,7 @@ function mesh_research_linked_open_profiles_validate_orcid_id($value)
     }
     // Must be a number which may end with the character 'X'
     // Further reading: <https://support.orcid.org/hc/en-us/articles/360053289173-Why-does-my-ORCID-iD-have-an-X>
-    if (preg_match('/^[0-9]{15}[0-9X]$/', str_replace('-', '', $value))) {
+    if (preg_match('/^[0-9]{15}[0-9X]$/i', str_replace('-', '', $value))) {
         $number_only = true;
     }
 
