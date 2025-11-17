@@ -244,7 +244,7 @@ export const sections = {
 		term: __( 'Peer Reviews', 'linked-open-profiles' ),
 		include: __( 'Include Peer Reviews', 'linked-open-profiles' ),
 		id: 'peer-reviews',
-		format: 'group',
+		format: 'peer-review',
 		summaryName: 'peer-review-summary',
 		dateName: 'completion-date',
 		can_exclude_items: true,
