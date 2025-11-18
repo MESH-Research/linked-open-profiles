@@ -5,7 +5,7 @@
  * Description:       Display public profile data from multiple ORCID profiles
  * Requires at least: 6.6.2
  * Requires PHP:      7.0
- * Version:           0.5.2
+ * Version:           0.5.3
  * Author:            ebengran
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
