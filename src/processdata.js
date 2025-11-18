@@ -8,6 +8,7 @@ export function getItems( type, profile ) {
 			items = records[ 'affiliation-group' ];
 			break;
 		case 'group':
+		case 'peer-review':
 			items = records.group;
 			break;
 		case 'person':
