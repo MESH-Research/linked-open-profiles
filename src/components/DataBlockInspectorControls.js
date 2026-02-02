@@ -268,6 +268,7 @@ const DataBlockInspectorControls = ( {
 					<TextControl
 						__nextHasNoMarginBottom={ true }
 						className="odb-small-margin-bottom"
+						__next40pxDefaultSize="true"
 						label={ __( 'ORCID iD', 'linked-open-profiles' ) }
 						value={ orcidId }
 						onChange={ ( value ) => {
