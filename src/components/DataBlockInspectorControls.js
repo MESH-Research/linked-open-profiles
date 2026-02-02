@@ -326,7 +326,7 @@ const DataBlockInspectorControls = ( {
 								className="odb-medium-margin-top"
 								__nextHasNoMarginBottom={ true }
 								label={ __(
-									'Include ORCID iD',
+									'Include ORCID iD link',
 									'linked-open-profiles'
 								) }
 								onChange={ ( value ) => {
