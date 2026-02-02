@@ -324,6 +324,7 @@ const DataBlockInspectorControls = ( {
 							<CheckboxControl
 								checked={ attributes[ `visibleOrcidId` ] }
 								className="odb-medium-margin-top"
+								__nextHasNoMarginBottom={ true }
 								label={ __(
 									'Include ORCID iD',
 									'linked-open-profiles'
