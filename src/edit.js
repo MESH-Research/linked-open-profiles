@@ -27,8 +27,6 @@ import {
 	Card,
 	CardBody,
 	__experimentalHeading as Heading,
-	__experimentalItemGroup as ItemGroup,
-	__experimentalItem as Item,
 } from '@wordpress/components';
 
 import { sections } from './sections';

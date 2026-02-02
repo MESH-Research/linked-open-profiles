@@ -136,7 +136,7 @@ function getSectionControls( section, items, attributes, setAttributes ) {
 					</p>
 				</Snackbar>
 			) }
-			{ section == 'bio' && attributes[ 'bio_show' ] && (
+			{ section === 'bio' && attributes.bio_show && (
 				<PanelBody
 					initialOpen={ false }
 					title={ __( 'Customize Items', 'linked-open-profiles' ) }
@@ -322,7 +322,7 @@ const DataBlockInspectorControls = ( {
 					<Panel>
 						<PanelBody>
 							<CheckboxControl
-								checked={ attributes[ `visibleOrcidId` ] }
+								checked={ attributes.visibleOrcidId }
 								className="odb-medium-margin-top"
 								__nextHasNoMarginBottom={ true }
 								label={ __(
