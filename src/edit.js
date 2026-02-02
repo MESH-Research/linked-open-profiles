@@ -233,7 +233,7 @@ export default function Edit( { attributes, setAttributes } ) {
 									! hasNoItems( section, items ) && (
 										<section
 											style={ { marginBottom: '2rem' } }
-											className={ `lop-section lop-section-${ section }` }
+											className={ `mesh-lop-section mesh-lop-section-${ section }` }
 											key={ section }
 										>
 											{ isHeadingShown(
