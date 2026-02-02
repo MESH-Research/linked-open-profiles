@@ -12,6 +12,12 @@ export function isSubSectionShown( subsection, section, attributes ) {
 	return attributes[ `${ section }_${ subsection }_show` ];
 }
 
+export function hasNoSectionsShown( attributes ) {
+	return ! Object.keys( sections ).some( ( section ) => {
+		return attributes?.[ `${ section }_show` ] === true;
+	} );
+}
+
 export function hasNoItems( section, items ) {
 	if ( ! items[ section ] ) {
 		return true;

@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Linked Open Profiles 0.5.4\n"
+"Project-Id-Version: Linked Open Profiles 0.6.8\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/linked-open-profiles\n"
 "Last-Translator: \n"
 "Language-Team: MSU Translation Center <translat@msu.edu>\n"
@@ -33,340 +33,337 @@ msgstr "Отобразить данные из профилей ORCID"
 msgid "ebengran"
 msgstr "ebengran"
 
-#: build/index.js:132
-#: build/index.js:167
-#: src/components/DataBlockInspectorControls.js:133
-#: src/components/DataBlockInspectorControls.js:210
-#: build/index.js:133
-#: build/index.js:210
+#: build/index.js:145
+#: build/index.js:180
+#: src/components/DataBlockInspectorControls.js:142
+#: src/components/DataBlockInspectorControls.js:219
+#: build/index.js:142
+#: build/index.js:219
 msgid "Customize Items"
 msgstr "Настроить элементы"
 
-#: build/index.js:122
-#: src/components/DataBlockInspectorControls.js:114
-#: build/index.js:114
+#: build/index.js:135
+#: src/components/DataBlockInspectorControls.js:123
+#: build/index.js:123
 msgid "Include Heading"
 msgstr ""
 
-#: build/index.js:151
-#: src/components/DataBlockInspectorControls.js:172
-#: build/index.js:172
+#: build/index.js:164
+#: src/components/DataBlockInspectorControls.js:181
+#: build/index.js:181
 msgid "Limit Items"
 msgstr ""
 
-#: build/index.js:156
-#: src/components/DataBlockInspectorControls.js:186
-#: build/index.js:186
+#: build/index.js:169
+#: src/components/DataBlockInspectorControls.js:195
+#: build/index.js:195
 msgid "Items to Show"
 msgstr ""
 
-#: build/index.js:209
-#: src/components/DataBlockInspectorControls.js:262
-#: build/index.js:262
+#: build/index.js:223
+#: src/components/DataBlockInspectorControls.js:272
+#: build/index.js:272
 msgid "ORCID iD"
 msgstr "ORCID iD"
 
-#: build/index.js:220
-#: src/components/DataBlockInspectorControls.js:272
-#: build/index.js:272
+#: build/index.js:234
+#: src/components/DataBlockInspectorControls.js:282
+#: build/index.js:282
 msgid "Apply"
 msgstr "Подтвердить"
 
-#: build/index.js:240
-#: src/components/DataBlockInspectorControls.js:291
-#: build/index.js:291
+#: build/index.js:254
+#: src/components/DataBlockInspectorControls.js:301
+#: build/index.js:301
 msgid "Please provide a valid ORCID iD."
 msgstr "Пожалуйста, укажите действительный идентификатор ORCID"
 
-#: build/index.js:263
-#: src/components/DataBlockInspectorControls.js:330
-#: build/index.js:330
+#: build/index.js:278
+#: src/components/DataBlockInspectorControls.js:341
+#: build/index.js:341
 msgid "Sections"
 msgstr "Разделы"
 
-#: build/index.js:270
-#: src/components/DataBlockInspectorControls.js:345
-#: build/index.js:345
+#: build/index.js:295
+#: src/components/DataBlockInspectorControls.js:374
+#: build/index.js:374
 msgid "No items detected."
 msgstr "Элементы не обнаружены"
 
-#: build/index.js:306
+#: build/index.js:331
 #: build/view.js:29
 #: src/components/LoadingSpinner.js:10
-#: build/index.js:404
+#: build/index.js:433
 #: build/view.js:10
 msgid "Loading ORCID Data"
 msgstr "Загрузка данных ORCID"
 
-#: build/index.js:471
-#: build/view.js:1383
-#: src/edit.js:144
-#: src/view.js:122
-#: build/index.js:555
-#: build/view.js:1347
+#: build/index.js:496
+#: build/view.js:1395
+#: src/edit.js:143
+#: src/view.js:129
+#: build/index.js:583
+#: build/view.js:1358
 msgid "An error occurred while fetching the data from ORCID"
 msgstr "Произошла ошибка при получении данных из ORCID"
 
-#: build/index.js:481
-#: build/view.js:1393
-#: src/edit.js:162
-#: src/view.js:139
-#: build/index.js:573
-#: build/view.js:1364
+#: build/index.js:506
+#: src/edit.js:161
+#: build/index.js:601
 msgid "Please provide an ORCID iD"
 msgstr "Пожалуйста, укажите идентификатор ORCID"
 
-#: build/index.js:706
-#: build/index.js:1448
+#: build/index.js:741
+#: build/index.js:1485
 #: build/view.js:167
-#: build/view.js:909
+#: build/view.js:911
 #: src/markupfunctions.js:58
 #: src/sections.js:169
-#: build/index.js:782
-#: build/index.js:1654
+#: build/index.js:826
+#: build/index.js:1696
 #: build/view.js:105
-#: build/view.js:977
+#: build/view.js:975
 msgid "Biographical Information"
 msgstr "Биографическая информация"
 
-#: build/index.js:854
-#: build/index.js:1436
-#: build/view.js:315
-#: build/view.js:897
+#: build/index.js:890
+#: build/index.js:1473
+#: build/view.js:316
+#: build/view.js:899
 #: src/markupfunctions.js:221
 #: src/sections.js:153
-#: build/index.js:945
-#: build/index.js:1638
+#: build/index.js:989
+#: build/index.js:1680
 #: build/view.js:268
-#: build/view.js:961
+#: build/view.js:959
 msgid "Given Name"
 msgstr "Имя"
 
-#: build/index.js:867
-#: build/index.js:1439
-#: build/view.js:328
-#: build/view.js:900
+#: build/index.js:903
+#: build/index.js:1476
+#: build/view.js:329
+#: build/view.js:902
 #: src/markupfunctions.js:234
 #: src/sections.js:157
-#: build/index.js:958
-#: build/index.js:1642
+#: build/index.js:1002
+#: build/index.js:1684
 #: build/view.js:281
-#: build/view.js:965
+#: build/view.js:963
 msgid "Family Name"
 msgstr "Фамилия"
 
-#: build/index.js:880
-#: build/index.js:1442
-#: build/view.js:341
-#: build/view.js:903
+#: build/index.js:916
+#: build/index.js:1479
+#: build/view.js:342
+#: build/view.js:905
 #: src/markupfunctions.js:247
 #: src/sections.js:161
-#: build/index.js:971
-#: build/index.js:1646
+#: build/index.js:1015
+#: build/index.js:1688
 #: build/view.js:294
-#: build/view.js:969
+#: build/view.js:967
 msgid "Credit Name"
 msgstr "Фамилия для указания авторства"
 
-#: build/index.js:893
-#: build/index.js:1445
-#: build/view.js:354
-#: build/view.js:906
+#: build/index.js:929
+#: build/index.js:1482
+#: build/view.js:355
+#: build/view.js:908
 #: src/markupfunctions.js:260
 #: src/sections.js:165
-#: build/index.js:984
-#: build/index.js:1650
+#: build/index.js:1028
+#: build/index.js:1692
 #: build/view.js:307
-#: build/view.js:973
+#: build/view.js:971
 msgid "Other Names"
 msgstr "Другие имена и фамилии"
 
-#: build/index.js:938
-#: build/index.js:1451
-#: build/view.js:399
-#: build/view.js:912
-#: src/markupfunctions.js:318
+#: build/index.js:974
+#: build/index.js:1488
+#: build/view.js:400
+#: build/view.js:914
+#: src/markupfunctions.js:315
 #: src/sections.js:173
-#: build/index.js:1042
-#: build/index.js:1658
-#: build/view.js:365
-#: build/view.js:981
+#: build/index.js:1083
+#: build/index.js:1700
+#: build/view.js:362
+#: build/view.js:979
 msgid "Websites & Social Links"
 msgstr "Веб-сайты и ссылки на социальные сети"
 
-#: build/index.js:1432
-#: build/view.js:893
+#: build/index.js:1469
+#: build/view.js:895
 #: src/sections.js:148
-#: build/index.js:1633
-#: build/view.js:956
+#: build/index.js:1675
+#: build/view.js:954
 msgid "Biography"
 msgstr "биографию"
 
-#: build/index.js:1433
-#: build/view.js:894
+#: build/index.js:1470
+#: build/view.js:896
 #: src/sections.js:149
-#: build/index.js:1634
-#: build/view.js:957
+#: build/index.js:1676
+#: build/view.js:955
 msgid "Include Biography"
 msgstr "Добавить биографию"
 
-#: build/index.js:1461
-#: build/view.js:922
+#: build/index.js:1498
+#: build/view.js:924
 #: src/sections.js:184
-#: build/index.js:1669
-#: build/view.js:992
+#: build/index.js:1711
+#: build/view.js:990
 msgid "Distinctions"
 msgstr "награды и достижения"
 
-#: build/index.js:1462
-#: build/view.js:923
+#: build/index.js:1499
+#: build/view.js:925
 #: src/sections.js:185
-#: build/index.js:1670
-#: build/view.js:993
+#: build/index.js:1712
+#: build/view.js:991
 msgid "Include Distinctions"
 msgstr "Добавить награды и достижения"
 
-#: build/index.js:1471
-#: build/view.js:932
+#: build/index.js:1508
+#: build/view.js:934
 #: src/sections.js:194
-#: build/index.js:1679
-#: build/view.js:1002
+#: build/index.js:1721
+#: build/view.js:1000
 msgid "Education"
 msgstr "образование"
 
-#: build/index.js:1472
-#: build/view.js:933
+#: build/index.js:1509
+#: build/view.js:935
 #: src/sections.js:195
-#: build/index.js:1680
-#: build/view.js:1003
+#: build/index.js:1722
+#: build/view.js:1001
 msgid "Include Education"
 msgstr "Добавить образование"
 
-#: build/index.js:1481
-#: build/view.js:942
+#: build/index.js:1518
+#: build/view.js:944
 #: src/sections.js:204
-#: build/index.js:1689
-#: build/view.js:1012
+#: build/index.js:1731
+#: build/view.js:1010
 msgid "Employment"
 msgstr "Трудовую деятельность"
 
-#: build/index.js:1482
-#: build/view.js:943
+#: build/index.js:1519
+#: build/view.js:945
 #: src/sections.js:205
-#: build/index.js:1690
-#: build/view.js:1013
+#: build/index.js:1732
+#: build/view.js:1011
 msgid "Include Employment"
 msgstr "Добавить Трудовую деятельность"
 
-#: build/index.js:1491
-#: build/view.js:952
+#: build/index.js:1528
+#: build/view.js:954
 #: src/sections.js:214
-#: build/index.js:1699
-#: build/view.js:1022
+#: build/index.js:1741
+#: build/view.js:1020
 msgid "Fundings"
 msgstr "финансирование"
 
-#: build/index.js:1492
-#: build/view.js:953
+#: build/index.js:1529
+#: build/view.js:955
 #: src/sections.js:215
-#: build/index.js:1700
-#: build/view.js:1023
+#: build/index.js:1742
+#: build/view.js:1021
 msgid "Include Fundings"
 msgstr "Добавить финансирование"
 
-#: build/index.js:1501
-#: build/view.js:962
+#: build/index.js:1538
+#: build/view.js:964
 #: src/sections.js:224
-#: build/index.js:1709
-#: build/view.js:1032
+#: build/index.js:1751
+#: build/view.js:1030
 msgid "Invited Positions"
 msgstr "Приглашённые должности"
 
-#: build/index.js:1502
-#: build/view.js:963
+#: build/index.js:1539
+#: build/view.js:965
 #: src/sections.js:225
-#: build/index.js:1710
-#: build/view.js:1033
+#: build/index.js:1752
+#: build/view.js:1031
 msgid "Include Invited Positions"
 msgstr "Добавить Приглашённые должности"
 
-#: build/index.js:1511
-#: build/view.js:972
+#: build/index.js:1548
+#: build/view.js:974
 #: src/sections.js:234
-#: build/index.js:1719
-#: build/view.js:1042
+#: build/index.js:1761
+#: build/view.js:1040
 msgid "Memberships"
 msgstr "членства"
 
-#: build/index.js:1512
-#: build/view.js:973
+#: build/index.js:1549
+#: build/view.js:975
 #: src/sections.js:235
-#: build/index.js:1720
-#: build/view.js:1043
+#: build/index.js:1762
+#: build/view.js:1041
 msgid "Include Memberships"
 msgstr "Добавить членства"
 
-#: build/index.js:1521
-#: build/view.js:982
+#: build/index.js:1558
+#: build/view.js:984
 #: src/sections.js:244
-#: build/index.js:1729
-#: build/view.js:1052
+#: build/index.js:1771
+#: build/view.js:1050
 msgid "Peer Reviews"
 msgstr "экспертные рецензии"
 
-#: build/index.js:1522
-#: build/view.js:983
+#: build/index.js:1559
+#: build/view.js:985
 #: src/sections.js:245
-#: build/index.js:1730
-#: build/view.js:1053
+#: build/index.js:1772
+#: build/view.js:1051
 msgid "Include Peer Reviews"
 msgstr "Добавить экспертные рецензии"
 
-#: build/index.js:1531
-#: build/view.js:992
+#: build/index.js:1568
+#: build/view.js:994
 #: src/sections.js:254
-#: build/index.js:1739
-#: build/view.js:1062
+#: build/index.js:1781
+#: build/view.js:1060
 msgid "Qualifications"
 msgstr "квалификации"
 
-#: build/index.js:1532
-#: build/view.js:993
+#: build/index.js:1569
+#: build/view.js:995
 #: src/sections.js:255
-#: build/index.js:1740
-#: build/view.js:1063
+#: build/index.js:1782
+#: build/view.js:1061
 msgid "Include Qualifications"
 msgstr "Добавить квалификации"
 
-#: build/index.js:1550
-#: build/view.js:1011
+#: build/index.js:1587
+#: build/view.js:1013
 #: src/sections.js:273
-#: build/index.js:1758
-#: build/view.js:1081
+#: build/index.js:1800
+#: build/view.js:1079
 msgid "Services"
 msgstr "услуги"
 
-#: build/index.js:1551
-#: build/view.js:1012
+#: build/index.js:1588
+#: build/view.js:1014
 #: src/sections.js:274
-#: build/index.js:1759
-#: build/view.js:1082
+#: build/index.js:1801
+#: build/view.js:1080
 msgid "Include Services"
 msgstr "Добавить услуги"
 
-#: build/index.js:1559
-#: build/view.js:1020
+#: build/index.js:1596
+#: build/view.js:1022
 #: src/sections.js:282
-#: build/index.js:1767
-#: build/view.js:1090
+#: build/index.js:1809
+#: build/view.js:1088
 msgid "Works"
 msgstr "Работы"
 
-#: build/index.js:1560
-#: build/view.js:1021
+#: build/index.js:1597
+#: build/view.js:1023
 #: src/sections.js:283
-#: build/index.js:1768
-#: build/view.js:1091
+#: build/index.js:1810
+#: build/view.js:1089
 msgid "Include Works"
 msgstr "Добавить Работы"
 
@@ -382,23 +379,35 @@ msgctxt "block description"
 msgid "Display public profile data from multiple ORCID profiles"
 msgstr "Отобразить данные из профилей ORCID"
 
-#: build/index.js:128
-#: src/components/DataBlockInspectorControls.js:123
-#: build/index.js:123
+#: build/index.js:141
+#: src/components/DataBlockInspectorControls.js:132
+#: build/index.js:132
 msgid "Excluding this heading could make your content misleading and less accessible."
 msgstr ""
 
-#: build/index.js:256
-#: src/components/DataBlockInspectorControls.js:317
-#: build/index.js:317
-msgid "Include ORCID iD"
+#: build/index.js:535
+#: build/view.js:1424
+#: src/edit.js:202
+#: src/view.js:170
+#: build/index.js:642
+#: build/view.js:1399
+msgid "unauthenticated"
 msgstr ""
 
-#: build/index.js:510
-#: build/view.js:1419
-#: src/edit.js:203
-#: src/view.js:177
-#: build/index.js:614
-#: build/view.js:1402
-msgid "unauthenticated"
+#: build/index.js:271
+#: src/components/DataBlockInspectorControls.js:328
+#: build/index.js:328
+msgid "Include ORCID iD link"
+msgstr ""
+
+#: build/index.js:284
+#: src/components/DataBlockInspectorControls.js:347
+#: build/index.js:347
+msgid "Toggle All Sections"
+msgstr ""
+
+#: build/index.js:543
+#: src/edit.js:217
+#: build/index.js:657
+msgid "Please include at least one section."
 msgstr ""

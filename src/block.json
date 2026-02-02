@@ -2,7 +2,7 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "mesh-research/linked-open-profiles",
-	"version": "0.5.3",
+	"version": "0.6.8",
 	"title": "Linked Open Profiles",
 	"category": "widgets",
 	"icon": "",
@@ -23,6 +23,10 @@
 		"startingHeadingLevel": {
 			"type": "number",
 			"default": 2
+		},
+		"all_sections_toggle": {
+			"type": "boolean",
+			"default": true
 		},
 		"bio_show": {
 			"type": "boolean",
@@ -278,5 +282,6 @@
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"render": "file:./render.php",
-	"viewScript": "file:./view.js"
+	"viewScript": "file:./view.js",
+	"style": "file:./style-index.css"
 }

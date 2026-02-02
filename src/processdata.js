@@ -245,7 +245,7 @@ function processRecordWork( record ) {
 		subtitle: data.title.subtitle?.value,
 		title: data.title.title.value,
 		type: data?.type,
-		url: data[ 'url' ]?.value,
+		url: data.url?.value,
 	};
 }
 

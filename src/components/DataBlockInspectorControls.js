@@ -39,7 +39,16 @@ function setLimitItemsCount( section, value, setAttributes ) {
 	setAttributes( { [ `${ section }_limit_items_count` ]: value } );
 }
 function toggleVisibleOrcidId( value, setAttributes ) {
-	setAttributes( { [ 'visibleOrcidId' ]: value } );
+	setAttributes( { visibleOrcidId: value } );
+}
+function toggleAllSections( value, setAttributes, items ) {
+	setAttributes( { all_sections_toggle: value } );
+	Object.keys( sections ).map( ( section ) => {
+		if ( ! hasNoItems( section, items ) ) {
+			setAttributes( { [ `${ section }_show` ]: value } );
+		}
+		return false;
+	} );
 }
 
 function modifyExcludedItems(
@@ -127,7 +136,7 @@ function getSectionControls( section, items, attributes, setAttributes ) {
 					</p>
 				</Snackbar>
 			) }
-			{ section == 'bio' && attributes[ 'bio_show' ] && (
+			{ section === 'bio' && attributes.bio_show && (
 				<PanelBody
 					initialOpen={ false }
 					title={ __( 'Customize Items', 'linked-open-profiles' ) }
@@ -259,6 +268,7 @@ const DataBlockInspectorControls = ( {
 					<TextControl
 						__nextHasNoMarginBottom={ true }
 						className="odb-small-margin-bottom"
+						__next40pxDefaultSize="true"
 						label={ __( 'ORCID iD', 'linked-open-profiles' ) }
 						value={ orcidId }
 						onChange={ ( value ) => {
@@ -312,10 +322,11 @@ const DataBlockInspectorControls = ( {
 					<Panel>
 						<PanelBody>
 							<CheckboxControl
-								checked={ attributes[ `visibleOrcidId` ] }
+								checked={ attributes.visibleOrcidId }
 								className="odb-medium-margin-top"
+								__nextHasNoMarginBottom={ true }
 								label={ __(
-									'Include ORCID iD',
+									'Include ORCID iD link',
 									'linked-open-profiles'
 								) }
 								onChange={ ( value ) => {
@@ -328,6 +339,24 @@ const DataBlockInspectorControls = ( {
 						</PanelBody>
 					</Panel>
 					<Panel header={ __( 'Sections', 'linked-open-profiles' ) }>
+						<PanelBody>
+							<CheckboxControl
+								checked={ attributes.all_sections_toggle }
+								className="odb-medium-margin-top"
+								__nextHasNoMarginBottom={ true }
+								label={ __(
+									'Toggle All Sections',
+									'linked-open-profiles'
+								) }
+								onChange={ ( value ) => {
+									toggleAllSections(
+										value,
+										setAttributes,
+										items
+									);
+								} }
+							/>
+						</PanelBody>
 						{ Object.keys( sections ).map( function ( section ) {
 							return (
 								<PanelBody
@@ -336,7 +365,7 @@ const DataBlockInspectorControls = ( {
 									icon={
 										! isSectionShown( section, attributes )
 											? 'hidden'
-											: ''
+											: 'saved'
 									}
 									title={ getSectionTitle( section, items ) }
 								>

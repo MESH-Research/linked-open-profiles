@@ -47,7 +47,7 @@ export function addressMarkup( data ) {
 }
 export function bioMarkup( data, attributes ) {
 	let markup = '';
-	if ( attributes[ 'bio_bio_info_show' ] == false ) {
+	if ( attributes.bio_bio_info_show === false ) {
 		return markup;
 	}
 	if ( data?.biography ) {
@@ -275,13 +275,10 @@ export function nameMarkup( data, attributes ) {
 	let markup = '';
 	markup = (
 		<ItemGroup>
-			{ attributes?.[ 'bio_given_name_show' ] && nameGivenMarkup( data ) }
-			{ attributes?.[ 'bio_family_name_show' ] &&
-				nameFamilyMarkup( data ) }
-			{ attributes?.[ 'bio_credit_name_show' ] &&
-				nameCreditMarkup( data ) }
-			{ attributes?.[ 'bio_other_names_show' ] &&
-				nameOtherMarkup( data ) }
+			{ attributes?.bio_given_name_show && nameGivenMarkup( data ) }
+			{ attributes?.bio_family_name_show && nameFamilyMarkup( data ) }
+			{ attributes?.bio_credit_name_show && nameCreditMarkup( data ) }
+			{ attributes?.bio_other_names_show && nameOtherMarkup( data ) }
 		</ItemGroup>
 	);
 	return markup;
@@ -307,7 +304,7 @@ export function organizationMarkup( data, firstline = false ) {
 }
 export function researcherUrlMarkup( data, attributes ) {
 	let markup = '';
-	if ( attributes[ 'bio_urls_show' ] == false ) {
+	if ( attributes.bio_urls_show === false ) {
 		return markup;
 	}
 	if ( data?.urls.length > 0 ) {

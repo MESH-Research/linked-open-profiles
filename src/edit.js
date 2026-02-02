@@ -27,8 +27,6 @@ import {
 	Card,
 	CardBody,
 	__experimentalHeading as Heading,
-	__experimentalItemGroup as ItemGroup,
-	__experimentalItem as Item,
 } from '@wordpress/components';
 
 import { sections } from './sections';
@@ -38,6 +36,7 @@ import {
 	isHeadingShown,
 	isSectionShown,
 	renderSectionItems,
+	hasNoSectionsShown,
 } from './sharedfunctions.js';
 import LoadingSpinner from './components/LoadingSpinner.js';
 import DataBlockInspectorControls from './components/DataBlockInspectorControls.js';
@@ -210,13 +209,29 @@ export default function Edit( { attributes, setAttributes } ) {
 							) }
 						{ ! loading &&
 							! fetchError &&
+							hasNoSectionsShown( attributes ) && (
+								<div role="alert">
+									<Card>
+										<CardBody isShady={ true }>
+											<p>
+												{ __(
+													'Please include at least one section.',
+													'linked-open-profiles'
+												) }
+											</p>
+										</CardBody>
+									</Card>
+								</div>
+							) }
+						{ ! loading &&
+							! fetchError &&
 							Object.keys( sections ).map(
 								( section ) =>
 									isSectionShown( section, attributes ) &&
 									! hasNoItems( section, items ) && (
 										<section
 											style={ { marginBottom: '2rem' } }
-											className={ `lop-section lop-section-${ section }` }
+											className={ `mesh-lop-section mesh-lop-section-${ section }` }
 											key={ section }
 										>
 											{ isHeadingShown(
