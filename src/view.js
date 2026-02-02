@@ -62,6 +62,7 @@ import {
 	isHeadingShown,
 	isSectionShown,
 	renderSectionItems,
+	hasNoSectionsShown,
 } from './sharedfunctions.js';
 import LoadingSpinner from './components/LoadingSpinner.js';
 
@@ -84,28 +85,31 @@ function LinkedOpenProfiles( { attributes } ) {
 	const [ dataFetched, setDataFetched ] = useState( false );
 	const [ loading, setLoading ] = useState( true );
 	const [ fetchError, setFetchError ] = useState( false );
+	const dontShowAnything = hasNoSectionsShown( attributes ) || ! orcidId;
 
 	const fetchData = useCallback( async () => {
 		setFetchError( false );
 		setDataFetched( false );
-		const queryParams = { orcidId: `${ orcidId }` };
-		apiFetch( {
-			path: addQueryArgs(
-				'/mesh_research_linked_open_profiles/v1/orcid-proxy',
-				queryParams
-			),
-		} )
-			.then( ( data ) => {
-				setItems( getProcessedData( data ) );
-				setDataFetched( true );
+		if ( ! dontShowAnything ) {
+			const queryParams = { orcidId: `${ orcidId }` };
+			apiFetch( {
+				path: addQueryArgs(
+					'/mesh_research_linked_open_profiles/v1/orcid-proxy',
+					queryParams
+				),
 			} )
-			.catch( () => {
-				setFetchError( true );
-			} )
-			.finally( () => {
-				setLoading( false );
-			} );
-	}, [ orcidId ] );
+				.then( ( data ) => {
+					setItems( getProcessedData( data ) );
+					setDataFetched( true );
+				} )
+				.catch( () => {
+					setFetchError( true );
+				} )
+				.finally( () => {
+					setLoading( false );
+				} );
+		}
+	}, [ orcidId, dontShowAnything ] );
 
 	useEffect( () => {
 		if ( orcidId && verifiedOrcidId && ! dataFetched ) {
@@ -115,104 +119,103 @@ function LinkedOpenProfiles( { attributes } ) {
 
 	return (
 		<div { ...useBlockProps() }>
-			{ fetchError && (
-				<div role="alert">
-					<Card>
-						<CardBody>
-							<p>
-								{ __(
-									'An error occurred while fetching the data from ORCID',
-									'linked-open-profiles'
-								) }
-							</p>
-						</CardBody>
-					</Card>
-				</div>
-			) }
-			{ ! orcidId && ! fetchError ? (
-				<p
-					style={ {
-						padding: '2rem',
-						border: '1px solid #ddd',
-					} }
-					role="alert"
-				>
-					{ __(
-						'Please provide an ORCID iD',
-						'linked-open-profiles'
-					) }
-				</p>
+			{ dontShowAnything ? (
+				<></>
 			) : (
 				<>
-					{ orcidId &&
-						verifiedOrcidId &&
-						dataFetched &&
-						visibleOrcidId && (
-							<div
-								style={ {
-									float: 'right',
-									display: 'inline-flex',
-									gap: '4px',
-								} }
-							>
-								<a
-									href={ `https://orcid.org/${ orcidId }` }
-									style={ {
-										display: 'inline-flex',
-										alignItems: 'center',
-										gap: '8px',
-									} }
-								>
-									<img
-										src={ orcidIcon }
-										alt=""
-										style={ {
-											height: '24px',
-											width: '24px',
-										} }
-									/>
-									<span>{ orcidId }</span>
-								</a>
-								<span>
-									(
-									{ __(
-										'unauthenticated',
-										'linked-open-profiles'
-									) }
-									)
-								</span>
-							</div>
-						) }
-					{ ! loading ? (
-						Object.keys( sections ).map(
-							( section ) =>
-								isSectionShown( section, attributes ) &&
-								! hasNoItems( section, items ) && (
-									<section
-										style={ { marginBottom: '2rem' } }
-										className={ `lop-section lop-section-${ section }` }
-										key={ section }
-									>
-										{ isHeadingShown(
-											section,
-											attributes
-										) && (
-											<Heading
-												level={ startingHeadingLevel }
-											>
-												{ sections[ section ].term }
-											</Heading>
+					{ fetchError ? (
+						<div role="alert">
+							<Card>
+								<CardBody>
+									<p>
+										{ __(
+											'An error occurred while fetching the data from ORCID',
+											'linked-open-profiles'
 										) }
-										{ renderSectionItems(
-											section,
-											items,
-											attributes
-										) }
-									</section>
-								)
-						)
+									</p>
+								</CardBody>
+							</Card>
+						</div>
 					) : (
-						<LoadingSpinner />
+						<>
+							{ orcidId &&
+								verifiedOrcidId &&
+								dataFetched &&
+								visibleOrcidId && (
+									<div
+										style={ {
+											float: 'right',
+											display: 'inline-flex',
+											gap: '4px',
+										} }
+									>
+										<a
+											href={ `https://orcid.org/${ orcidId }` }
+											style={ {
+												display: 'inline-flex',
+												alignItems: 'center',
+												gap: '8px',
+											} }
+										>
+											<img
+												src={ orcidIcon }
+												alt=""
+												style={ {
+													height: '24px',
+													width: '24px',
+												} }
+											/>
+											<span>{ orcidId }</span>
+										</a>
+										<span>
+											(
+											{ __(
+												'unauthenticated',
+												'linked-open-profiles'
+											) }
+											)
+										</span>
+									</div>
+								) }
+							{ ! loading ? (
+								Object.keys( sections ).map(
+									( section ) =>
+										isSectionShown( section, attributes ) &&
+										! hasNoItems( section, items ) && (
+											<section
+												style={ {
+													marginBottom: '2rem',
+												} }
+												className={ `mesh-lop-section mesh-lop-section-${ section }` }
+												key={ section }
+											>
+												{ isHeadingShown(
+													section,
+													attributes
+												) && (
+													<Heading
+														level={
+															startingHeadingLevel
+														}
+													>
+														{
+															sections[ section ]
+																.term
+														}
+													</Heading>
+												) }
+												{ renderSectionItems(
+													section,
+													items,
+													attributes
+												) }
+											</section>
+										)
+								)
+							) : (
+								<LoadingSpinner />
+							) }
+						</>
 					) }
 				</>
 			) }
