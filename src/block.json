@@ -24,6 +24,10 @@
 			"type": "number",
 			"default": 2
 		},
+		"all_sections_toggle": {
+			"type": "boolean",
+			"default": true
+		},
 		"bio_show": {
 			"type": "boolean",
 			"default": true

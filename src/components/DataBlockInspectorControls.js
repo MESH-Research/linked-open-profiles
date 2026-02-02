@@ -39,7 +39,16 @@ function setLimitItemsCount( section, value, setAttributes ) {
 	setAttributes( { [ `${ section }_limit_items_count` ]: value } );
 }
 function toggleVisibleOrcidId( value, setAttributes ) {
-	setAttributes( { [ 'visibleOrcidId' ]: value } );
+	setAttributes( { visibleOrcidId: value } );
+}
+function toggleAllSections( value, setAttributes, items ) {
+	setAttributes( { all_sections_toggle: value } );
+	Object.keys( sections ).map( ( section ) => {
+		if ( ! hasNoItems( section, items ) ) {
+			setAttributes( { [ `${ section }_show` ]: value } );
+		}
+		return false;
+	} );
 }
 
 function modifyExcludedItems(
@@ -328,6 +337,24 @@ const DataBlockInspectorControls = ( {
 						</PanelBody>
 					</Panel>
 					<Panel header={ __( 'Sections', 'linked-open-profiles' ) }>
+						<PanelBody>
+							<CheckboxControl
+								checked={ attributes.all_sections_toggle }
+								className="odb-medium-margin-top"
+								__nextHasNoMarginBottom={ true }
+								label={ __(
+									'Toggle All Sections',
+									'linked-open-profiles'
+								) }
+								onChange={ ( value ) => {
+									toggleAllSections(
+										value,
+										setAttributes,
+										items
+									);
+								} }
+							/>
+						</PanelBody>
 						{ Object.keys( sections ).map( function ( section ) {
 							return (
 								<PanelBody
@@ -336,7 +363,7 @@ const DataBlockInspectorControls = ( {
 									icon={
 										! isSectionShown( section, attributes )
 											? 'hidden'
-											: ''
+											: 'saved'
 									}
 									title={ getSectionTitle( section, items ) }
 								>

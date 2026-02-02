@@ -38,6 +38,7 @@ import {
 	isHeadingShown,
 	isSectionShown,
 	renderSectionItems,
+	hasNoSectionsShown,
 } from './sharedfunctions.js';
 import LoadingSpinner from './components/LoadingSpinner.js';
 import DataBlockInspectorControls from './components/DataBlockInspectorControls.js';
@@ -206,6 +207,22 @@ export default function Edit( { attributes, setAttributes } ) {
 										) }
 										)
 									</span>
+								</div>
+							) }
+						{ ! loading &&
+							! fetchError &&
+							hasNoSectionsShown( attributes ) && (
+								<div role="alert">
+									<Card>
+										<CardBody isShady={ true }>
+											<p>
+												{ __(
+													'Please include at least one section.',
+													'linked-open-profiles'
+												) }
+											</p>
+										</CardBody>
+									</Card>
 								</div>
 							) }
 						{ ! loading &&
