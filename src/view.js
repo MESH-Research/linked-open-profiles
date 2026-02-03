@@ -83,7 +83,8 @@ function LinkedOpenProfiles( { attributes } ) {
 	const [ dataFetched, setDataFetched ] = useState( false );
 	const [ loading, setLoading ] = useState( true );
 	const [ fetchError, setFetchError ] = useState( false );
-	const dontShowAnything = hasNoSectionsShown( attributes ) || ! orcidId;
+	const dontShowAnything =
+		hasNoSectionsShown( items, attributes ) || ! orcidId;
 
 	const fetchData = useCallback( async () => {
 		setFetchError( false );

@@ -209,7 +209,7 @@ export default function Edit( { attributes, setAttributes } ) {
 							) }
 						{ ! loading &&
 							! fetchError &&
-							hasNoSectionsShown( attributes ) && (
+							hasNoSectionsShown( items, attributes ) && (
 								<div role="alert">
 									<Card>
 										<CardBody isShady={ true }>

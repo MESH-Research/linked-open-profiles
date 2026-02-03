@@ -89,6 +89,16 @@ function getItemCheckboxes( section, items, attributes, setAttributes ) {
 	) );
 }
 
+function getSectionDashicon( section, items, attributes ) {
+	if (
+		! isSectionShown( section, attributes ) ||
+		hasNoItems( section, items )
+	) {
+		return 'hidden';
+	}
+	return 'saved';
+}
+
 function getSectionTitle( section, items ) {
 	if ( ! section || items[ section ] === undefined ) {
 		return '';
@@ -362,11 +372,11 @@ const DataBlockInspectorControls = ( {
 								<PanelBody
 									key={ section.id }
 									initialOpen={ false }
-									icon={
-										! isSectionShown( section, attributes )
-											? 'hidden'
-											: 'saved'
-									}
+									icon={ getSectionDashicon(
+										section,
+										items,
+										attributes
+									) }
 									title={ getSectionTitle( section, items ) }
 								>
 									{ hasNoItems( section, items ) && (
