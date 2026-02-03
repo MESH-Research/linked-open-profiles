@@ -2,7 +2,7 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Linked Open Profiles 0.6.11\n"
+"Project-Id-Version: Linked Open Profiles 0.6.12\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/linked-open-profiles\n"
 "Language-Team: MSU Translation Center <translat@msu.edu>\n"
 "Language: LANGUAGE\n"
