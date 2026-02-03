@@ -64,6 +64,14 @@ export default function Edit( { attributes, setAttributes } ) {
 	const [ fetchError, setFetchError ] = useState( false );
 
 	const fetchData = useCallback( async () => {
+		function hideSectionsWithNoItems( pdata ) {
+			Object.keys( pdata ).map( ( section ) => {
+				if ( hasNoItems( section, pdata ) ) {
+					setAttributes( { [ `${ section }_show` ]: false } );
+				}
+				return false;
+			} );
+		}
 		setFetchError( false );
 		setDataFetched( false );
 		const queryParams = { orcidId: `${ orcidId }` };
@@ -74,8 +82,10 @@ export default function Edit( { attributes, setAttributes } ) {
 			),
 		} )
 			.then( ( data ) => {
-				setItems( getProcessedData( data ) );
+				const pdata = getProcessedData( data );
+				setItems( pdata );
 				setDataFetched( true );
+				hideSectionsWithNoItems( pdata );
 			} )
 			.catch( () => {
 				setFetchError( true );
@@ -83,7 +93,7 @@ export default function Edit( { attributes, setAttributes } ) {
 			.finally( () => {
 				setLoading( false );
 			} );
-	}, [ orcidId ] );
+	}, [ orcidId, setAttributes ] );
 
 	useEffect( () => {
 		if ( orcidId && verifiedOrcidId && ! dataFetched ) {
@@ -209,7 +219,7 @@ export default function Edit( { attributes, setAttributes } ) {
 							) }
 						{ ! loading &&
 							! fetchError &&
-							hasNoSectionsShown( items, attributes ) && (
+							hasNoSectionsShown( attributes ) && (
 								<div role="alert">
 									<Card>
 										<CardBody isShady={ true }>
