@@ -29,19 +29,19 @@ section fully included](assets/screenshot-1.png)
 
     | Language              | Translation Completion |
     | --------------------- | -----------------------|
-    | Arabic                | 72%                    |
-    | Chinese (Simplified)  | 72%                    |
-    | Chinese (Traditional) | 72%                    |
-    | Czech                 | 72%                    |
-    | French                | 72%                    |
-    | German                | 72%                    |
-    | Italian               | 72%                    |
-    | Japanese              | 72%                    |
-    | Korean                | 72%                    |
-    | Polish                | 72%                    |
-    | Portuguese            | 68%                    |
-    | Russian               | 72%                    |
-    | Spanish               | 72%                    |
+    | Arabic                | 67%                    |
+    | Chinese (Simplified)  | 67%                    |
+    | Chinese (Traditional) | 67%                    |
+    | Czech                 | 67%                    |
+    | French                | 67%                    |
+    | German                | 67%                    |
+    | Italian               | 67%                    |
+    | Japanese              | 67%                    |
+    | Korean                | 67%                    |
+    | Polish                | 67%                    |
+    | Portuguese            | 63%                    |
+    | Russian               | 67%                    |
+    | Spanish               | 67%                    |
     | Turkish               | 0%                     |
 
 ## Information Supported

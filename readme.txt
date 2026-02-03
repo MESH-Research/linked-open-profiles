@@ -32,19 +32,19 @@ This work is funded by the [ORCID Global Participation Fund][awardees].
 * Info will remain automatically up-to-date with ORCID
 * Accessible to those with disabilities
 * All languages currently supported by ORCID will be supported (subject to translator availability)
-    * Arabic: 72%
-    * Chinese (Simplified): 72%
-    * Chinese (Traditional): 72%
-    * Czech: 72%
-    * French: 72%
-    * German: 72%
-    * Italian: 72%
-    * Japanese: 72%
-    * Korean: 72%
-    * Polish: 72%
-    * Portuguese: 68%
-    * Russian: 72%
-    * Spanish: 72%
+    * Arabic: 67%
+    * Chinese (Simplified): 67%
+    * Chinese (Traditional): 67%
+    * Czech: 67%
+    * French: 67%
+    * German: 67%
+    * Italian: 67%
+    * Japanese: 67%
+    * Korean: 67%
+    * Polish: 67%
+    * Portuguese: 63%
+    * Russian: 67%
+    * Spanish: 67%
     * Turkish: 0%
 
 == Screenshots ==
