@@ -131,6 +131,28 @@ export default function Edit( { attributes, setAttributes } ) {
 		}
 	}
 
+	function showMissingOrcidIdMessage() {
+		return (
+			( ! orcidId || ! verifiedOrcidId ) &&
+			! dataFetched &&
+			! loading &&
+			! fetchError
+		);
+	}
+
+	function showOneSectionMinimumMessage( attributes ) {
+		return (
+			verifiedOrcidId &&
+			! loading &&
+			! fetchError &&
+			hasNoSectionsShown( attributes )
+		);
+	}
+
+	function showOrcidIdHyperlink() {
+		return orcidId && verifiedOrcidId && dataFetched && visibleOrcidId;
+	}
+
 	return (
 		<>
 			<DataBlockInspectorControls
@@ -160,10 +182,7 @@ export default function Edit( { attributes, setAttributes } ) {
 					</div>
 				) }
 				{ loading && <LoadingSpinner /> }
-				{ ! verifiedOrcidId &&
-				! dataFetched &&
-				! loading &&
-				! fetchError ? (
+				{ showMissingOrcidIdMessage() ? (
 					<div role="alert">
 						<Card>
 							<CardBody isShady={ true }>
@@ -178,61 +197,56 @@ export default function Edit( { attributes, setAttributes } ) {
 					</div>
 				) : (
 					<>
-						{ orcidId &&
-							verifiedOrcidId &&
-							dataFetched &&
-							visibleOrcidId && (
-								<div
+						{ showOrcidIdHyperlink() && (
+							<div
+								style={ {
+									float: 'right',
+									display: 'inline-flex',
+									gap: '4px',
+								} }
+							>
+								<a
+									href={ `https://orcid.org/${ orcidId }` }
 									style={ {
-										float: 'right',
 										display: 'inline-flex',
-										gap: '4px',
+										alignItems: 'center',
+										gap: '8px',
 									} }
 								>
-									<a
-										href={ `https://orcid.org/${ orcidId }` }
+									<img
+										src={ orcidIcon }
+										alt=""
 										style={ {
-											display: 'inline-flex',
-											alignItems: 'center',
-											gap: '8px',
+											height: '24px',
+											width: '24px',
 										} }
-									>
-										<img
-											src={ orcidIcon }
-											alt=""
-											style={ {
-												height: '24px',
-												width: '24px',
-											} }
-										/>
-										<span>{ orcidId }</span>
-									</a>
-									<span>
-										(
-										{ __(
-											'unauthenticated',
-											'linked-open-profiles'
-										) }
-										)
-									</span>
-								</div>
-							) }
-						{ ! loading &&
-							! fetchError &&
-							hasNoSectionsShown( attributes ) && (
-								<div role="alert">
-									<Card>
-										<CardBody isShady={ true }>
-											<p>
-												{ __(
-													'Please include at least one section.',
-													'linked-open-profiles'
-												) }
-											</p>
-										</CardBody>
-									</Card>
-								</div>
-							) }
+									/>
+									<span>{ orcidId }</span>
+								</a>
+								<span>
+									(
+									{ __(
+										'unauthenticated',
+										'linked-open-profiles'
+									) }
+									)
+								</span>
+							</div>
+						) }
+						{ showOneSectionMinimumMessage( attributes ) && (
+							<div role="alert">
+								<Card>
+									<CardBody isShady={ true }>
+										<p>
+											{ __(
+												'Please include at least one section.',
+												'linked-open-profiles'
+											) }
+										</p>
+									</CardBody>
+								</Card>
+							</div>
+						) }
 						{ ! loading &&
 							! fetchError &&
 							Object.keys( sections ).map(
