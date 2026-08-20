@@ -2,7 +2,7 @@
 Contributors: ebengran
 Tags: block, widget, orcid
 Requires at least: 6.6.2
-Tested up to: 7.0
+Tested up to: 7.2
 Requires PHP: 7.0
 Stable tag: 0.7.1
 License: GPLv2 or later
